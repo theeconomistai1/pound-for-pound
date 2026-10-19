@@ -74,5 +74,7 @@ python3 -I pipeline/make.py videos/NNN-slug stills 0.05,3,8,14,20,26,32,40
 - Mark the topic `done (NNN)` in `topics.md`; commit the video folder (build/ is ignored) and push to `main`.
 - Studio page https://claude.ai/artifact/2SbNVqQh6hMzCyCmHzNkaj — with `ArtifactData`, set `videos/<NNN>`:
   `{title, type:"Short", status:"scheduled", publishAt (ISO with offset), durationSec, description, tags, plannerUrl}`.
+  Also look up yesterday's post with Metricool `getScheduledPosts` (extendedRange true): when its YouTube
+  status is PUBLISHED, update that video's row to `status:"published"` and `youtubeUrl` (the post's `publicUrl`).
   If the Artifact tools are unavailable, skip this step.
 - Finish with a two-line summary: the video's title and publish time, or what went wrong.
