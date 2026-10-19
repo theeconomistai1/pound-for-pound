@@ -1,6 +1,6 @@
 """Original music bed + sound effects, ducked under the voice.
 
-Usage: python3 -I audio_mix.py <voice_processed_44k.wav> <events.json> <duration_s> <out.wav> [--seed N]
+Usage: python3 -I audio_mix.py <voice_processed_44k.wav> <events.json> <duration_s> <out.wav> [--seed N] [--bpm 100] [--gain 0.2] [--soft]
 
 events.json: [{"t": 4.2, "kind": "whoosh"|"pop"|"coin"|"boom"|"crash"}, ...]
 Everything here is synthesised from scratch, so it is free of copyright claims.
@@ -152,7 +152,7 @@ def boom():
     return (body + noise) * 0.8
 
 
-SFX = {"whoosh": whoosh, "pop": pop, "coin": coin, "boom": boom, "crash": crash}
+SFX = {"whoosh": lambda: whoosh() * (0.6 if "--soft" in sys.argv else 1.0), "pop": pop, "coin": coin, "boom": boom, "crash": crash}
 
 
 # ---- arrangement ----------------------------------------------------------------
@@ -210,14 +210,16 @@ def main():
     voice = np.zeros(n)
     voice[: min(n, len(v))] = v[:n]
 
-    m = music(duration)
+    bpm = float(sys.argv[sys.argv.index('--bpm') + 1]) if '--bpm' in sys.argv else 124
+    m = music(duration, bpm)
     m = m / np.abs(m).max()
 
     # duck the music under speech
     e = np.convolve(np.abs(voice), np.ones(int(0.05 * SR)) / (0.05 * SR), mode="same")
     active = np.clip(e / (0.25 * e.max() + 1e-9), 0, 1)
     active = np.convolve(active, np.ones(int(0.12 * SR)) / (0.12 * SR), mode="same")
-    music_gain = 0.30 * (1 - 0.55 * active)
+    base = float(sys.argv[sys.argv.index('--gain') + 1]) if '--gain' in sys.argv else 0.30
+    music_gain = base * (1 - 0.55 * active)
 
     sfx = np.zeros(n)
     for ev in json.load(open(events_path)):

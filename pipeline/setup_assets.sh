@@ -10,7 +10,13 @@ cd "$A"
 REL=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
 [ -s kokoro.onnx ] || curl -sSL --retry 3 -o kokoro.onnx "$REL/kokoro-v1.0.int8.onnx"
 [ -s voices-v1.0.bin ] || curl -sSL --retry 3 -o voices-v1.0.bin "$REL/voices-v1.0.bin"
-# Inter font: use the system copy if present, otherwise download it.
+# Nunito (house-style font for motion.py videos).
+if [ ! -f "nunito/fonts/variable/Nunito[wght].ttf" ]; then
+  rm -rf nunito
+  git clone -q --depth 1 --filter=blob:none --sparse https://github.com/googlefonts/nunito.git nunito
+  (cd nunito && git sparse-checkout set fonts/variable)
+fi
+# Inter font (older videos): use the system copy if present, otherwise download it.
 if [ ! -f /usr/share/fonts/opentype/inter/Inter-Black.otf ] && [ ! -f fonts/Inter-Black.otf ]; then
   mkdir -p fonts
   curl -sSL --retry 3 -o inter.zip https://github.com/rsms/inter/releases/download/v4.0/Inter-4.0.zip
