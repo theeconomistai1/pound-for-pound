@@ -1,0 +1,31 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.1,
+ "gap": 0.1,
+ "sentences": [
+  "Amy puts in {£24,000.|twenty four thousand pounds.}",
+  "Ben puts in {£72,000.|seventy two thousand.}",
+  "And Amy ends up with more money.",
+  "Here's the maths.",
+  "Two friends, same plan: {£200|two hundred pounds} a month into a Stocks {&|and} Shares ISA.",
+  "Amy invests from {25|twenty five} to {35,|thirty five,} then stops.",
+  "Ben starts at {35|thirty five} and keeps going until {65.|sixty five.}",
+  "Amy pays in {£2,400|two thousand four hundred pounds} a year for ten years. That's {£24,000.|twenty four thousand.}",
+  "At {7%|seven per cent} a year, it's about {£34,000|thirty four thousand} by age {35.|thirty five.}",
+  "Then she leaves it alone for {30|thirty} years, and it grows to about {£260,000.|two hundred and sixty thousand.}",
+  "Ben pays in for thirty years. That's {£72,000,|seventy two thousand,} three times more.",
+  "At sixty five, he has about {£234,000.|two hundred and thirty four thousand.}",
+  "Same return, and Amy wins by about {£26,000.|twenty six thousand pounds.}",
+  "Why? Amy's money got ten extra years to grow.",
+  "Compounding is slow at first, then very fast.",
+  "Quick trick: the rule of {72.|seventy two.}",
+  "Divide {72|seventy two} by your yearly return. {72 ÷ 7|Seventy two divided by seven} is about {10.|ten.}",
+  "So at {7%,|seven per cent,} money doubles roughly every ten years.",
+  "And {£200|two hundred pounds} a month? That's about {£6.60|six pounds sixty} a day.",
+  "Starting early beats starting big.",
+  "Your turn. At {9%,|nine per cent,} how many years until your money doubles?",
+  "Use the rule of {72,|seventy two,} and comment your answer.",
+  "This is an illustration, and investments can fall as well as rise.",
+  "Like and save this for later!"
+ ]
+}
