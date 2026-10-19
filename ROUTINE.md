@@ -12,7 +12,7 @@ cd /home/claude/pound-for-pound && pipeline/setup_assets.sh
 ```
 
 ## 1. Pick the topic
-Take the first `todo` line in `topics.md`. Next video number = highest `videos/NNN-*` folder + 1.
+Take the first `todo` line in `topics.md`. Next video number = highest `NNN` across `videos/NNN-*` and `samples/NNN-*` + 1.
 
 ## 2. Research (every time)
 Check every rule, rate, allowance and threshold against an official source today (gov.uk, HMRC, ONS,

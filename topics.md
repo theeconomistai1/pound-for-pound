@@ -8,7 +8,7 @@ Bank of England, MoneyHelper, NS&I, FCA) on the day the video is made.
 - done (001) — £5 a day for 30 years in a Stocks & Shares ISA could reach ~£178K at 7% a year
 - todo — The £100k tax trap: why part of the £100k–£125,140 band is taxed at an effective 60%
 - todo — Workplace pension: why an employer match is an instant 100% "return" on your contribution
-- todo — Rule of 72: how long money takes to double at 4%, 7% and 10%
+- done (002, covered in Amy vs Ben) — Rule of 72: how long money takes to double at 4%, 7% and 10%
 - done (002, sample in new style) — Starting at 25 vs 35: Amy vs Ben, plus the Rule of 72
 - todo — Fund fees: 1% vs 0.2% a year over 30 years
 - todo — Credit card minimum payments: how long a £2,000 balance really takes
