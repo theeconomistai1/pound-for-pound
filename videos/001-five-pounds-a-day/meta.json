@@ -1,0 +1,8 @@
+{
+  "id": "001",
+  "title": "£5 a day → £178,000? The ISA maths nobody shows you #shorts",
+  "description": "£5 a day is about £152 a month. Over 30 years you pay in £54,750.\nAt an assumed 7% a year, the pot could reach £177,854 — and 69% of that is growth, not money you paid in. Inside a Stocks & Shares ISA, you pay no tax on that growth.\n\nMilestones at 7% a year:\n• Year 10: £26,014\n• Year 20: £77,188\n• Year 30: £177,854\n\nIllustration only. 7% a year is an assumption after fees and before inflation. Investments can fall as well as rise and you may get back less than you put in. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#ISA #PersonalFinanceUK #Investing #CompoundInterest #MoneyTips",
+  "tags": ["stocks and shares ISA", "ISA UK", "compound interest", "investing for beginners UK", "personal finance UK", "saving money UK", "£5 a day", "money tips"],
+  "assumptions": ["£5 × 365 ÷ 12 = £152.08 a month", "7% a year effective, compounded monthly", "Paid in £54,750; pot £177,854"],
+  "sources": ["Computed in scenes.py from the stated assumptions"]
+}
