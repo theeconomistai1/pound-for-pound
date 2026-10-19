@@ -47,20 +47,28 @@ python3 -I pipeline/make.py videos/NNN-slug stills 0.05,3,8,14,20,26,32,40
 - Do not publish a video with a wrong number or broken frame. Report it instead.
 
 ## 5. Publish
-1. Host the file for Metricool (a public GitHub release, deleted after it's live):
+1. Host the file for a few minutes on the `upload` branch (releases and branch deletion are blocked for
+   cloud sessions, so this branch is reused and emptied each time):
    ```bash
-   cp videos/NNN-slug/build/video.mp4 /tmp/video-NNN.mp4
-   gh release create video-NNN /tmp/video-NNN.mp4 -R theeconomistai1/pound-for-pound --title "Video NNN" --notes "Temporary upload for publishing"
+   U=$(mktemp -d) && cd "$U" && git init -q && git checkout -q --orphan upload
+   cp /home/claude/pound-for-pound/videos/NNN-slug/build/video.mp4 video-NNN.mp4
+   git add video-NNN.mp4 && git -c user.name=Claude -c user.email=noreply@anthropic.com commit -qm "Temporary upload of video NNN"
+   git push -q -f https://github.com/theeconomistai1/pound-for-pound upload:upload
    ```
-   Media URL: `https://github.com/theeconomistai1/pound-for-pound/releases/download/video-NNN/video-NNN.mp4`
+   Media URL: `https://raw.githubusercontent.com/theeconomistai1/pound-for-pound/upload/video-NNN.mp4`
 2. Metricool `createScheduledPost`: blogId `7523442`, date today 16:00 Europe/London
    (if that has passed, 10 minutes from now), `info`:
    `providers [{"network":"youtube"}]`, `media [<URL>]`, `text` = description, `autoPublish true`, `draft false`,
    `publicationDate {"dateTime": "...", "timezone": "Europe/London"}`,
    `youtubeData {"title", "type":"short", "privacy":"public", "madeForKids":false, "isAiGeneratedContent":true,
    "category":"EDUCATION", "tags"}`.
-3. Clean up older uploads: for each `video-*` release older than one day whose Metricool post is no longer in
-   `getScheduledPosts` (i.e. published), run `gh release delete video-XXX --cleanup-tag -y -R theeconomistai1/pound-for-pound`.
+   Check the response: `media` must now point at `static.metricool.com` (Metricool keeps its own copy).
+3. Empty the upload branch straight away so the file is no longer in the repository:
+   ```bash
+   cd "$U" && git checkout -q --orphan empty && git rm -q --cached video-NNN.mp4 && rm -f video-NNN.mp4
+   git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q --allow-empty -m "Clear temporary upload"
+   git push -q -f https://github.com/theeconomistai1/pound-for-pound empty:upload
+   ```
 
 ## 6. Record
 - Mark the topic `done (NNN)` in `topics.md`; commit the video folder (build/ is ignored) and push to `main`.
