@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build one house-style video end to end: voice -> sound cues -> voice polish -> calm music mix -> render.
-# Usage: pipeline/build_v3.sh videos/NNN-slug
+# Usage: pipeline/build_v3.sh videos/NNN-slug        (KEEP_VOICE=1 to skip re-voicing)
 set -euo pipefail
 V="$1"
 P="$(cd "$(dirname "$0")" && pwd)"
@@ -8,7 +8,12 @@ A="${P4P_ASSETS:-$HOME/.p4p-assets}"
 export MOTION_FONT="${MOTION_FONT:-$A/nunito/fonts/variable/Nunito[wght].ttf}"
 B="$V/build"
 mkdir -p "$B"
-python3 -I "$P/tts2.py" "$A" "$V/spec.json" "$B/voice_raw.wav" "$B/timings.json"
+# KEEP_VOICE=1 reuses build/voice_raw.wav + timings.json when only scenes.py changed (spec.json unchanged).
+if [ "${KEEP_VOICE:-0}" = 1 ] && [ -s "$B/voice_raw.wav" ] && [ -s "$B/timings.json" ]; then
+  echo "reusing voice"
+else
+  python3 -I "$P/tts2.py" "$A" "$V/spec.json" "$B/voice_raw.wav" "$B/timings.json"
+fi
 TOTAL=$(python3 -I "$P/make_v3.py" "$V" events)
 ffmpeg -v error -y -i "$B/voice_raw.wav" -af "highpass=f=75,equalizer=f=220:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.2:g=3.5,equalizer=f=9000:t=h:w=2000:g=2,acompressor=threshold=-20dB:ratio=3.5:attack=4:release=90:makeup=4,aresample=44100" -ar 44100 "$B/voice_44k.wav"
 python3 -I "$P/audio_mix.py" "$B/voice_44k.wav" "$B/events.json" "$TOTAL" "$B/mix_raw.wav" --bpm 100 --gain 0.2 --soft

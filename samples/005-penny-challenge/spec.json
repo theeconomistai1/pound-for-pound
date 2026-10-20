@@ -1,0 +1,21 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "sentences": [
+  "One penny today, two tomorrow, and by New Year's Eve you'll have {£667.95.|six hundred and sixty seven pounds, ninety five.}",
+  "But most people quit in December.",
+  "Day {1|one} is {1p.|a penny.} Day {100,|one hundred,} {£1.|a pound.}",
+  "The last day? {£3.65.|Three pounds sixty five.}",
+  "The shortcut: {365|three hundred and sixty five} times {366,|three hundred and sixty six,} halved.",
+  "That's {£667.95|six hundred and sixty seven pounds, ninety five} from pennies.",
+  "The catch? December alone costs {£108.50,|a hundred and eight pounds fifty,} right before Christmas.",
+  "The fix most people miss? Do it backwards.",
+  "Start with {£3.65|three pounds sixty five} on New Year's Day, and December costs just {£4.96.|four pounds ninety six.}",
+  "Same total, and your savings earn interest for longer.",
+  "Repeat it for ten years, invested at {7%|seven per cent} a year? About {£9,230.|nine thousand, two hundred and thirty pounds.}",
+  "Illustration only. Investments can fall as well as rise.",
+  "Your turn. In a leap year, what's the total? Comment your answer.",
+  "Send this to the friend who says pennies don't matter."
+ ]
+}

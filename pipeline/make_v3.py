@@ -2,6 +2,7 @@
 
   python3 -I pipeline/make_v3.py <video_dir> events            write <video_dir>/build/events.json, print length
   python3 -I pipeline/make_v3.py <video_dir> stills 0.5,4,12   write preview PNGs to <video_dir>/build/
+  python3 -I pipeline/make_v3.py <video_dir> thumb             write <video_dir>/build/thumb.png (frame 0)
   python3 -I pipeline/make_v3.py <video_dir> render            write <video_dir>/build/video.mp4
 
 <video_dir>/scenes.py must define:
@@ -9,6 +10,7 @@
   DRAW    list of functions draw(L, t), one per scene
   events()  list of {"t": seconds, "kind": "whoosh"|"pop"|"coin"|"boom"|"crash"}
 and may set BADGE / TITLE for the top bar. It does `from motion import *`.
+With `BRAND = True` (and `from brand import *`) it renders with the brand kit: pipeline/brand.py, BRAND.md.
 """
 import importlib.util
 import json
@@ -30,7 +32,17 @@ def load(video_dir):
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     Mo.SCENE = mod
+    global FRAME
+    if getattr(mod, "BRAND", False):  # brand kit v1 (pipeline/brand.py): locked frame, captions and loop
+        import brand as Br
+        Br.EPISODE = os.path.basename(os.path.normpath(video_dir)).split("-")[0]
+        FRAME = Br.frame
+    else:
+        FRAME = Mo.frame
     return mod
+
+
+FRAME = None
 
 
 def main():
@@ -43,7 +55,11 @@ def main():
         print(f"{Mo.T['total']:.3f}")
     elif cmd == "stills":
         for ts in sys.argv[3].split(","):
-            Mo.frame(float(ts)).save(os.path.join(b, f"still_{float(ts):05.2f}.png"))
+            FRAME(float(ts)).save(os.path.join(b, f"still_{float(ts):05.2f}.png"))
+    elif cmd == "thumb":  # frame 0 = the cover frame (and the loop target for brand videos)
+        out = os.path.join(b, "thumb.png")
+        FRAME(0.0).save(out)
+        print(out)
     elif cmd == "render":
         out = os.path.join(b, "video.mp4")
         n = int(math.ceil(Mo.T["total"] * Mo.FPS))
@@ -53,7 +69,7 @@ def main():
              "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart",
              out], stdin=subprocess.PIPE)
         for i in range(n):
-            ff.stdin.write(Mo.frame(i / Mo.FPS).tobytes())
+            ff.stdin.write(FRAME(i / Mo.FPS).tobytes())
         ff.stdin.close()
         if ff.wait() != 0:
             sys.exit("ffmpeg failed")

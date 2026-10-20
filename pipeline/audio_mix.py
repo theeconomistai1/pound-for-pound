@@ -2,7 +2,7 @@
 
 Usage: python3 -I audio_mix.py <voice_processed_44k.wav> <events.json> <duration_s> <out.wav> [--seed N] [--bpm 100] [--gain 0.2] [--soft]
 
-events.json: [{"t": 4.2, "kind": "whoosh"|"pop"|"coin"|"boom"|"crash"}, ...]
+events.json: [{"t": 4.2, "kind": "whoosh"|"pop"|"coin"|"boom"|"crash"|"sting"}, ...]
 Everything here is synthesised from scratch, so it is free of copyright claims.
 """
 import json
@@ -152,7 +152,22 @@ def boom():
     return (body + noise) * 0.8
 
 
-SFX = {"whoosh": lambda: whoosh() * (0.6 if "--soft" in sys.argv else 1.0), "pop": pop, "coin": coin, "boom": boom, "crash": crash}
+def sting():
+    """Brand sound: three quick rising bell notes (E6, G#6, B6) with a soft shimmer tail."""
+    n = int(1.4 * SR)
+    t = np.arange(n) / SR
+    out = np.zeros(n)
+    for start, m in ((0.0, 88), (0.085, 92), (0.17, 95)):
+        k = int(start * SR)
+        f = hz(m)
+        tt = t[: n - k]
+        tone = np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * f * 2.0 * tt) + 0.12 * np.sin(2 * np.pi * f * 3.01 * tt)
+        out[k:] += tone * np.exp(-tt / 0.35) * (0.8 if m < 95 else 1.0)
+    shimmer = hp(rng.standard_normal(n), 9000) * env(n, 0.15, 0.4) * 0.05
+    return out * 0.13 + shimmer
+
+
+SFX = {"whoosh": lambda: whoosh() * (0.6 if "--soft" in sys.argv else 1.0), "pop": pop, "coin": coin, "boom": boom, "crash": crash, "sting": sting}
 
 
 # ---- arrangement ----------------------------------------------------------------

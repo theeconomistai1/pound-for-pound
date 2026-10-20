@@ -1,0 +1,25 @@
+{
+  "id": "005",
+  "slot": "sample — not published (worked example of the brand template)",
+  "title": "1p a Day Becomes £667.95… Why Most People Quit in December 😱 #shorts",
+  "description": "Save 1p on day 1, 2p on day 2 … £3.65 on day 365, and you'll have £667.95 by New Year's Eve.\n\nThe maths: 1p + 2p + … + 365p = 365 × 366 ÷ 2 = 66,795p = £667.95.\n\nThe catch: December alone costs £108.50, right before Christmas.\nThe fix most people miss: do it backwards. Start at £3.65 on 1 January and December costs just £4.96. Same total, and your savings earn interest for longer.\n\nLevel up: repeat it for 10 years, invested at an assumed 7% a year, and it could grow to about £9,230 (£6,680 paid in).\n\nYour turn: in a leap year, what's the total? Comment your answer 👇\n📩 Send this to the friend who says pennies don't matter.\n\nIllustration only. 365-day year (2027). Assumes 7% a year after fees, with each year's £667.95 invested at the end of the year. Investments can fall as well as rise and you may get back less than you put in. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#savingschallenge #pennychallenge #moneytips #personalfinanceuk #savemoney",
+  "first_comment": "📩 Know someone who'd give up in December? Send them this. New money maths every day, every number checked.",
+  "tags": [
+    "1p savings challenge",
+    "penny challenge",
+    "savings challenge UK",
+    "how to save money UK",
+    "money saving tips",
+    "personal finance UK",
+    "compound interest",
+    "saving for Christmas"
+  ],
+  "assumptions": [
+    "365 days (2027 is not a leap year): 1p on day 1 rising by 1p a day to 365p on day 365",
+    "Total 365 x 366 / 2 = 66,795p = £667.95; December (days 335-365) = £108.50",
+    "Backwards (365p down to 1p): December = 1p + ... + 31p = £4.96",
+    "£667.95 invested at the end of each year for 10 years at 7% a year after fees = £9,228.70 (paid in £6,679.50)",
+    "Leap year (comment-question answer, not shown): 366 x 367 / 2 = 67,161p = £671.61"
+  ],
+  "sources": []
+}

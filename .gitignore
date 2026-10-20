@@ -1,3 +1,5 @@
 videos/*/build/
+samples/*/build/
+template/*/build/
 __pycache__/
 *.pyc

@@ -22,6 +22,7 @@ if [ ! -f /usr/share/fonts/opentype/inter/Inter-Black.otf ] && [ ! -f fonts/Inte
   curl -sSL --retry 3 -o inter.zip https://github.com/rsms/inter/releases/download/v4.0/Inter-4.0.zip
   python3 -c "import zipfile,sys;z=zipfile.ZipFile('inter.zip');[open('fonts/'+n.split('/')[-1],'wb').write(z.read(n)) for n in z.namelist() if n.endswith('.otf') and '/Inter-' in n and 'Display' not in n]"
 fi
+python3 -c "import fontTools" 2>/dev/null || pip install -q --break-system-packages fonttools >/dev/null 2>&1 || echo "note: fonttools not installed; qa.py skips the glyph check" >&2
 python3 -c "import onnxruntime, scipy, PIL, numpy" || { echo "missing python packages: onnxruntime scipy pillow numpy" >&2; exit 1; }
 command -v ffmpeg >/dev/null || { echo "ffmpeg missing" >&2; exit 1; }
 echo "assets ready in $A"
