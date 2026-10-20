@@ -3,7 +3,7 @@
   python3 -I pipeline/qa.py <video_dir>
 
 Needs <video_dir>/build/timings.json (run the build first, or at least tts2.py). Writes:
-  build/thumb.png    frame 0 (the cover frame and loop target)
+  build/cover.png    frame 0 = the cover (also cover.jpg), which is also the loop target
   build/contact.png  frame 0, the end of every scene, and the loop frame, on one sheet
 Prints PASS / WARN / FAIL lines and exits 1 if anything FAILs. Fix every FAIL before publishing.
 """
@@ -86,6 +86,7 @@ def check_layout():
         "button column (x>975, y>900)": (slice(900, Mo.H), slice(975, Mo.W)),
     }
     hits = {}
+    Br.DRAW_COVER_BG = False  # the cover scene is meant to fill the frame; lint what sits on top of it
     for t in np.arange(0, total, 0.25):
         a = np.asarray(Br._content(float(t)))[..., 3]
         for name, (ys, xs) in zones.items():
@@ -103,8 +104,29 @@ def check_layout():
         report("FAIL", f"content in {name} at t={ts[:8]}{' …' if len(ts) > 8 else ''}")
     a0 = np.asarray(Br._content(0.0))[..., 3]
     filled = (a0 > 60).mean()
+    Br.DRAW_COVER_BG = True
     (report("PASS", f"frame 0 shows the hook ({filled * 100:.1f}% of the frame)") if filled > 0.02 else
      report("FAIL", "frame 0 is nearly empty — the hook must be fully visible on the first frame"))
+
+
+def check_cover():
+    c = getattr(Mo.SCENE, "COVER", None)
+    if not c:
+        report("FAIL", "no COVER in scenes.py — every Short opens on its cover (BRAND.md §3)")
+        return
+    words = list(c.get("words", ()))
+    if not 1 <= len(words) <= 2:
+        report("FAIL", f"cover must have one or two words, not {len(words)}: {words}")
+    elif any(len(w) > 11 for w in words):
+        report("WARN", f"long cover word {words} — shorter words read better on a phone grid")
+    else:
+        report("PASS", f"cover: {' '.join(words)} (highlight: {words[c.get('highlight', 0)] if c.get('highlight', 0) >= 0 else 'none'}) on the {Br.THEME_KEY} palette")
+    import cover as Cv
+    for name in filter(None, (c.get("hero"), c.get("left"), c.get("right"), c.get("particles"))):
+        try:
+            Cv.obj(name, 64)
+        except Exception as e:  # noqa: BLE001
+            report("FAIL", f"cover object {name!r} not found: {e}")
 
 
 def check_glyphs():
@@ -157,7 +179,9 @@ def contact_sheet(video_dir):
         end = Mo.S(sc[k + 1][0]) if k + 1 < len(sc) else total - Br.LOOP
         times.append(max(start + 0.5, end - 0.45))
     times.append(total - 0.05)
-    make_v3.FRAME(0.0).save(os.path.join(b, "thumb.png"))
+    im0 = make_v3.FRAME(0.0)
+    im0.save(os.path.join(b, "cover.png"))
+    im0.save(os.path.join(b, "cover.jpg"), quality=92)
     tw, th = 360, 640
     cols = 5
     rows = (len(times) + cols - 1) // cols
@@ -181,6 +205,7 @@ def main():
     spec = json.load(open(os.path.join(video_dir, "spec.json"), encoding="utf-8"))
     check_script(spec)
     check_timing()
+    check_cover()
     check_layout()
     check_glyphs()
     check_meta(video_dir, spec)

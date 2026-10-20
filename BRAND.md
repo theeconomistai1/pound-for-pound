@@ -1,7 +1,8 @@
-# Pound for Pound — brand book (brand-v1)
+# Pound for Pound — brand book (brand-v1.1)
 
 One look for every Short. The look is **code**, not a description: `pipeline/brand.py` draws the frame,
-logo, beat chips, hook, end cards, captions and the loop, so every video comes out the same. A video opts in
+logo, beat chips, cover, hook, end cards, captions and the loop, so every video comes out the same — while
+`pipeline/cover.py` gives each one its own cover and the palette changes with every video. A video opts in
 with `BRAND = True` in its `scenes.py`. Worked example: `samples/005-penny-challenge/`. Blank template:
 `template/short/`. QA: `python3 -I pipeline/qa.py <video_dir>` must print `RESULT: PASS`.
 
@@ -16,7 +17,7 @@ Every Short follows the same beats in the same order, with the same beat chips, 
 
 | # | Beat | Sentences | What is said | On screen (block in `brand.py`) |
 |---|------|-----------|--------------|------------------------------|
-| 1 | **Hook** | 1–2 | Sentence 1 states the **payoff number**. Sentence 2 opens a loop ("But most people quit in December.") | `hook()` — fully visible on frame 0 |
+| 1 | **Cover + hook** | 1–2 | Sentence 1 states the **payoff number**. Sentence 2 opens a loop ("But most people quit in December.") | `cover_hook()` — frame 0 is the cover; then the payoff number lands |
 | 2 | **The example** | 1–2 | Real people, prices or everyday objects | `beat("example")` + cards / chart |
 | 3 | **The maths** | 1–2 | Step by step, short | `beat("maths")` + `timed_line()` + `big_number()` + `checked()` |
 | 4 | **The catch** or **The twist** | 1–2 | The surprise | `beat("catch")` (red) or `beat("twist")` (green) |
@@ -30,8 +31,9 @@ Budget: **11–16 sentences**, voice `bf_emma`, speed **1.15**, gap **0.08** →
 
 ## 2. Built-in viral mechanics (do not remove)
 
-1. **Frame 0 is the hook.** Headline + giant green payoff number are on screen on the very first frame — no
-   fade-in. It is also the cover frame (`build/thumb.png`) and the loop target.
+1. **Frame 0 is the cover.** A full-bleed scene that fits the subject + one or two huge words, one
+   highlighted — the same picture on the channel grid, in the feed and at the loop. After 0.45 s the scene
+   dims, the words move up and the giant payoff number lands. Saved as `build/cover.png` / `cover.jpg`.
 2. **Voice starts at 0.0 s** with the payoff number in sentence 1. No intro, no "hi guys", no logo sting first.
 3. **Open loop in sentence 2** ("…here's why", "most people get this wrong") so viewers stay for the answer.
 4. **Visible progress**: progress bar + fixed beat chips tell viewers where they are and that it's short.
@@ -45,16 +47,44 @@ Budget: **11–16 sentences**, voice `bf_emma`, speed **1.15**, gap **0.08** →
 10. **Trust stamp**: `checked("GOV.UK · 20 OCT 2026")` when an official figure appears (or
     `"MATHS CHECKED · <date>"` for pure arithmetic). This is the brand's signature.
 
-## 3. Visual identity (locked)
+## 3. Visual identity
+
+### Cover (every video)
+- **Words:** one or two, max ~11 characters each, Anton, huge (auto-fitted to 860 px wide). Plain word =
+  white with a black outline; **highlighted word** = the palette's highlight colour (yellow or red) with a
+  white outline and black edge. Highlight the word that carries the hook: **1p** CHALLENGE, START **EARLY**,
+  **CHILD** BENEFIT, **MILLIONAIRE**, **£5** DAILY.
+- **Scene:** `COVER = dict(words=(...), highlight=0, hero=..., left=..., right=..., particles=..., fill=..., env=...)`
+  - `hero` — the big sharp subject: a Fluent emoji folder name, or `"£"` (the gold pound sign)
+  - `left` / `right` — supporting objects, blurred behind for depth · `particles` — small objects scattered
+    (usually `"Coin"`) · `fill` — fills a container hero (`hero="Jar", fill="Coin"`) · `env` — `"city"`
+    (night skyline, default) or `"plain"`
+  - Objects that fit common topics: savings → Jar + Coin, Calendar · investing → Chart increasing, £ ·
+    pensions → Old man / Old woman, Hourglass not done · home/mortgage/rent → House with garden, Key ·
+    cards/debt → Credit card, Warning, Chains · tax/payslip → Receipt, Classical building · cars → Automobile,
+    Key · family → Baby, Woman, Man · energy → Electric plug, Light bulb · wedding → Ring, Wedding · shopping →
+    Shopping cart, Shopping bags · coffee/habits → Hot beverage. Any of the ~1,600 names at
+    github.com/microsoft/fluentui-emoji/tree/main/assets works.
+  - **Never** objects showing "$" (Money bag, Money with wings, Dollar banknote, Heavy dollar sign): use
+    `"£"`, Pound banknote or Coin. No real people, logos or brands.
+
+### Daily palette (changes with every video)
+Background, glow and accents rotate by video number, so the two daily Shorts never share a colour:
+005 emerald → 006 royal → 007 ember → 008 plum → 009 ocean → 010 wine → 011 graphite → 012 magenta → 013
+emerald… (`spec.json` `"theme"` can override; `classic` is the old navy). The **roles** never change: accent
+= key results and the spoken caption word; in-between results; red-ish = costs; muted = labels; white =
+inputs. The logo coin stays green on every palette.
+
+### Fixed elements
 
 | Element | Spec |
 |---|---|
 | Canvas | 1080 × 1920, 30 fps, H.264 CRF 18, AAC 192k, loudness −14 LUFS |
-| Background | Navy → purple vertical gradient (`#0E1430` → `#2A2A6E`), 60 px grid at 4 %, slow purple glow |
+| Background | The day's palette: dark-to-rich vertical gradient, 60 px grid at 4 %, slow glow in the palette colour |
 | Logo | Green coin with an ink "£" (`logo_sprite`), top-left with the wordmark **POUND FOR POUND** and tagline *UK MONEY · EXPLAINED WITH DATA* |
 | Episode | `#NNN` pill top-right (from the folder name) |
-| Font | Nunito Black (headlines, numbers), Nunito ExtraBold (labels). Nothing else. |
-| Colours | Green `#9BE15D` = key result · Cyan `#4FC3F7` = in-between · White = inputs · Muted `#8A93B8` = labels · Red `#FF7070` = costs/losses · Gold `#FFCD56` = rare "record" highlight |
+| Font | Nunito Black (headlines, numbers), Nunito ExtraBold (labels); Anton for the cover words only. |
+| Colours | By role, from the day's palette (see above): accent = key result · in-between · white = inputs · muted = labels · red-ish = costs |
 | Beat chip | Pill at y = 305: THE EXAMPLE · THE MATHS · THE CATCH (red) · THE TWIST (green) · ONE THING PEOPLE MISS · LEVEL UP (green) · YOUR TURN (green) · SEND THIS TO (green) |
 | Captions | Karaoke, 60 px Nunito Black with shadow, spoken word green, centred at y = 1365, max 840 px wide |
 | Motion | Spring entrances, 0.35 s scene dissolves, numbers pulse when spoken, emoji idle bob |
@@ -99,16 +129,17 @@ use words or `L.arrow`), or if frame 0 is empty.
 
 ## 5. What may change between videos
 
-Inside the content zone each video should *look* fresh: pick different blocks (value cards, versus cards,
-bar chart, line chart, checklist, calculator, timeline) and different emoji. The frame, colours, font, beat
-chips, hook layout, end cards, captions, sounds and loop never change. A new block may be added to
+Each video has its own cover and the next palette in the rotation. Inside the content zone each video should *look* fresh: pick different blocks (value cards, versus cards,
+bar chart, line chart, checklist, calculator, timeline) and different emoji. The frame, logo, fonts, colour roles,
+beat chips, cover style, hook layout, end cards, captions, sounds and loop never change. A new block may be added to
 `brand.py` when a topic needs it — in the brand colours, and then it's available to every video.
 
 ## 6. Block reference (`from brand import *`)
 
 | Block | Use |
 |---|---|
-| `hook(L, t, lines, number, sub=, emoji=, number_at=, stamp=, extra=)` | Scene 1. `lines` ≤ 2 × 22 chars. `extra(L, t)` adds one late element (e.g. a red chip on sentence 2). |
+| `cover_hook(L, t, number, sub=, number_at=, kicker=, extra=)` | Scene 1 for videos with a `COVER` (all new ones). `kicker` = one short context line under the cover words. `extra(L, t)` adds one late element (e.g. a red chip on sentence 2). |
+| `hook(L, t, lines, number, sub=, emoji=, number_at=, stamp=, extra=)` | Older scene-1 layout without a cover. |
 | `beat(L, key, t, start, sub=, sub_at=)` | Beat chip. Keys: `example maths catch twist miss levelup turn share`, or free text. |
 | `chip(L, label, cx, cy, t, start, tone, size, emoji=, outline=)` | Any pill. Tones: green white red cyan gold. |
 | `checked(L, "GOV.UK · 20 OCT 2026", cx, cy, t, start)` | Trust stamp. |

@@ -10,6 +10,11 @@ from brand import *  # noqa: F401,F403
 
 BRAND = True  # renders with the locked brand frame, captions and loop
 
+# Cover = frame 0 and the loop target: 1-2 words (highlight the one that carries the hook) over a scene that
+# fits the subject. Objects are Fluent emoji folder names (BRAND.md §3). No "$" objects (Money bag etc.).
+COVER = dict(words=("TODO", "TODO"), highlight=0, hero="£", left="TODO e.g. Calendar", right="TODO e.g. Coin",
+             particles="Coin")  # optional: fill="Coin" (fills a hero container such as "Jar"), env="plain"
+
 # ---- figures: compute every number shown or said here, never by hand -----------------------------------
 # TODO e.g.
 # TOTAL = ...
@@ -22,10 +27,9 @@ def gbp2(v):
 
 # ---- scenes: one per beat. Sentence indices match spec.json -----------------------------------------------
 def s_hook(L, t):
-    # Fully visible on frame 0. lines: 1-2 headline lines (<= 22 chars), then the payoff number.
-    hook(L, t, ["TODO HEADLINE,", "TODO LINE 2"], "£TODO", sub="TODO short sub-line", emoji="money_bag",
-         number_at=tk(0, "£"),
-         extra=lambda L, t: chip(L, "TODO OPEN LOOP", W / 2, 1215, t, S(1), "red", 30, emoji="warning"))
+    # Frame 0 = the clean cover. After 0.45 s the scene dims, the cover words move up and the payoff lands.
+    cover_hook(L, t, "£TODO", sub="TODO short sub-line", number_at=tk(0, "£"), kicker="TODO SHORT CONTEXT LINE",
+               extra=lambda L, t: chip(L, "TODO OPEN LOOP", W / 2, 1180, t, S(1), "red", 30, emoji="warning"))
 
 
 def s_example(L, t):

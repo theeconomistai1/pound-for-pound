@@ -10,16 +10,63 @@ inside the content zone, in the brand colours. See BRAND.md for the rules.
 import math
 from functools import lru_cache
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 import motion as Mo
 from motion import (C, G, INK, M, SS, W, H, Wt, Layer, circle_sprite, clamp, ease, emoji_sprite, font, ramp,
                     rrect_sprite, scaled, spring, text_sprite, text_width, with_alpha)
 
-VERSION = "brand-v1"
+VERSION = "brand-v1.1"
 RED = (255, 112, 112)       # costs, losses, warnings
 GOLD = (255, 205, 86)       # rare highlight (records, "best")
+LOGO_GREEN = (155, 225, 93)  # the logo never changes colour
 TONES = {"green": G, "white": Wt, "red": RED, "cyan": C, "gold": GOLD}
+
+# ---- daily palettes ----------------------------------------------------------------------------------------
+# Every video gets a different background colour. The roles stay fixed: "green" = the key-result accent
+# (captions' spoken word, payoff numbers), "cyan" = in-between results, "red" = costs, "muted" = labels,
+# "highlight" = the highlighted cover word, "glow" = lighting. White text must read on every palette.
+PALETTES = {
+    "emerald":  dict(bgTop=(3, 32, 26), bgBottom=(8, 84, 64), glow=(36, 200, 140), green=(255, 212, 72),
+                     cyan=(125, 225, 255), red=(255, 128, 128), muted=(146, 186, 170), highlight=(255, 214, 0)),
+    "royal":    dict(bgTop=(6, 18, 66), bgBottom=(24, 60, 170), glow=(90, 150, 255), green=(155, 225, 93),
+                     cyan=(255, 206, 90), red=(255, 120, 120), muted=(164, 180, 224), highlight=(255, 56, 56)),
+    "ember":    dict(bgTop=(34, 10, 4), bgBottom=(130, 50, 12), glow=(255, 140, 60), green=(155, 225, 93),
+                     cyan=(130, 214, 255), red=(255, 150, 150), muted=(212, 176, 150), highlight=(255, 214, 0)),
+    "plum":     dict(bgTop=(28, 8, 44), bgBottom=(88, 24, 108), glow=(190, 80, 255), green=(155, 225, 93),
+                     cyan=(255, 186, 100), red=(255, 118, 140), muted=(184, 160, 200), highlight=(255, 214, 0)),
+    "ocean":    dict(bgTop=(2, 26, 40), bgBottom=(6, 84, 104), glow=(30, 200, 220), green=(155, 225, 93),
+                     cyan=(255, 196, 100), red=(255, 120, 120), muted=(140, 184, 198), highlight=(255, 56, 56)),
+    "wine":     dict(bgTop=(34, 4, 14), bgBottom=(116, 18, 44), glow=(255, 80, 110), green=(255, 212, 72),
+                     cyan=(130, 214, 255), red=(255, 170, 180), muted=(206, 164, 174), highlight=(255, 214, 0)),
+    "graphite": dict(bgTop=(12, 12, 14), bgBottom=(48, 44, 40), glow=(255, 190, 80), green=(255, 204, 80),
+                     cyan=(90, 200, 250), red=(255, 112, 112), muted=(172, 166, 156), highlight=(255, 56, 56)),
+    "magenta":  dict(bgTop=(36, 4, 32), bgBottom=(120, 14, 90), glow=(255, 80, 190), green=(155, 225, 93),
+                     cyan=(130, 226, 255), red=(255, 170, 120), muted=(208, 164, 198), highlight=(255, 214, 0)),
+    "classic":  dict(bgTop=(14, 20, 48), bgBottom=(42, 42, 110), glow=(90, 80, 200), green=(155, 225, 93),
+                     cyan=(79, 195, 247), red=(255, 112, 112), muted=(138, 147, 184), highlight=(255, 56, 56)),
+}
+ROTATION = ["emerald", "royal", "ember", "plum", "ocean", "wine", "graphite", "magenta"]  # 005 = emerald
+THEME_KEY = "classic"
+PAL = PALETTES["classic"]
+
+
+def theme_for(number):
+    """Palette for video number NNN: consecutive videos (and the two daily slots) always differ."""
+    return ROTATION[(int(number) - 5) % len(ROTATION)]
+
+
+def set_theme(key):
+    """Switch every colour role to palette `key`. Call before the video's scenes.py is executed."""
+    global THEME_KEY, PAL, G, C, M, RED, TONES, _first, _cov
+    pal = PALETTES[key]
+    THEME_KEY, PAL = key, pal
+    G, C, M, RED = pal["green"], pal["cyan"], pal["muted"], pal["red"]
+    TONES = {"green": G, "white": Wt, "red": RED, "cyan": C, "gold": GOLD}
+    Mo.THEME.update(bgTop=pal["bgTop"], bgBottom=pal["bgBottom"], glow=pal["glow"], green=G, cyan=C, muted=M)
+    Mo.G, Mo.C, Mo.M = G, C, M
+    Mo._bg = Mo._glow = None
+    _first = _cov = None
 
 # ---- layout grid (1080x1920) ------------------------------------------------------------------------
 # YouTube hides ~120px top, ~300px bottom and a ~96px button column on the right of the lower half.
@@ -53,7 +100,7 @@ def logo_sprite(d):
     D = d * SS
     big = Image.new("RGBA", (D, D), (0, 0, 0, 0))
     dr = ImageDraw.Draw(big)
-    dr.ellipse((0, 0, D - 1, D - 1), fill=G + (255,))
+    dr.ellipse((0, 0, D - 1, D - 1), fill=LOGO_GREEN + (255,))
     inset = int(D * 0.085)
     dr.ellipse((inset, inset, D - 1 - inset, D - 1 - inset), outline=INK + (70,), width=max(2, int(D * 0.03)))
     f = font(D * 0.6, "Black")
@@ -139,8 +186,9 @@ def panel(L, cx, cy, w, h, t, start, tone=None, r=26, static=False):
     return a
 
 
-def value_card(L, cx, cy, w, t, start, emoji, label, value, color=G, value_at=None, h=150, tone=None, sub=None):
+def value_card(L, cx, cy, w, t, start, emoji, label, value, color=None, value_at=None, h=150, tone=None, sub=None):
     """Card: emoji left, muted label + big value. The value pops in on value_at (the spoken word)."""
+    color = color or G
     a = panel(L, cx, cy, w, h, t, start, tone)
     if a <= 0:
         return
@@ -176,8 +224,9 @@ def glow_sprite(s, size, color):
     return g.filter(ImageFilter.GaussianBlur(size * 0.18))
 
 
-def big_number(L, s, cx, cy, t, at=None, size=190, color=G, maxw=920, alpha=1.0, glow=True):
-    """The brand's hero number: huge, green, glowing; pulses when it is spoken (at)."""
+def big_number(L, s, cx, cy, t, at=None, size=190, color=None, maxw=920, alpha=1.0, glow=True):
+    """The brand's hero number: huge, accent colour, glowing; pulses when it is spoken (at)."""
+    color = color or G
     tw = text_width(s, size)
     if tw > maxw:
         size = size * maxw / tw
@@ -203,7 +252,8 @@ def timed_line(L, tokens, cx, cy, size, t, gap=None):
         x += w + gap
 
 
-def underline(L, cx, cy, w, t, start, color=G, dur=0.35):
+def underline(L, cx, cy, w, t, start, color=None, dur=0.35):
+    color = color or G
     p = ease(ramp(t, start, dur))
     if p <= 0:
         return
@@ -235,6 +285,54 @@ def hook(L, t, lines, number, sub=None, emoji=None, number_at=None, stamp=None, 
         extra(L, t)
 
 
+COVER_HOLD = 0.45  # seconds the clean cover stays on screen before the hook builds on it
+DRAW_COVER_BG = True
+_cov = None
+
+
+def cover_layers():
+    """(sharp backdrop, darkened blurred backdrop, title sprite) for this video's COVER, built once."""
+    global _cov
+    if _cov is None:
+        import cover as Cv
+        c = Mo.SCENE.COVER
+        bg = Cv.backdrop(THEME_KEY, c["hero"], c.get("left"), c.get("right"), c.get("particles"),
+                         "|".join(c["words"]), c.get("fill"), c.get("env", "city")).convert("RGBA")
+        dark = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(9))).enhance(0.42)
+        ttl = Cv.title(tuple(c["words"]), c.get("highlight", 0), tuple(PAL["highlight"]))
+        _cov = (bg, dark, ttl)
+    return _cov
+
+
+def cover_hook(L, t, number, sub=None, number_at=None, kicker=None, extra=None):
+    """Signature opening for videos with a COVER (every brand video from 21 Oct 2026).
+    Frame 0 is the clean cover: the illustrated scene + the 1-2 cover words. After COVER_HOLD the scene
+    dims and blurs, the words shrink to the top and the payoff number lands. The loop returns here."""
+    import cover as Cv
+    bg, dark, ttl = cover_layers()
+    p = ease(ramp(t, COVER_HOLD, 0.45))
+    zoom = 1 + 0.045 * clamp(t / 9)
+    if DRAW_COVER_BG:  # qa.py turns this off to lint only the elements drawn on top of the scene
+        L.put(bg, W / 2, H / 2, 1.0, zoom)
+        if p > 0:
+            L.put(dark, W / 2, H / 2, p, zoom)
+    ty = Cv.TITLE_Y + (470 - Cv.TITLE_Y) * p
+    L.put(ttl, Cv.TITLE_X + (W / 2 - Cv.TITLE_X) * p, ty, 1.0, 1 - 0.44 * p)
+    if p <= 0:
+        return
+    if kicker:
+        L.text(kicker, W / 2, 690, 44, Wt, ramp(t, COVER_HOLD + 0.3, 0.3), shadow=True)
+    q = spring(t, COVER_HOLD + 0.35)
+    if q > 0:
+        big_number(L, number, W / 2, 860 + 30 * (1 - clamp(q)), t, number_at, alpha=clamp(q * 1.4))
+        if number_at is not None:
+            underline(L, W / 2, 972, min(700, text_width(number, 190) * 0.8), t, number_at + 0.1)
+        if sub:
+            L.text(sub, W / 2, 1030, 40, Wt, clamp(q * 1.4), weight="ExtraBold", shadow=True)
+    if extra:
+        extra(L, t)
+
+
 def your_turn(L, t, si, lines, answer_shape="= £?", hint=None, comment_word="Comment", label="COMMENT YOUR ANSWER"):
     """Signature comment card. Never show the answer. si: the sentence index of the question."""
     beat(L, "turn", t, Mo.S(si))
@@ -261,7 +359,7 @@ def share_close(L, t, si, lines, follow="FOLLOW FOR DAILY MONEY MATHS"):
     beat(L, "share", t, st - 0.1)
     p = spring(t, st)
     if p > 0:
-        ring = circle_sprite(250, (155, 225, 93, 36), G + (255,), 5)
+        ring = circle_sprite(250, G + (36,), G + (255,), 5)
         L.put(ring, W / 2, 520, clamp(p * 1.4), 0.6 + 0.4 * p)
         L.emoji("envelope", W / 2, 515, 150, t, st + 0.05, bounce=True)
     y = 730
@@ -446,18 +544,21 @@ def _content(t):
 def frame(t, captions_on=True):
     global _first
     total = Mo.T["total"]
-    img = Mo.background(t)
-    base = Layer()
-    brand_bar(base, t, total)
-    img.alpha_composite(base.im)
-    content = _content(t)
+    has_cover = getattr(Mo.SCENE, "COVER", None) is not None
     lp = ramp(t, total - LOOP, LOOP)
+    img = Mo.background(t)
+    content = _content(t)
     if lp > 0:  # seamless loop: dissolve into the hook frame exactly as it is on frame 0
         if _first is None:
             _first = _content(0.0)
         content = Image.alpha_composite(with_alpha(content, 1 - lp), with_alpha(_first, lp))
     img.alpha_composite(content)
-    if captions_on:
+    bar_a = (ramp(t, COVER_HOLD, 0.4) if has_cover else 1.0) * (1 - lp if has_cover else 1.0)
+    if bar_a > 0:  # the cover itself stays clean: no logo bar, no captions on frame 0
+        base = Layer()
+        brand_bar(base, t, total)
+        img.alpha_composite(with_alpha(base.im, bar_a))
+    if captions_on and not (has_cover and t < COVER_HOLD):
         cap = Layer()
         captions(cap, t, Mo.GROUPS)
         img.alpha_composite(cap.im)

@@ -247,7 +247,8 @@ def background(t):
         dist = np.sqrt((xx - r) ** 2 + (yy - r) ** 2) / r
         a = np.clip(1 - dist / 0.6, 0, 1) ** 1.6 * 0.35 * 255
         glow = np.zeros((2 * r, 2 * r, 4), np.uint8)
-        glow[..., 0], glow[..., 1], glow[..., 2], glow[..., 3] = 90, 80, 200, a.astype(np.uint8)
+        gc = THEME.get("glow", (90, 80, 200))
+        glow[..., 0], glow[..., 1], glow[..., 2], glow[..., 3] = gc[0], gc[1], gc[2], a.astype(np.uint8)
         _glow = Image.fromarray(glow, "RGBA")
     im = _bg.copy()
     cx = int(W * 0.70 + 40 * math.sin(t * 0.25))

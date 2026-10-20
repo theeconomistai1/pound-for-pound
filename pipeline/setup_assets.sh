@@ -16,6 +16,22 @@ if [ ! -f "nunito/fonts/variable/Nunito[wght].ttf" ]; then
   git clone -q --depth 1 --filter=blob:none --sparse https://github.com/googlefonts/nunito.git nunito
   (cd nunito && git sparse-checkout set fonts/variable)
 fi
+# Cover art: Microsoft Fluent Emoji vectors (MIT; fetched per object on demand), the resvg renderer,
+# and the Anton display font for cover words (SIL OFL).
+if [ ! -d fluent/.git ]; then
+  rm -rf fluent
+  git clone -q --depth 1 --filter=blob:none --sparse https://github.com/microsoft/fluentui-emoji.git fluent
+  git -C fluent sparse-checkout set --no-cone '/LICENSE'
+fi
+if [ ! -x resvg/resvg ]; then
+  mkdir -p resvg
+  curl -sSL --retry 3 https://github.com/linebender/resvg/releases/download/v0.45.1/resvg-linux-x86_64.tar.gz | tar -xz -C resvg
+fi
+if [ ! -f gfonts/ofl/anton/Anton-Regular.ttf ]; then
+  rm -rf gfonts
+  git clone -q --depth 1 --filter=blob:none --sparse https://github.com/google/fonts.git gfonts
+  (cd gfonts && git sparse-checkout set ofl/anton)
+fi
 # Inter font (older videos): use the system copy if present, otherwise download it.
 if [ ! -f /usr/share/fonts/opentype/inter/Inter-Black.otf ] && [ ! -f fonts/Inter-Black.otf ]; then
   mkdir -p fonts

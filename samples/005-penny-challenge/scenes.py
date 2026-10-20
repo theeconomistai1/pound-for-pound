@@ -12,6 +12,10 @@ from PIL import Image, ImageDraw
 
 BRAND = True
 
+# Cover = frame 0: one or two words (one highlighted) over a scene that fits the subject (BRAND.md §3)
+COVER = dict(words=("1p", "CHALLENGE"), highlight=0, hero="Jar", fill="Coin", left="Calendar",
+             right="Pound banknote", particles="Coin")
+
 # ---- figures (every number on screen comes from here) -------------------------------------------------
 DAYS = 365
 MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -36,10 +40,9 @@ def p2(v):
 
 # ---- scenes -----------------------------------------------------------------------------------------------
 def s_hook(L, t):
-    hook(L, t, ["1p TODAY,", "2p TOMORROW…"], p2(TOTAL), sub="by New Year's Eve", emoji="coin",
-         number_at=tk(0, "£667"),
-         extra=lambda L, t: chip(L, "MOST QUIT IN DECEMBER", W / 2, 1215, t, tk(1, "December") - 0.1, "red", 30,
-                                 emoji="face_screaming_in_fear"))
+    cover_hook(L, t, p2(TOTAL), sub="by New Year's Eve", number_at=tk(0, "£667"), kicker="1p TODAY, 2p TOMORROW…",
+               extra=lambda L, t: chip(L, "MOST QUIT IN DECEMBER", W / 2, 1180, t, tk(1, "December") - 0.1, "red",
+                                       30, emoji="face_screaming_in_fear"))
 
 
 def s_example(L, t):

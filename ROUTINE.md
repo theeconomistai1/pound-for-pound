@@ -42,7 +42,10 @@ Read `BRAND.md` first — it is the brand book and it is not optional. Then:
   Write numbers as `{shown|spoken}` with the spoken part in words. British spelling. Voice it straight away
   (`pipeline/tts2.py`, see `template/short/README.md`) so scenes use real word timings.
 - **scenes.py** — `from motion import *`, `from brand import *`, `BRAND = True`. Compute every number at the top
-  (and `assert` each spoken figure against its rounded text). One scene per beat, built from the brand blocks:
+  (and `assert` each spoken figure against its rounded text). Set the **`COVER`** (BRAND.md §3): one or two
+  words with the hook word highlighted, and a `hero` / `left` / `right` / `particles` scene that clearly fits
+  the subject — no "$" objects. Scene 1 is `cover_hook(...)`. The background palette rotates automatically.
+  One scene per beat, built from the brand blocks:
   `hook`, `beat`, `value_card`, `versus`, `timed_line`, `big_number`, `bar_chart`, `line_chart`, `checked`,
   `caveat`, `your_turn`, `share_close` (reference in BRAND.md §6). Every element appears on the word that names
   it (`tk(sentence, "word")`). Show a `checked("GOV.UK · <date>")` stamp when an official figure appears. Keep
@@ -62,7 +65,8 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
 - If tts prints `MISSING`, reword the spoken text or add the word to `EXTRA` in `pipeline/tts.py`.
 - `qa.py` checks the script shape, length, that the voice starts at 0 s, frame 0 shows the hook, every safe
   zone on every quarter-second, missing glyphs and meta.json. Fix every FAIL; act on WARNs where sensible.
-- Read `build/contact.png` (frame 0, the end of every scene, the loop frame): no overlapping or clipped text,
+- Read `build/contact.png` (frame 0 = the cover, the end of every scene, the loop frame). The cover must read
+  at a glance on a phone grid and the scene must obviously match the topic; no overlapping or clipped text,
   nothing on top of chart lines, numbers match meta.json, caveat readable. For a closer look:
   `python3 -I pipeline/make_v3.py videos/NNN-slug stills 3,10,20`. Re-render after fixes.
 - Do not publish a video with a wrong number or broken frame. Report it instead.
@@ -90,7 +94,9 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
    `instagramData {"type":"REEL", "showReelOnFeed":true, "isAiGenerated":true}`,
    `facebookData {"type":"REEL", "title": <title without #shorts>}`.
    If the call is rejected because of `firstCommentText` or one network, retry once without that part and say
-   so in the report. Check the response: `media` must now point at `static.metricool.com` (Metricool keeps its
+   so in the report. **Cover upload: OFF.** (Frame 0 is the cover, which YouTube can use.) When the owner
+   confirms the channel can set Shorts thumbnails, switch this to ON: host `build/cover.jpg` on the upload
+   branch next to the video and pass its URL as `videoThumbnailUrl`. Check the response: `media` must now point at `static.metricool.com` (Metricool keeps its
    own copy).
 3. Empty the upload branch straight away so the file is no longer in the repository:
    ```bash
@@ -100,7 +106,8 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
    ```
 
 ## 7. Record
-- Mark the topic `done (NNN)` in `topics.md`; commit the video folder (build/ is ignored) and push to `main`
+- Copy `build/cover.jpg` to `covers/NNN.jpg` (the cover gallery).
+- Mark the topic `done (NNN)` in `topics.md`; commit the video folder and the cover (build/ is ignored) and push to `main`
   (`git fetch origin main && git rebase origin/main` first — the other slot's run may have pushed).
 - Studio page https://claude.ai/artifact/2SbNVqQh6hMzCyCmHzNkaj — with `ArtifactData`, set `videos/short-NNN`:
   `{title, type:"Short", status:"scheduled", publishAt (ISO with offset), durationSec, description, tags, plannerUrl}`.
