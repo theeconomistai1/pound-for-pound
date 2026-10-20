@@ -13,7 +13,7 @@ Bank of England, MoneyHelper, NS&I, FCA) on the day the video is made.
 - done (002, sample in new style) — Starting at 25 vs 35: Amy vs Ben, plus the Rule of 72
 - done (002, covered in Amy vs Ben) — Rule of 72: how long money takes to double at 4%, 7% and 10%
 - done (003) — Child Benefit invested from birth: ~£46K at 18 (10:00, 20 Oct)
-- todo — Millionaire maths: how much a month to reach £1 million by 60, starting at 20, 30 or 40
+- done (004) — Millionaire maths: how much a month to reach £1 million by 60, starting at 20, 30 or 40 (16:00, 20 Oct)
 - todo — The 1p savings challenge: 1p on day 1, 2p on day 2… = £667.95 in a year, and what if you invested it
 - todo — Rich vs poor: a £30,000 car vs £30,000 invested, ten years later
 - todo — The 50/30/20 budget on the UK median salary (ONS median, take-home after tax and NI)

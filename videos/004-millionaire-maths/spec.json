@@ -1,0 +1,25 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.1,
+ "gap": 0.1,
+ "sentences": [
+  "How much do you need to invest each month to be a millionaire by sixty?",
+  "Start at twenty, and it's about {£405|four hundred and five pounds} a month.",
+  "Let's meet three savers, all aiming for {£1 million|one million pounds} by {60.|sixty.}",
+  "Each invests in a Stocks {&|and} Shares ISA, growing at {7%|seven per cent} a year.",
+  "Lucy starts at {20,|twenty,} with {£405|four hundred and five pounds} a month.",
+  "Tom waits until {30.|thirty.} He needs {£855|eight hundred and fifty five pounds} a month.",
+  "Maya starts at {40,|forty,} and needs {£1,970|one thousand nine hundred and seventy pounds} a month.",
+  "Every ten years of waiting more than doubles the monthly cost.",
+  "Now look at what they actually pay in.",
+  "Lucy pays in about {£194,000.|one hundred and ninety four thousand pounds.} Growth does the other {81%.|eighty one per cent.}",
+  "Maya pays in {£473,000,|four hundred and seventy three thousand pounds,} and growth does only about half.",
+  "But here's the twist. A million pounds in forty years won't buy what it does today.",
+  "With {2%|two per cent} inflation, the Bank of England's target, it's worth about {£453,000|four hundred and fifty three thousand pounds} in today's money.",
+  "One thing people miss.",
+  "The ISA limit is {£20,000|twenty thousand pounds} a year, about {£1,667|one thousand six hundred and sixty seven pounds} a month, so Maya would need a pension too.",
+  "Your turn. Starting at twenty five, how much a month would you need? Comment your guess.",
+  "This is an illustration. Investments can fall, and you may get back less.",
+  "Starting today? Hit like, and follow for more money maths."
+ ]
+}
