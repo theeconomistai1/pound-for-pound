@@ -1,0 +1,15 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "Go {£1|one pound} over the higher rate line, and you still keep {58p|fifty eight pence} of it.",
+  "People say a pay rise can push you into a higher band and leave you worse off.",
+  "But only the money above {£50,270|fifty thousand, two hundred and seventy pounds} is taxed at {40%.|forty per cent.}",
+  "Add {2%|two per cent} National Insurance, and you keep {58p|fifty eight pence} of every extra pound.",
+  "The real trap starts at {£100,000,|a hundred thousand pounds,} where your tax free allowance starts to disappear.",
+  "And if you claim Child Benefit, it's clawed back from {£60,000.|sixty thousand pounds.}",
+  "So next time someone turns down a pay rise because of tax, remember:"
+ ]
+}

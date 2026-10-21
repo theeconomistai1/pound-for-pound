@@ -16,7 +16,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
 
 ## Queue
-- todo · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
+- done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
 - todo · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
 - todo · since · tax — The Personal Allowance since 2010 vs what it would be if it had kept up with inflation (gov.uk rates history, ONS CPI)
 - todo · calc · pensions — Relief at source: how £80 becomes £100 in a pension, and the extra a higher-rate taxpayer can claim back
