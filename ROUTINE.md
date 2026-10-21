@@ -1,12 +1,13 @@
-# Scheduled run: prepare one Short for one slot, for the owner's review
+# Scheduled run: make and publish one Short for one slot
 
 The channel: **Pound for Pound** — UK money, explained with data. Two Shorts a day, at **10:00** and **16:00**
-Europe/London. Each scheduled run prepares ONE video for the slot named in its prompt and **books it for the
-owner's review: nothing is published without her approval.** Read `BRAND.md` first (brand-v2) — including
-*why*: YouTube won't monetise generic, repetitive or template-based channels, so every video must be UK-specific,
-our own maths and data, a different format from the last one, and checked by the owner.
+Europe/London. Each scheduled run makes ONE video for the slot named in its prompt and **schedules it to publish
+automatically** at that slot (the owner chose no approval step, 21 Oct 2026). Read `BRAND.md` first (brand-v2) —
+including *why*: YouTube won't monetise generic, repetitive or template-based channels, so every video must be
+UK-specific, our own maths and data, and a different format from the last one. With no human check before
+publishing, the fact sheet and `qa.py` are the safety net: never publish a number you couldn't verify.
 
-Don't ask the owner questions mid-run; finish, then put anything she needs to decide in the review sheet.
+Don't ask the owner questions mid-run. Finish, publish, and send the summary sheet (§7).
 
 ## 0. Set up
 ```bash
@@ -16,7 +17,7 @@ cd /home/claude/pound-for-pound && pipeline/setup_assets.sh
 
 ## 1. Is the slot already booked?
 Metricool `getScheduledPosts` (brandId 7523442, timezone Europe/London, extendedRange true) for today. If a
-YouTube post (scheduled, or awaiting review) is already booked within 30 minutes of this run's slot, stop and
+YouTube post is already booked within 30 minutes of this run's slot, stop and
 report "slot already booked" with its title.
 
 ## 2. Pick the topic
@@ -55,7 +56,7 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
   "📩 Send this to …" line, assumptions, "General education, not financial advice.", "Music and sound effects:
   original, made for this channel.", 4–5 hashtags), `comment_question`, `first_comment`, tags (6–10),
   `facts` (every number in the script: figure exactly as written, how, source, checked date), assumptions,
-  sources, `review` (`status: "awaiting review"`). If `pillars.json` has a URL for the pillar, add
+  sources, `review` (`status: "scheduled"`). If `pillars.json` has a URL for the pillar, add
   "Full video: <url>" to the description and first comment.
 
 ## 5. Build and check
@@ -70,7 +71,7 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
   numbers match `facts`; the last frame matches frame 0. Fix and rebuild.
 - Never book a video with a wrong number or a broken frame. Report it instead.
 
-## 6. Book it for review (never auto-publish without approval)
+## 6. Publish (scheduled, automatic)
 1. Host the file for a few minutes on the `upload` branch (releases and branch deletion are blocked for cloud
    sessions, so this branch is reused and emptied each time):
    ```bash
@@ -89,12 +90,9 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
    "privacyOption":"PUBLIC_TO_EVERYONE", "isAigc":true}`, `instagramData {"type":"REEL", "showReelOnFeed":true,
    "isAiGenerated":true}`, `facebookData {"type":"REEL", "title": <title without #shorts>}`.
    (Set the AI flags to false only for a video voiced by the owner with no synthetic voice.)
-3. **Review path A (preferred):** `createScheduledPostForReview` with that `info` (`autoPublish true` — the
-   approval gates it), `reviewers "theeconomistai1@gmail.com"`, `approvalSystem "any"`, `notify true`.
-   **Review path B** (if A returns a plan/permission error): `createScheduledPost` with the same `info` but
-   **`autoPublish false`** — Metricool then asks the owner in its app to publish by hand at the slot, and that
-   tap is her approval. Never use `autoPublish true` outside path A. Check the response: `media` must point at
-   `static.metricool.com`. Keep the `plannerUrl`.
+3. `createScheduledPost` with that `info` and **`autoPublish true`**. If the call is rejected because of
+   `firstCommentText` or one network, retry once without that part and say so in the summary. Check the
+   response: `media` must point at `static.metricool.com`. Keep the `plannerUrl`.
 4. Empty the upload branch straight away:
    ```bash
    cd "$U" && git checkout -q --orphan empty && git rm -q --cached video-NNN.mp4 && rm -f video-NNN.mp4
@@ -106,31 +104,29 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
 
 ## 7. Record and report
 - Add `"durationSec"` (from `build/timings.json` total) to meta.json. Copy `build/cover.jpg` to `covers/NNN.jpg`.
-  Mark the topic `review (NNN)` in `topics.md`. Commit the video
+  Mark the topic `done (NNN)` in `topics.md`. Commit the video
   folder and the cover (build/ is ignored); `git fetch origin main && git rebase origin/main`; push to `main`.
 - Studio page https://claude.ai/artifact/2SbNVqQh6hMzCyCmHzNkaj — with `ArtifactData`, set `videos/short-NNN`:
-  `{title, type:"Short", format, status:"awaiting review", reviewPath:"A"|"B", publishAt (ISO with offset),
+  `{title, type:"Short", format, status:"scheduled", publishAt (ISO with offset),
   durationSec, description, tags, plannerUrl}`. Also check posts from the last 2 days with `getScheduledPosts`
-  (extendedRange true): published ones → `status:"published"`, `youtubeUrl` (the post's `publicUrl`), and
-  mark their topic `done (NNN)`. If the Artifact tools are unavailable, skip the studio page.
-- **The final message is the review sheet** (it reaches the owner's phone). Keep it in this order:
-  1. `REVIEW: <title> — <slot>, <format>, <seconds> s` and the review path (A: approve in Metricool; B: Metricool
-     will ask you to publish at the slot).
+  (extendedRange true): published ones → `status:"published"`, `youtubeUrl` (the post's `publicUrl`). If the Artifact tools are unavailable, skip the studio page.
+- **The final message is the summary sheet** (it reaches the owner's phone). Keep it in this order:
+  1. `SCHEDULED: <title> — publishes <slot>, <format>, <seconds> s`.
   2. The script, numbered.
   3. Every number: figure — how — source link.
   4. The cover words and the comment question.
   5. The Metricool `plannerUrl`. If the pillar has a full video in `pillars.json`: "Set it as this Short's
      Related video in YouTube Studio once it's live."
-  6. "Reply in this chat with: **approve**, **change** <line> to <text>, **my take:** <your line>, or **reject**."
+  6. "It publishes automatically. To change it before then, reply here with **change** <line> to <text>,
+     **my take:** <your line>, or **cancel**."
 
-## 8. When the owner replies (in the run's chat, or a new one)
-- **approve** → path A: ask her to tap Approve in Metricool (the API can't approve for her); path B: she taps
-  Publish when Metricool asks. Set `review.status "approved"` in meta.json and the studio row.
-- **change …** / **my take: …** → edit spec.json (a take becomes one sentence before the loop line, shown with
-  `take_card`), re-voice, rebuild, `qa.py` PASS, re-host the file, `updateScheduledPost` with the new media
-  (same uuid, full original content otherwise), empty the upload branch, push, and send the new review sheet.
-- **reject** → don't publish: `updateScheduledPost` → `draft true` (or leave a path-B post unpublished), mark the
-  topic `rejected (NNN): <her reason>`, set the studio row to `status:"rejected"`.
+## 8. If the owner replies (in the run's chat, or a new one)
+- **change …** / **my take: …** before the slot → edit spec.json (a take becomes one sentence before the loop
+  line, shown with `take_card`), re-voice, rebuild, `qa.py` PASS, re-host the file, `updateScheduledPost` with the
+  new media (same uuid, full original content otherwise), empty the upload branch, push, send a new summary.
+  After it has published, the video can't be swapped: say so and offer to make a corrected follow-up.
+- **cancel** before the slot → `updateScheduledPost` → `draft true`, mark the topic `cancelled (NNN): <reason>`,
+  set the studio row to `status:"cancelled"`. After publishing: she can delete or hide it in YouTube Studio.
 
 ## 9. The owner's own voice (optional)
 If `videos/NNN-slug/voice/` holds her recordings (`01.m4a`, `02.m4a`, … one per sentence, in order), the build

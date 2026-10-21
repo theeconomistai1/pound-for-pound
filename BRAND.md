@@ -7,13 +7,13 @@ the palette changes with every video. Templates: `template/calc`, `template/myth
 must print `RESULT: PASS`.
 
 **Promise:** UK money, explained with data. Every number is computed in code, every rule, rate or allowance is
-checked against an official source on the day, and the owner reviews every video before it goes out.
+checked against an official source on the day.
 
 **Why it's built this way (monetisation).** YouTube's Partner Program policy (updated July 2026) won't
 monetise channels with too much *generic, repetitive or template-based* content, *distressing* content, or
 *AI personas* (AI-made likenesses of real people) on sensitive topics such as finance. YouTube judges how
 content is made and whether it adds value, not AI use itself. So: UK-specific topics with our own maths and
-data, rotating formats, the owner's review and own take, no presenter or persona, honest disclosure.
+data, rotating formats, the owner's own take when she adds one, no presenter or persona, honest disclosure.
 
 ---
 
@@ -148,11 +148,12 @@ be added to `brand.py` in the brand colours.
 | `scene_events(extra)` | Standard whooshes + brand sting; add pops/coins/booms on words. |
 | `hook`, `your_turn`, `share_close` | Older (brand-v1, 45–60 s) layouts — not used for new videos. |
 
-## 7. Human in the loop
+## 7. The owner's input
 
-- **Every video is booked for the owner's review** — nothing is published without her approval (ROUTINE.md §6).
-- **Review sheet** (the run's final message): title, slot, the full script, every number with how it was worked
-  out and its source (`meta.json` → `facts`), the Metricool link, and how to reply.
+- **Videos publish automatically** at their slot (no approval step — the owner's choice). The fact sheet and
+  `qa.py` are the safety net.
+- **Summary sheet** (the run's final message): title, slot, the full script, every number with how it was worked
+  out and its source (`meta.json` → `facts`), the Metricool link. She can change or cancel it before the slot.
 - **Her own take:** she can reply with a line; it goes in as a sentence before the loop line + `take_card`.
 - **Her own voice** (optional): per-sentence recordings replace the synthetic voice (ROUTINE.md §9).
 - **Disclosure:** YouTube "altered or synthetic content" on (`isAiGeneratedContent: true`), TikTok `isAigc`,

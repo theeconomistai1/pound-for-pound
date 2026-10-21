@@ -15,17 +15,16 @@ every figure verified against an official source today, qa.py must PASS.
 Topic: [your topic — or "the next one in topics.md"]
 Format: [calc | myth | since | news — or "your choice"]
 My take (optional): [one line in your own words]
-Book it: [for my review at HH:MM today | don't book, just send me the video]
+Publish: [today at HH:MM Europe/London | don't publish, just send me the video]
 
-Send me the review sheet and the video when it's ready.
+Send me the summary sheet and the video when it's ready.
 ```
 
-## 2. Reply to a review sheet (in the run's chat)
+## 2. Change a scheduled Short before it publishes (reply in the run's chat)
 
-- `approve`
 - `change line 3 to: …`
 - `my take: …` (added before the loop line, shown on a MY TAKE card)
-- `reject: <reason>`
+- `cancel: <reason>`
 
 ## 3. Use your own voice
 
@@ -34,7 +33,7 @@ and attach them in the run's chat with "use my voice". Claude puts them in `vide
 
 ## 4. The scheduled tasks
 
-- Morning (07:45 for 10:00) and afternoon (12:47 for 16:00): prepare one Short each, booked for your review.
+- Morning (07:45 for 10:00) and afternoon (12:47 for 16:00): make one Short each and schedule it to publish.
 - Monday morning: the weekly performance check (`WEEKLY.md`).
 Edit `ROUTINE.md`, `BRAND.md`, `topics.md`, `formats.json` or `pillars.json` to change what they do.
 

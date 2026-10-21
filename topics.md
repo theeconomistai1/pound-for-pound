@@ -1,9 +1,8 @@
 # Topic queue (brand-v2)
 
-Two Shorts a day (10:00 and 16:00 Europe/London), each booked for the owner's review. Line format:
+Two Shorts a day (10:00 and 16:00 Europe/London), published automatically. Line format:
 `- todo · <format> · <pillar> — <topic>` (+ `· sample: <path>`, `· from: YYYY-MM-DD` for news).
-Statuses: `todo` → `review (NNN)` → `done (NNN)`, or `blocked: <reason>`, `rejected (NNN): <reason>`,
-`skipped: <reason>`. See ROUTINE.md §2: news first; otherwise the first `todo` whose format differs from the last
+Statuses: `todo` → `done (NNN)`, or `blocked: <reason>`, `cancelled (NNN): <reason>`, `skipped: <reason>`. See ROUTINE.md §2: news first; otherwise the first `todo` whose format differs from the last
 video's and is switched on in `formats.json`.
 
 Rules: UK-specific angle, our own maths and official data, never a remake of another creator's video. Every
