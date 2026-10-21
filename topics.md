@@ -17,7 +17,7 @@ rule, rate or figure is checked against an official source on the day the video 
 
 ## Queue
 - done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
-- todo · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
+- done (006) · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
 - todo · since · tax — The Personal Allowance since 2010 vs what it would be if it had kept up with inflation (gov.uk rates history, ONS CPI)
 - todo · calc · pensions — Relief at source: how £80 becomes £100 in a pension, and the extra a higher-rate taxpayer can claim back
 - todo · myth · saving — "Premium Bonds are a good investment": the prize fund rate vs easy-access savings, and the odds per £1 (NS&I)

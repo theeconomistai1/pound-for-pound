@@ -1,0 +1,16 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "You keep just {38p|thirty eight pence} of each pound you earn just over {£100,000.|a hundred thousand.}",
+  "Your tax free allowance shrinks by {£1|a pound} for every {£2|two pounds} over that.",
+  "So each extra pound costs {40p|forty pence} tax, plus {20p|twenty pence} on the lost allowance.",
+  "Add {2p|two pence} National Insurance, and {62p|sixty two pence} is gone.",
+  "Pay {£10,000|ten thousand pounds} into a pension on {£110,000,|a hundred and ten thousand,} and the allowance comes back.",
+  "After tax relief, that {£10,000|ten thousand} costs you just {£4,000.|four thousand pounds.}",
+  "The catch: with relief at source, you claim the higher rate part on a tax return.",
+  "So when a pay rise takes you past {£100,000,|a hundred thousand,} remember:"
+ ]
+}

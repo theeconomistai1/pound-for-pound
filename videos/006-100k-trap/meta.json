@@ -1,0 +1,148 @@
+{
+  "id": "006",
+  "slot": "2026-10-21 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "tax",
+  "title": "Earn Just Over £100k? You Keep 38p of Each Extra £1 🪤💷 #shorts",
+  "description": "Earn just over £100,000 and you keep only 38p of each extra pound.\n\nBetween £100,000 and £125,140 your tax-free Personal Allowance (£12,570) shrinks by £1 for every £2 you earn over £100,000. So each extra £1 costs 40p in higher-rate tax, plus 20p on the allowance you lose (50p of allowance taxed at 40%), plus 2p National Insurance: 62p gone, 38p kept.\n\nThe fix people miss: on a £110,000 salary, £10,000 paid into a pension brings your adjusted net income back to £100,000, and the whole allowance comes back. With relief at source you pay in £8,000, the provider adds £2,000, and you claim £4,000 back on your tax return, so £10,000 in your pension costs you £4,000. The catch: the higher-rate part isn't automatic, you claim it through Self Assessment.\n\nSources: gov.uk/income-tax-rates · gov.uk/income-tax-rates/income-over-100000 · gov.uk/guidance/adjusted-net-income · gov.uk/tax-on-your-private-pension/pension-tax-relief · gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027\n\nOn a £120,000 salary, how much would you need to pay into a pension to get the whole allowance back? Comment 👇\n📩 Send this to the friend who just got a promotion past £100k.\n\nIllustration only. 2026/27 rates for England, Wales and Northern Ireland (Scotland's income tax bands differ). Employee, category A National Insurance. Ignores student loans and other income. Pension contributions count towards your annual allowance. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#incometax #pension #100ktrap #personalfinanceuk #ukmoney",
+  "comment_question": "On a £120,000 salary, how much would you need to pay into a pension to get the whole allowance back?",
+  "first_comment": "On a £120,000 salary, how much would you need to pay into a pension to get the whole allowance back? 👇 📩 Send this to the friend who just got a promotion past £100k. Every number is checked against official sources.",
+  "tags": [
+    "100k tax trap",
+    "60% tax trap",
+    "personal allowance taper",
+    "pension tax relief",
+    "relief at source",
+    "adjusted net income",
+    "income tax 2026/27",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "38p",
+      "how": "£1 − 40p − 20p − 2p, from a £2 step at £110,000 run through the 2026/27 tax and NI rules",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£100,000",
+      "how": "Personal Allowance goes down £1 for every £2 of adjusted net income above this",
+      "source": "https://www.gov.uk/income-tax-rates/income-over-100000",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£1",
+      "how": "allowance lost per £2 over £100,000",
+      "source": "https://www.gov.uk/income-tax-rates/income-over-100000",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£2",
+      "how": "income over £100,000 per £1 of allowance lost",
+      "source": "https://www.gov.uk/income-tax-rates/income-over-100000",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£12,570",
+      "how": "standard Personal Allowance 2026/27 (shown on screen)",
+      "source": "https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£125,140",
+      "how": "allowance is zero at this income: £100,000 + 2 × £12,570 (description)",
+      "source": "https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "40p",
+      "how": "higher rate 40% on £1",
+      "source": "https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "20p",
+      "how": "50p of lost allowance taxed at 40%",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "2p",
+      "how": "employee Class 1 NI 2% above the Upper Earnings Limit (£50,270), category A",
+      "source": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "62p",
+      "how": "40p + 20p + 2p",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£10,000",
+      "how": "example gross pension contribution (illustration)",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£110,000",
+      "how": "example salary; minus £10,000 gross contribution = adjusted net income £100,000",
+      "source": "https://www.gov.uk/guidance/adjusted-net-income",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£7,570",
+      "how": "allowance at £110,000: £12,570 − £10,000/2 (shown on screen)",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£8,000",
+      "how": "what you pay into a relief-at-source scheme for £10,000 gross (shown on screen)",
+      "source": "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£2,000",
+      "how": "20% basic-rate relief added by the provider (shown on screen)",
+      "source": "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "£4,000",
+      "how": "extra relief claimed on the tax return: income tax at £110,000 with no contribution minus with £10,000 gross (band extended + allowance restored); £8,000 − £4,000 = £4,000 net cost",
+      "source": "arithmetic in scenes.py; https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+      "checked": "2026-10-21"
+    },
+    {
+      "figure": "20%",
+      "how": "basic-rate relief added at source (shown on screen)",
+      "source": "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+      "checked": "2026-10-21"
+    }
+  ],
+  "assumptions": [
+    "Employee, category A NI, England/Wales/NI income tax, 2026/27",
+    "£110,000 salary is the only income; no student loan or other deductions",
+    "Pension paid by relief at source (net £8,000 grossed up to £10,000); higher-rate relief and the restored allowance are claimed via Self Assessment",
+    "Income tax at £110,000: £33,432 with no contribution, £29,432 with £10,000 gross (computed in scenes.py)",
+    "Ignores NI savings available through salary sacrifice and the pension annual allowance",
+    "Comment-question answer (not shown): £20,000 gross"
+  ],
+  "sources": [
+    "https://www.gov.uk/income-tax-rates",
+    "https://www.gov.uk/income-tax-rates/income-over-100000",
+    "https://www.gov.uk/guidance/adjusted-net-income",
+    "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+    "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "Figures re-verified on gov.uk 21 Oct 2026",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=519827415094609804"
+  },
+  "durationSec": 37.64
+}
