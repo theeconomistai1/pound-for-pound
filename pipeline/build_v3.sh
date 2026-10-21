@@ -9,7 +9,9 @@ export MOTION_FONT="${MOTION_FONT:-$A/nunito/fonts/variable/Nunito[wght].ttf}"
 B="$V/build"
 mkdir -p "$B"
 # KEEP_VOICE=1 reuses build/voice_raw.wav + timings.json when only scenes.py changed (spec.json unchanged).
-if [ "${KEEP_VOICE:-0}" = 1 ] && [ -s "$B/voice_raw.wav" ] && [ -s "$B/timings.json" ]; then
+if [ -d "$V/voice" ] && ls "$V/voice" | grep -qvE '\.md$'; then
+  python3 -I "$P/owner_voice.py" "$V"        # the owner's own recordings (ROUTINE.md §9)
+elif [ "${KEEP_VOICE:-0}" = 1 ] && [ -s "$B/voice_raw.wav" ] && [ -s "$B/timings.json" ]; then
   echo "reusing voice"
 else
   python3 -I "$P/tts2.py" "$A" "$V/spec.json" "$B/voice_raw.wav" "$B/timings.json"

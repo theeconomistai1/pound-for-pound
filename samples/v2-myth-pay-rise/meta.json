@@ -1,0 +1,27 @@
+{
+  "id": "sample",
+  "slot": "sample — the worked example of brand-v2 (myth format); not published",
+  "format": "myth",
+  "pillar": "tax",
+  "title": "Can a Pay Rise Leave You Worse Off? The 58p Truth 💷 #shorts",
+  "description": "Go £1 over the higher-rate line and you still keep 58p of it.\n\nOnly income above £50,270 is taxed at 40%. Add 2% National Insurance above the Upper Earnings Limit and you keep 58p of every extra £1.\n\nWhere it really bites: between £100,000 and £125,140 your Personal Allowance tapers away (£1 for every £2), so that band is taxed at an effective 60%. And the High Income Child Benefit Charge starts at £60,000, with all of it repaid by £80,000.\n\nSources: gov.uk/income-tax-rates · gov.uk/national-insurance-rates-letters · gov.uk/child-benefit-tax-charge\n\nWould you turn down a pay rise because of tax? Comment 👇\n📩 Send this to the friend who turned down overtime \"because of tax\".\n\n2026/27 rates for England, Wales and Northern Ireland (Scotland's income tax bands differ). Ignores student loans and pension contributions. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#incometax #payrise #personalfinanceuk #ukmoney #taxuk",
+  "comment_question": "Would you turn down a pay rise because of tax?",
+  "first_comment": "Would you turn down a pay rise because of tax? 👇 📩 Send this to the friend who turned down overtime \"because of tax\". Every number is checked against gov.uk.",
+  "tags": ["pay rise tax UK", "higher rate tax", "income tax bands 2026/27", "60% tax trap", "child benefit tax charge", "personal finance UK", "UK money", "national insurance"],
+  "facts": [
+    {"figure": "£1", "how": "the extra pound being taxed (illustration)", "source": "arithmetic in scenes.py", "checked": "2026-10-21"},
+    {"figure": "58p", "how": "£1 − 40p income tax − 2p National Insurance", "source": "arithmetic in scenes.py", "checked": "2026-10-21"},
+    {"figure": "£50,270", "how": "top of the basic rate band; higher rate from £50,271 (2026/27)", "source": "https://www.gov.uk/income-tax-rates", "checked": "2026-10-21"},
+    {"figure": "40%", "how": "higher rate of income tax (2026/27)", "source": "https://www.gov.uk/income-tax-rates", "checked": "2026-10-21"},
+    {"figure": "2%", "how": "employee Class 1 NI above the Upper Earnings Limit, category A (2026/27)", "source": "https://www.gov.uk/national-insurance-rates-letters", "checked": "2026-10-21"},
+    {"figure": "£100,000", "how": "Personal Allowance falls £1 for every £2 above this; zero at £125,140", "source": "https://www.gov.uk/income-tax-rates", "checked": "2026-10-21"},
+    {"figure": "£60,000", "how": "High Income Child Benefit Charge starts above this (1% per £200); all repaid above £80,000", "source": "https://www.gov.uk/child-benefit-tax-charge", "checked": "2026-10-21"}
+  ],
+  "assumptions": [
+    "Employee, category A NI, England/Wales/NI income tax bands, 2026/27; NI UEL £967 a week (£4,189 a month) ≈ £50,270 a year",
+    "Effective 60% = 40% + 40% × 0.5 (allowance lost) between £100,000 and £125,140, before NI",
+    "Ignores student loan repayments, pension contributions and other deductions"
+  ],
+  "sources": ["https://www.gov.uk/income-tax-rates", "https://www.gov.uk/national-insurance-rates-letters", "https://www.gov.uk/child-benefit-tax-charge"],
+  "review": {"status": "sample", "owner_take": "", "owner_voice": false, "notes": ""}
+}

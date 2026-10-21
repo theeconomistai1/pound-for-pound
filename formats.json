@@ -1,0 +1,7 @@
+{
+  "_note": "Formats the scheduled runs may use. The weekly performance check (WEEKLY.md) switches one off when it underperforms; set back to true to try it again.",
+  "calc": true,
+  "myth": true,
+  "since": true,
+  "news": true
+}

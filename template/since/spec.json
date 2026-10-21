@@ -1,0 +1,16 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "since",
+ "_notes": "6-10 sentences, 20-40 s. Sentence 1 = the payoff number. Last sentence = the loop line, ending on a hand-over (':' ',' or '…') that runs into sentence 1. No spoken calls to action. Palette rotates automatically; add \"theme\" to override.",
+ "sentences": [
+  "TODO HOOK: £X in Y in YEAR is £Z today, e.g. {£1,000|A thousand pounds} put away in {2010|twenty ten} is worth TODO today, if you picked right.",
+  "TODO back then: the starting point.",
+  "TODO the path, part one.",
+  "TODO the path, where it ends.",
+  "TODO the comparison (cash, inflation, another option), with numbers.",
+  "TODO caveat: Past performance doesn't guarantee future returns.",
+  "TODO LOOP LINE back into sentence 1, e.g. So what about the money you put away this year:"
+ ]
+}

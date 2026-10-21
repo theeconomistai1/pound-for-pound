@@ -16,7 +16,7 @@ import motion as Mo
 from motion import (C, G, INK, M, SS, W, H, Wt, Layer, circle_sprite, clamp, ease, emoji_sprite, font, ramp,
                     rrect_sprite, scaled, spring, text_sprite, text_width, with_alpha)
 
-VERSION = "brand-v1.1"
+VERSION = "brand-v2"
 RED = (255, 112, 112)       # costs, losses, warnings
 GOLD = (255, 205, 86)       # rare highlight (records, "best")
 LOGO_GREEN = (155, 225, 93)  # the logo never changes colour
@@ -88,6 +88,16 @@ BEATS = {  # the fixed beat labels; use these words so viewers learn the format
     "levelup": ("LEVEL UP", "green"),
     "turn": ("YOUR TURN", "green"),
     "share": ("SEND THIS TO", "green"),
+    # brand-v2 formats (BRAND.md §1)
+    "myth": ("THE MYTH", "red"),
+    "truth": ("THE TRUTH", "green"),
+    "why": ("WHY", "white"),
+    "changed": ("WHAT CHANGED", "white"),
+    "who": ("WHO IT AFFECTS", "white"),
+    "means": ("WHAT IT MEANS", "green"),
+    "then": ("BACK THEN", "white"),
+    "today": ("TODAY", "green"),
+    "take": ("MY TAKE", "gold"),
 }
 
 EPISODE = None  # set from the video folder name by make_v3.py ("005")
@@ -378,6 +388,65 @@ def share_close(L, t, si, lines, follow="FOLLOW FOR DAILY MONEY MATHS"):
         L.text(follow, x0 + 84 + 18 + tw / 2, 1191, 30, Wt, f)
 
 
+def verdict_stamp(L, word, cx, cy, t, start, tone="red", size=120, angle=-8):
+    """A rubber-stamp verdict (MYTH / FALSE / TRUE / HALF TRUE) that slams in at `start`."""
+    p = spring(t, start, damping=18, stiffness=260)
+    if p <= 0:
+        return
+    col = TONES[tone]
+    tw = text_width(word, size)
+    w, h = int(tw + size * 0.9), int(size * 1.45)
+    im = Image.new("RGBA", (w + 40, h + 40), (0, 0, 0, 0))
+    box, pad = rrect_sprite(w, h, int(size * 0.18), col + (34,), col + (255,), 9)
+    im.alpha_composite(box, (20 - pad, 20 - pad))
+    tx = text_sprite(word, size, col)
+    im.alpha_composite(tx, (int(20 + w / 2 - tx.width / 2), int(20 + h / 2 - tx.height / 2)))
+    im = im.rotate(angle, Image.BICUBIC, expand=True)
+    s = 1.0 + 0.6 * (1 - clamp(p))
+    L.put(im, cx, cy, clamp(p * 2), s)
+
+
+def take_card(L, t, si, lines, label="MY TAKE", cy=760):
+    """The owner's own take (BRAND.md §7): a gold-edged quote card. si: the sentence that says it."""
+    st = Mo.S(si)
+    a = panel(L, W / 2, cy, 900, 120 + 70 * len(lines), t, st - 0.1, "gold")
+    if a <= 0:
+        return
+    top = cy - (120 + 70 * len(lines)) / 2
+    chip(L, label, W / 2, top, t, st - 0.05, "gold", 28)
+    L.text("\u201c", 150, top + 70, 120, GOLD, a)
+    for i, ln in enumerate(lines):
+        q = clamp(spring(t, st + 0.15 + 0.12 * i) * 1.3)
+        L.text(ln, W / 2, top + 95 + 70 * i + 12 * (1 - q), 46, Wt, q)
+
+
+_LOOP_SEEN = False
+
+
+def loop_close(L, t, si, comment=None):
+    """Last scene of every brand-v2 Short. The last line is spoken while the picture rebuilds the cover,
+    so the end runs straight back into frame 0 (and the last line runs into the first one).
+    comment: optional short chip text, e.g. "LEAP YEAR TOTAL? COMMENT ↓" (no arrows: use words)."""
+    import cover as Cv
+    st = Mo.S(si)
+    end = Mo.T["total"] - LOOP
+    bg, dark, ttl = cover_layers()
+    back = ease(ramp(t, end - 1.3, 1.2))  # 0 -> 1: dimmed scene -> the clean cover
+    if DRAW_COVER_BG:
+        L.put(bg, W / 2, H / 2, 1.0)
+        L.put(dark, W / 2, H / 2, 1 - back)
+    ty = 470 + (Cv.TITLE_Y - 470) * back
+    L.put(ttl, W / 2 + (Cv.TITLE_X - W / 2) * back, ty, ramp(t, st, 0.3), 0.56 + 0.44 * back)
+    global _LOOP_SEEN
+    _LOOP_SEEN = True
+    if comment:
+        fade = 1 - ramp(t, end - 1.4, 0.3)
+        if fade > 0:
+            sub = Layer()
+            chip(sub, comment, W / 2, 900, t, st + 0.2, "white", 32, emoji="speech_balloon")
+            L.put(sub.im, W / 2, H / 2, fade)
+
+
 def caveat(L, t, start, lines, cy=1150, size=28):
     for i, ln in enumerate(lines):
         L.text(ln, W / 2, cy + i * 42, size, M, ramp(t, start + 0.08 * i, 0.3), weight="ExtraBold")
@@ -551,9 +620,11 @@ def frame(t, captions_on=True):
     if lp > 0:  # seamless loop: dissolve into the hook frame exactly as it is on frame 0
         if _first is None:
             _first = _content(0.0)
-        content = Image.alpha_composite(with_alpha(content, 1 - lp), with_alpha(_first, lp))
+        content = Image.blend(content, _first, lp)  # linear mix: no dip to the plain background
     img.alpha_composite(content)
     bar_a = (ramp(t, COVER_HOLD, 0.4) if has_cover else 1.0) * (1 - lp if has_cover else 1.0)
+    if has_cover and _LOOP_SEEN:
+        bar_a *= 1 - ramp(t, total - LOOP - 1.3, 1.2)  # the bar leaves as the cover rebuilds
     if bar_a > 0:  # the cover itself stays clean: no logo bar, no captions on frame 0
         base = Layer()
         brand_bar(base, t, total)

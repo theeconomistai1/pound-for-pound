@@ -1,0 +1,17 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "_notes": "6-10 sentences, 20-40 s. Sentence 1 = the payoff number. Last sentence = the loop line, ending on a hand-over (':' ',' or '…') that runs into sentence 1. No spoken calls to action. Palette rotates automatically; add \"theme\" to override.",
+ "sentences": [
+  "TODO HOOK with the payoff number, e.g. Earn {£100,000|a hundred thousand pounds} and part of your next pay rise is taxed at {60%.|sixty per cent.}",
+  "TODO the everyday example.",
+  "TODO the maths, step one.",
+  "TODO the maths, the result.",
+  "TODO the twist or catch, with its number.",
+  "TODO one thing people miss.",
+  "TODO optional: the owner's take, or a short caveat.",
+  "TODO LOOP LINE that runs back into sentence 1, e.g. So before you celebrate that pay rise, remember:"
+ ]
+}

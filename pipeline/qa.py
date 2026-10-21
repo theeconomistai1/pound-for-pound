@@ -44,36 +44,70 @@ def spoken(sentence):
     return re.sub(r"\{[^|}]*\|([^}]*)\}", r"\1", sentence)
 
 
-def check_script(spec):
+FORMATS = ("calc", "myth", "since", "news")
+CTA = re.compile(r"^(send this|follow|like|subscribe|hit |smash|share this|comment )", re.I)
+
+
+def shown_numbers(spec):
+    text = " ".join(re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", s) for s in spec["sentences"])
+    return sorted({x.rstrip(".,") for x in re.findall(r"£[\d,]+(?:\.\d+)?[KkMm]?|\d[\d,]*(?:\.\d+)?%?p?", text)
+                   if any(ch.isdigit() for ch in x)})
+
+
+def check_script(spec, video_dir):
     ss = spec["sentences"]
     n = len(ss)
-    (report("PASS", f"{n} sentences") if 11 <= n <= 16 else report("WARN", f"{n} sentences (aim for 11-16)"))
-    first = ss[0]
-    if re.search(r"[£%]|\d", first):
+    (report("PASS", f"{n} sentences") if 6 <= n <= 10 else
+     report("WARN" if n <= 12 else "FAIL", f"{n} sentences (brand-v2: 6-10 for a 20-40 s Short)"))
+    fmt = spec.get("format")
+    if fmt not in FORMATS:
+        report("FAIL", f"spec.json needs \"format\": one of {FORMATS}")
+    else:
+        prev = previous_format(video_dir)
+        (report("WARN", f"same format as the previous video ({fmt}) — rotate formats") if prev == fmt else
+         report("PASS", f"format {fmt} (previous video: {prev or 'n/a'})"))
+    if re.search(r"[£%]|\d", ss[0]):
         report("PASS", "hook sentence carries the payoff number")
     else:
         report("FAIL", "sentence 1 must contain the payoff number (the hook)")
-    turn = [i for i, s in enumerate(ss) if s.startswith("Your turn")]
-    report("PASS", "has a 'Your turn' comment question") if turn else report("FAIL", "no 'Your turn.' sentence")
-    if ss[-1].startswith("Send this to"):
-        report("PASS", "ends on the share line (loops into the hook)")
+    last = spoken(ss[-1]).strip()
+    if CTA.search(last):
+        report("FAIL", "the last line is a call to action — it must be the loop line that runs into sentence 1 "
+                       "(put share/comment prompts in the first comment)")
+    elif last.endswith((".", "!")):
+        report("WARN", "loop line ends with a full stop — end on a hand-over (':' ',' or '…') into sentence 1")
     else:
-        report("FAIL", "last sentence must start 'Send this to …' (the share line)")
-    if not any(re.search(r"illustration|can fall|not financial advice|could change|may get back less", s, re.I)
-               for s in ss):
-        report("WARN", "no spoken caveat found (needed for anything about investing or risk)")
-    long = [i for i, s in enumerate(ss) if len(spoken(s).split()) > 26]
+        report("PASS", "ends on a loop line")
+    if spec.get("format") in ("calc", "since") and not any(
+            re.search(r"illustration|can fall|not financial advice|may get back less|past performance", s, re.I)
+            for s in ss):
+        report("WARN", "no spoken caveat — keep one on screen at least (caveat() block) for anything about investing")
+    long = [i for i, s in enumerate(ss) if len(spoken(s).split()) > 20]
     if long:
-        report("WARN", f"long sentences (>26 spoken words): {long}")
+        report("WARN", f"long sentences (>20 spoken words): {long}")
+
+
+def previous_format(video_dir):
+    here = os.path.basename(os.path.normpath(video_dir))
+    root = os.path.dirname(os.path.dirname(os.path.abspath(video_dir)))
+    best = None
+    for d in sorted(os.listdir(os.path.join(root, "videos"))):
+        if d < here and os.path.exists(os.path.join(root, "videos", d, "spec.json")):
+            best = json.load(open(os.path.join(root, "videos", d, "spec.json"), encoding="utf-8")).get("format")
+    return best
 
 
 def check_timing():
     total = Mo.T["total"]
     first = Mo.T["sentences"][0]["start"]
-    (report("PASS", f"length {total:.1f}s") if 40 <= total <= 65 else
-     report("WARN", f"length {total:.1f}s (aim for 45-60s; rewrite tighter if over 65s)"))
+    if 20 <= total <= 40:
+        report("PASS", f"length {total:.1f}s")
+    elif total <= 45:
+        report("WARN", f"length {total:.1f}s (brand-v2: 20-40 s)")
+    else:
+        report("FAIL", f"length {total:.1f}s — cut to 20-40 s")
     (report("PASS", f"voice starts at {first:.2f}s") if first <= 0.35 else
-     report("FAIL", f"voice starts late ({first:.2f}s) — the hook must start immediately"))
+     report("FAIL", f"voice starts late ({first:.2f}s) — the hook must land in the first 1-2 seconds"))
 
 
 def check_layout():
@@ -147,26 +181,37 @@ def check_glyphs():
 def check_meta(video_dir, spec):
     path = os.path.join(video_dir, "meta.json")
     if not os.path.exists(path):
-        report("WARN", "no meta.json yet")
+        report("FAIL", "no meta.json")
         return
     m = json.load(open(path, encoding="utf-8"))
     title = m.get("title", "")
     (report("PASS", f"title {len(title)} chars") if len(title) <= 100 and title.endswith("#shorts") else
      report("FAIL", "title must be <= 100 characters and end with #shorts"))
     d = m.get("description", "")
-    for need in ("General education, not financial advice.", "Music and sound effects: original, made for this channel.",
-                 "Your turn", "Send this to"):
+    for need in ("General education, not financial advice.", "Music and sound effects: original, made for this channel."):
         if need not in d:
             report("FAIL", f"description is missing: {need!r}")
+    for key in ("comment_question", "first_comment", "pillar"):
+        if not m.get(key):
+            report("WARN", f"meta.json has no {key}")
     tags = m.get("tags", [])
     (report("PASS", f"{len(tags)} tags") if 6 <= len(tags) <= 10 else report("WARN", f"{len(tags)} tags (aim 6-10)"))
-    if not m.get("first_comment"):
-        report("WARN", "no first_comment (the share prompt posted as the first comment)")
-    shown = set(re.findall(r"£[\d,]+(?:\.\d+)?[KkMm]?|\d+(?:\.\d+)?%", " ".join(
-        re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", s) for s in spec["sentences"])))
-    missing = sorted(x.rstrip(".,") for x in shown if x.rstrip(".,") not in d)
-    if missing:
-        report("WARN", f"numbers said in the video but not in the description: {missing}")
+    # fact sheet: every number in the script must be listed with how it was worked out and its source
+    facts = m.get("facts") or []
+    listed = " ".join(str(f.get("figure", "")) for f in facts)
+    nums = shown_numbers(spec)
+    missing = [x for x in nums if x not in listed]
+    if not facts:
+        report("FAIL", "meta.json has no facts list (figure, how, source, checked) — the owner reviews from it")
+    elif missing:
+        report("FAIL", f"numbers in the script missing from meta.facts: {missing}")
+    else:
+        bad = [f.get("figure") for f in facts if not (f.get("how") and f.get("source") and f.get("checked"))]
+        (report("FAIL", f"facts without how/source/checked: {bad}") if bad else
+         report("PASS", f"fact sheet covers all {len(nums)} numbers in the script"))
+    not_in_desc = [x for x in nums if x not in d and len(x) > 2]
+    if not_in_desc:
+        report("WARN", f"numbers said in the video but not in the description: {not_in_desc}")
 
 
 def contact_sheet(video_dir):
@@ -203,7 +248,7 @@ def main():
     if not getattr(mod, "BRAND", False):
         sys.exit("this video does not use the brand kit (BRAND = True)")
     spec = json.load(open(os.path.join(video_dir, "spec.json"), encoding="utf-8"))
-    check_script(spec)
+    check_script(spec, video_dir)
     check_timing()
     check_cover()
     check_layout()

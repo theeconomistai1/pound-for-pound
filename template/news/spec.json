@@ -1,0 +1,15 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "news",
+ "_notes": "6-10 sentences, 20-40 s. Sentence 1 = the payoff number. Last sentence = the loop line, ending on a hand-over (':' ',' or '…') that runs into sentence 1. No spoken calls to action. Palette rotates automatically; add \"theme\" to override.",
+ "sentences": [
+  "TODO HOOK: what changes and the number, e.g. From TODO date, TODO goes up to {£X.|...}",
+  "TODO what changed, old to new, with the official source named.",
+  "TODO who it affects.",
+  "TODO a worked example with numbers.",
+  "TODO what it means / what to check.",
+  "TODO LOOP LINE back into sentence 1, e.g. Which is why, from TODO date,"
+ ]
+}

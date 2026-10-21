@@ -1,46 +1,46 @@
 # Prompts to give Claude
 
-The brand and the method live in this repo (`BRAND.md`, `ROUTINE.md`, `pipeline/brand.py`, `template/short/`),
-so a prompt only has to point at them. Turn on the Metricool connector in the chat when you want it published.
+The method lives in this repo (`BRAND.md`, `ROUTINE.md`, `pipeline/`, `template/`), so a prompt only has to
+point at it. Turn on the Metricool connector in the chat when you want it booked.
 
-## 1. Make one Short now (any topic)
+## 1. Make one Short now
 
 ```
 Make one YouTube Short for my channel Pound for Pound (UK money, explained with data).
 
 Repo: theeconomistai1/pound-for-pound — attach it with push access and clone it to /home/claude/pound-for-pound.
-Read BRAND.md and ROUTINE.md and follow them exactly: brand-v1 template (template/short, worked example
-samples/005-penny-challenge), every figure verified against an official source today, qa.py must PASS.
+Read BRAND.md and ROUTINE.md and follow them: brand-v2 (20–40 s, loop line, format rotation), UK-specific,
+every figure verified against an official source today, qa.py must PASS.
 
-Topic: [your topic — or "the next todo in topics.md"]
-Send-this-to line: [who should viewers send it to — or "your choice"]
-Publish: [today at HH:MM Europe/London | in Metricool for my review only | don't publish, just send me the video]
+Topic: [your topic — or "the next one in topics.md"]
+Format: [calc | myth | since | news — or "your choice"]
+My take (optional): [one line in your own words]
+Book it: [for my review at HH:MM today | don't book, just send me the video]
 
-Send me the finished video and the contact sheet when it's ready.
+Send me the review sheet and the video when it's ready.
 ```
 
-## 2. Steer a video (optional brief — paste under the prompt above)
+## 2. Reply to a review sheet (in the run's chat)
 
-```
-Hook number: [e.g. £667.95 from 1p a day]
-Open loop (sentence 2): [e.g. But most people quit in December.]
-Real-life example: [people, prices or objects]
-The catch / twist: [the surprise]
-One thing people miss: [the tip]
-Your turn question: [has a number answer; Claude never shows it]
-Send this to: [a specific person and why]
-```
+- `approve`
+- `change line 3 to: …`
+- `my take: …` (added before the loop line, shown on a MY TAKE card)
+- `reject: <reason>`
 
-## 3. The daily scheduled tasks
+## 3. Use your own voice
 
-Two scheduled tasks run every day (07:45 for the 10:00 slot, 12:47 for the 16:00 slot). Each one clones the
-repo, follows `ROUTINE.md` for its slot and reports two lines back. Nothing to paste — edit `ROUTINE.md`,
-`BRAND.md` or `topics.md` to change what they do, and add topics as `- todo — ...` lines in `topics.md`.
+Record each sentence of the script as its own clip (phone voice memo is fine), name them `01`, `02`, … in order
+and attach them in the run's chat with "use my voice". Claude puts them in `videos/NNN-slug/voice/` and rebuilds.
 
-## 4. Change the brand
+## 4. The scheduled tasks
+
+- Morning (07:45 for 10:00) and afternoon (12:47 for 16:00): prepare one Short each, booked for your review.
+- Monday morning: the weekly performance check (`WEEKLY.md`).
+Edit `ROUTINE.md`, `BRAND.md`, `topics.md`, `formats.json` or `pillars.json` to change what they do.
+
+## 5. Change the brand
 
 ```
 In theeconomistai1/pound-for-pound, change the brand kit (pipeline/brand.py and BRAND.md): [what to change].
-Keep every rule in BRAND.md §2. Re-render samples/005-penny-challenge, run qa.py, and send me the
-contact sheet before pushing to main.
+Re-render samples/v2-myth-pay-rise, run qa.py, and send me the contact sheet before pushing to main.
 ```

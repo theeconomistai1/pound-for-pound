@@ -1,0 +1,39 @@
+{
+  "id": "NNN",
+  "slot": "YYYY-MM-DD HH:MM Europe/London",
+  "format": "myth",
+  "pillar": "TODO one of: isa, pensions, tax, saving, debt, property, investing, bills",
+  "title": "TODO the number + curiosity, one or two emoji, <= 100 chars #shorts",
+  "description": "TODO one-line claim with the payoff number.\n\nTODO the key numbers and how they're worked out.\n\nSources: TODO gov.uk/... (every official figure)\n\nTODO comment question 👇\n📩 Send this to TODO.\n\nIllustration only. TODO assumptions. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#TODO #TODO #personalfinanceuk #ukmoney",
+  "comment_question": "TODO a question with a number answer (never answered in the video)",
+  "first_comment": "TODO the comment question + 📩 Send this to <a specific person>. Every number is checked against official sources.",
+  "tags": [
+    "TODO",
+    "TODO",
+    "TODO",
+    "TODO",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "TODO exactly as written in the script, e.g. £125,140",
+      "how": "TODO how it was worked out (or 'official figure')",
+      "source": "TODO URL, or 'arithmetic in scenes.py'",
+      "checked": "YYYY-MM-DD"
+    }
+  ],
+  "assumptions": [
+    "TODO every assumption and every exact figure behind a rounded one",
+    "TODO comment-question answer (not shown)"
+  ],
+  "sources": [
+    "TODO https://www.gov.uk/..."
+  ],
+  "review": {
+    "status": "awaiting review",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": ""
+  }
+}

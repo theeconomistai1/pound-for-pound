@@ -1,48 +1,49 @@
-# Topic backlog
+# Topic queue (brand-v2)
 
-Two Shorts a day: 10:00 and 16:00 Europe/London. Each run takes the first `todo` line, makes the video,
-and marks it `done (NNN)`. Mark a topic `blocked: <reason>` if its numbers can't be verified that day.
+Two Shorts a day (10:00 and 16:00 Europe/London), each booked for the owner's review. Line format:
+`- todo · <format> · <pillar> — <topic>` (+ `· sample: <path>`, `· from: YYYY-MM-DD` for news).
+Statuses: `todo` → `review (NNN)` → `done (NNN)`, or `blocked: <reason>`, `rejected (NNN): <reason>`,
+`skipped: <reason>`. See ROUTINE.md §2: news first; otherwise the first `todo` whose format differs from the last
+video's and is switched on in `formats.json`.
 
-These are UK versions of the most-watched personal finance themes on YouTube, TikTok and Instagram.
-Make our own version every time: our own script, maths, examples and visuals. Never copy another creator's
-script, footage, music or thumbnails, and never use clips of real people.
-Every rule, allowance, rate or threshold must be checked against an official source (gov.uk, HMRC, ONS,
-Bank of England, MoneyHelper, NS&I, FCA) on the day the video is made.
+Rules: UK-specific angle, our own maths and official data, never a remake of another creator's video. Every
+rule, rate or figure is checked against an official source on the day the video is made.
 
-- done (001) — £5 a day for 30 years in a Stocks & Shares ISA could reach ~£178K at 7% a year
-- done (002, sample in new style) — Starting at 25 vs 35: Amy vs Ben, plus the Rule of 72
-- done (002, covered in Amy vs Ben) — Rule of 72: how long money takes to double at 4%, 7% and 10%
-- done (003) — Child Benefit invested from birth: ~£46K at 18 (10:00, 20 Oct)
-- done (004) — Millionaire maths: how much a month to reach £1 million by 60, starting at 20, 30 or 40 (16:00, 20 Oct)
-- todo — The 1p savings challenge: 1p on day 1, 2p on day 2… = £667.95 in a year, and what if you invested it
-- todo — Rich vs poor: a £30,000 car vs £30,000 invested, ten years later
-- todo — The 50/30/20 budget on the UK median salary (ONS median, take-home after tax and NI)
-- todo — The £100k tax trap: why part of the £100k–£125,140 band is taxed at an effective 60%
-- todo — Credit card minimum payments: how long a £2,000 balance really takes, and the interest paid
-- todo — The latte factor: a £4 workday coffee for 10 years, if invested instead
-- todo — Workplace pension: why an employer match is free money you shouldn't leave behind
-- todo — Lifestyle creep: spending vs saving your next pay rise over 20 years
-- todo — Emergency fund: how many months, using typical UK household spending (ONS)
-- todo — Inflation: what £100 from ten years ago buys today (ONS CPI)
-- todo — Fund fees: 1% vs 0.2% a year over 30 years
-- todo — The 100-envelope challenge, UK edition: £5,050 in 100 days
-- todo — Lifetime ISA: the 25% bonus, and the 25% withdrawal charge
-- todo — Premium Bonds: the real odds per £1 and the current prize-fund rate
-- todo — Buy now, pay later: what happens when you miss a payment
-- todo — Salary sacrifice: why it can beat a pay rise you take home
-- todo — Pension tax relief: how £80 becomes £100 in a relief-at-source pension
-- todo — Pound-cost averaging: investing monthly vs all at once
-- todo — Renting vs buying: the monthly costs people forget
-- todo — Mortgage overpayments: what an extra £100 a month saves
-- todo — The average UK wedding cost, invested instead
-- todo — What 1257L on your payslip actually means
-- todo — Credit cards vs debit cards: Section 75 protection explained
-- todo — State Pension: the full amount and the National Insurance years you need
-- todo — Car finance (PCP) vs buying outright: total cost on one example
-- todo — Student loans: how Plan 2 and Plan 5 repayments are worked out
-- todo — Personal Savings Allowance: when savings interest starts being taxed
-- todo — Marriage Allowance: transferring part of your Personal Allowance
-- todo — Overdraft at ~40% APR: the cost of £500 for a year
-- todo — Council Tax bands: how your band was set
-- todo — The energy price cap: what it limits and what it doesn't
-- todo — Capital Gains Tax and dividend allowances today
+## Published before brand-v2
+- done (001) — £5 a day for 30 years in a Stocks & Shares ISA
+- done (002) — Starting at 25 vs 35, plus the Rule of 72
+- done (003) — Child Benefit invested from birth
+- done (004) — Millionaire maths: how much a month for £1 million by 60
+- parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
+
+## Queue
+- todo · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
+- todo · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
+- todo · since · tax — The Personal Allowance since 2010 vs what it would be if it had kept up with inflation (gov.uk rates history, ONS CPI)
+- todo · calc · pensions — Relief at source: how £80 becomes £100 in a pension, and the extra a higher-rate taxpayer can claim back
+- todo · myth · saving — "Premium Bonds are a good investment": the prize fund rate vs easy-access savings, and the odds per £1 (NS&I)
+- todo · calc · isa — Lifetime ISA: the 25% bonus, and why the 25% withdrawal charge costs more than the bonus
+- todo · since · pensions — The full new State Pension since 2016 vs earnings and prices: the triple lock in one chart (gov.uk)
+- todo · calc · tax — Child Benefit after £60,000: the High Income Child Benefit Charge, worked through for one and two children
+- todo · myth · pensions — "The State Pension is enough to live on": the full new State Pension vs the PLSA Retirement Living Standards
+- todo · calc · pensions — Salary sacrifice vs a pay rise: the take-home difference on one example (NI and tax)
+- todo · since · saving — What £100 from 2010 buys today (ONS CPI), and what cash at Bank Rate would have done since then (Bank of England)
+- todo · calc · tax — What 1257L on your payslip means, and what the letters and an emergency code do
+- todo · myth · debt — "Minimum payments are fine": a £2,000 credit card balance at a typical APR, paid at the minimum (FCA / lender rules)
+- todo · calc · tax — Student loans: Plan 2 vs Plan 5 repayments on the same salary (gov.uk thresholds)
+- todo · since · isa — The ISA allowance since 1999 (PEP/TESSA to £20,000) vs inflation
+- todo · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
+- todo · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band
+- todo · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
+- todo · calc · debt — An arranged overdraft at around 40% APR: the cost of £500 for a year
+- todo · since · bills — The energy price cap since 2019 (Ofgem): the typical yearly bill, quarter by quarter
+- todo · calc · tax — The dividend allowance and Capital Gains Tax allowance today, and what that means for investing outside an ISA
+- todo · myth · investing — "1% fees don't matter": 1% vs 0.2% a year on the same pension over 30 years
+- todo · calc · property — Stamp Duty in England: the bands for first-time buyers vs movers on one example (gov.uk)
+- todo · myth · tax — "Council Tax bands are based on what your home is worth today" (England: 1991 values, VOA)
+
+## News (taken only when the event happens; ROUTINE.md §2)
+- watch · news · tax — Autumn Budget 2026: what changed for income tax, ISAs and pensions (check the date on gov.uk)
+- watch · news · saving — Bank of England Bank Rate decisions (MPC dates on bankofengland.co.uk)
+- watch · news · bills — Ofgem price cap announcements for the next quarter
+- watch · news · tax — New tax year (6 April 2027): what changes

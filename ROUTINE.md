@@ -1,10 +1,12 @@
-# Scheduled run: make and publish one Short for one slot
+# Scheduled run: prepare one Short for one slot, for the owner's review
 
-The channel: **Pound for Pound** — UK money, explained with data. **Two YouTube Shorts a day**, at
-**10:00** (morning slot) and **16:00** (afternoon slot) Europe/London — the channel's best morning and
-afternoon hours, per Metricool. Each scheduled run makes ONE video for the slot named in its prompt.
-The owner wants this fully hands-off: make the video, publish it, report back. No questions to the owner
-unless something is broken. Every Short uses the brand template (brand-v1): read `BRAND.md` before writing.
+The channel: **Pound for Pound** — UK money, explained with data. Two Shorts a day, at **10:00** and **16:00**
+Europe/London. Each scheduled run prepares ONE video for the slot named in its prompt and **books it for the
+owner's review: nothing is published without her approval.** Read `BRAND.md` first (brand-v2) — including
+*why*: YouTube won't monetise generic, repetitive or template-based channels, so every video must be UK-specific,
+our own maths and data, a different format from the last one, and checked by the owner.
+
+Don't ask the owner questions mid-run; finish, then put anything she needs to decide in the review sheet.
 
 ## 0. Set up
 ```bash
@@ -13,49 +15,48 @@ cd /home/claude/pound-for-pound && pipeline/setup_assets.sh
 ```
 
 ## 1. Is the slot already booked?
-Metricool `getScheduledPosts` (brandId 7523442, timezone Europe/London, extendedRange true) for today.
-If a YouTube post is already booked within 30 minutes of this run's slot, stop: report "slot already booked"
-with its title. (The owner or another session may have made it by hand.)
+Metricool `getScheduledPosts` (brandId 7523442, timezone Europe/London, extendedRange true) for today. If a
+YouTube post (scheduled, or awaiting review) is already booked within 30 minutes of this run's slot, stop and
+report "slot already booked" with its title.
 
 ## 2. Pick the topic
-Take the first `todo` line in `topics.md`. Next video number = highest `NNN` in `videos/NNN-*` + 1
-(sample 002 was published as 002; sample 005 is the brand template's worked example of the next topic). The topics are UK versions of the most-watched personal finance themes: make our own
-version — own script, own maths, own examples. Never copy another creator's script, footage, music or
-thumbnails, and never use clips of real people (copyright claims, "reused content", no ad money).
-If `samples/` already holds a brand-v1 example of this topic (e.g. `samples/005-penny-challenge` for the 1p
-challenge), copy it to `videos/NNN-slug` as the starting point, re-check every figure, and publish it as NNN.
+Lines in `topics.md` look like `- todo · <format> · <pillar> — <topic>` (optional `· sample: <path>`,
+`· from: YYYY-MM-DD` for news).
+1. **News first:** if a UK money event happened in the last 2 days (Budget or fiscal event, Bank of England rate
+   decision, Ofgem price cap announcement, new tax year), make a `news` video about it — add the line if missing.
+   A `news` line with `from:` is only taken on/after that date and within 3 days of the event.
+2. Otherwise take the first `todo` line whose format (a) is not the format of the last video in `videos/` (its
+   `spec.json` `format`) and (b) is `true` in `formats.json`.
+3. Never remake another creator's video. If a topic has no UK-specific angle, mark it
+   `skipped: not UK-specific` and take the next.
+4. Next video number = highest `NNN` in `videos/` + 1. If the line names a `sample:`, copy that folder to
+   `videos/NNN-slug` as the starting point and re-verify everything.
 
 ## 3. Research (every time)
-Check every rule, rate, allowance and threshold against an official source today (gov.uk, HMRC, ONS,
-Bank of England, MoneyHelper, NS&I, FCA) with web search / fetch. UK rules change at Budgets and in April.
-Compute every number in code (inside `scenes.py`), never by hand. If a figure can't be verified,
-mark the topic `blocked: <reason>`, take the next one.
+Check every rule, rate, allowance and threshold against an official source today (gov.uk, HMRC, ONS, Bank of
+England, MoneyHelper, NS&I, FCA, Ofgem, OBR) with web search / fetch. For `since` videos, take the data series
+from the official source and paste it into `scenes.py` with its URL. Compute every number in code (`scenes.py`),
+never by hand, and `assert` each spoken figure against its rounded text. If a figure can't be verified, mark the
+topic `blocked: <reason>` and take the next. Record every number in `meta.json` → `facts`.
 
-## 4. Write `videos/NNN-slug/` with the brand template (brand-v1)
-Read `BRAND.md` first — it is the brand book and it is not optional. Then:
-`cp -r template/short videos/NNN-slug` (worked example: `samples/005-penny-challenge/`).
-- **spec.json** — 11–16 short sentences, **45–60 seconds** at speed 1.15, gap 0.08, voice `bf_emma`.
-  Beats, in this order: **hook** (sentence 1 = the payoff number; sentence 2 opens a loop) → **the example**
-  (people, prices, everyday objects) → **the maths** → **the catch / the twist** → **one thing people miss** →
-  optional **level up** → short **caveat** → **"Your turn."** comment question with a number answer (never show
-  it) → **"Send this to …"** naming a specific person (always the last sentence; no "like and follow").
-  Write numbers as `{shown|spoken}` with the spoken part in words. British spelling. Voice it straight away
-  (`pipeline/tts2.py`, see `template/short/README.md`) so scenes use real word timings.
-- **scenes.py** — `from motion import *`, `from brand import *`, `BRAND = True`. Compute every number at the top
-  (and `assert` each spoken figure against its rounded text). Set the **`COVER`** (BRAND.md §3): one or two
-  words with the hook word highlighted, and a `hero` / `left` / `right` / `particles` scene that clearly fits
-  the subject — no "$" objects. Scene 1 is `cover_hook(...)`. The background palette rotates automatically.
-  One scene per beat, built from the brand blocks:
-  `hook`, `beat`, `value_card`, `versus`, `timed_line`, `big_number`, `bar_chart`, `line_chart`, `checked`,
-  `caveat`, `your_turn`, `share_close` (reference in BRAND.md §6). Every element appears on the word that names
-  it (`tk(sentence, "word")`). Show a `checked("GOV.UK · <date>")` stamp when an official figure appears. Keep
-  the frame identical; vary only the content blocks and emoji between videos. Don't use characters the font
-  lacks (→ ✓ ↓): use words or `L.arrow`.
-- **meta.json** — title (≤100 chars, the number + curiosity, one or two emoji, ends `#shorts`), description
-  (every number said in the video, assumptions, sources as plain URLs or gov.uk paths, the "Your turn" question,
-  the "Send this to" line, "General education, not financial advice.", "Music and sound effects: original, made
-  for this channel.", 4–5 hashtags), `first_comment` (the share prompt again + "every number checked"),
-  tags (6–10), assumptions, sources, slot.
+## 4. Write `videos/NNN-slug/` (brand-v2)
+`cp -r template/<format> videos/NNN-slug`, then:
+- **spec.json** — `format`, 6–10 sentences, **20–40 seconds** at speed 1.15, gap 0.08, voice `bf_emma`.
+  Sentence 1 = the payoff number. Follow the format's beats (BRAND.md §1). **Last sentence = the loop line**,
+  ending on a hand-over (":" "," or "…") that runs into sentence 1. No spoken calls to action (like, follow,
+  share, comment, send). Education, not advice; no persona (BRAND.md §4). Numbers as `{shown|spoken}`.
+  Voice it straight away for real word timings:
+  `python3 -I pipeline/tts2.py ~/.p4p-assets videos/NNN-slug/spec.json videos/NNN-slug/build/voice_raw.wav videos/NNN-slug/build/timings.json`
+- **scenes.py** — `COVER` (one or two words, the hook word highlighted, a scene that clearly fits the subject,
+  no "$" objects), `cover_hook` first, `loop_close` last, the format's blocks between. Every element on its word
+  (`tk(sentence, "word")`). A `checked(...)` stamp on official figures. Vary blocks and emoji from recent videos.
+- **meta.json** — `format`, `pillar`, title (≤100 chars, the number + curiosity, one or two emoji, ends
+  `#shorts`), description (every number said, sources as URLs or gov.uk paths, the comment question, the
+  "📩 Send this to …" line, assumptions, "General education, not financial advice.", "Music and sound effects:
+  original, made for this channel.", 4–5 hashtags), `comment_question`, `first_comment`, tags (6–10),
+  `facts` (every number in the script: figure exactly as written, how, source, checked date), assumptions,
+  sources, `review` (`status: "awaiting review"`). If `pillars.json` has a URL for the pillar, add
+  "Full video: <url>" to the description and first comment.
 
 ## 5. Build and check
 ```bash
@@ -63,17 +64,15 @@ KEEP_VOICE=1 pipeline/build_v3.sh videos/NNN-slug     # drop KEEP_VOICE=1 if spe
 python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
 ```
 - If tts prints `MISSING`, reword the spoken text or add the word to `EXTRA` in `pipeline/tts.py`.
-- `qa.py` checks the script shape, length, that the voice starts at 0 s, frame 0 shows the hook, every safe
-  zone on every quarter-second, missing glyphs and meta.json. Fix every FAIL; act on WARNs where sensible.
-- Read `build/contact.png` (frame 0 = the cover, the end of every scene, the loop frame). The cover must read
-  at a glance on a phone grid and the scene must obviously match the topic; no overlapping or clipped text,
-  nothing on top of chart lines, numbers match meta.json, caveat readable. For a closer look:
-  `python3 -I pipeline/make_v3.py videos/NNN-slug stills 3,10,20`. Re-render after fixes.
-- Do not publish a video with a wrong number or broken frame. Report it instead.
+- `qa.py` checks length (20–40 s), sentence count, format rotation, the hook, the loop line, the fact sheet,
+  safe zones on every quarter-second, glyphs, the cover and meta.json. Fix every FAIL.
+- Read `build/contact.png`: the cover reads at a glance and fits the topic; no overlapping or clipped text;
+  numbers match `facts`; the last frame matches frame 0. Fix and rebuild.
+- Never book a video with a wrong number or a broken frame. Report it instead.
 
-## 6. Publish
-1. Host the file for a few minutes on the `upload` branch (releases and branch deletion are blocked for
-   cloud sessions, so this branch is reused and emptied each time):
+## 6. Book it for review (never auto-publish without approval)
+1. Host the file for a few minutes on the `upload` branch (releases and branch deletion are blocked for cloud
+   sessions, so this branch is reused and emptied each time):
    ```bash
    U=$(mktemp -d) && cd "$U" && git init -q && git checkout -q --orphan upload
    cp /home/claude/pound-for-pound/videos/NNN-slug/build/video.mp4 video-NNN.mp4
@@ -81,41 +80,63 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
    git push -q -f https://github.com/theeconomistai1/pound-for-pound upload:upload
    ```
    Media URL: `https://raw.githubusercontent.com/theeconomistai1/pound-for-pound/upload/video-NNN.mp4`
-2. Metricool `getBrandSettings`: note which networks are connected (`networksData` keys: `youtubeData`,
-   `tiktokData`, `instagramData`, `facebookData`). Post the same video to **every connected one** of those in
-   one `createScheduledPost`: blogId `7523442`, date today at the run's slot (10:00 or 16:00 Europe/London; if
-   that has passed, 10 minutes from now), `info`:
-   `providers` = `[{"network":"youtube"}]` plus `tiktok` / `instagram` / `facebook` if connected,
-   `media [<URL>]`, `text` = description, `firstCommentText` = meta `first_comment`, `autoPublish true`,
-   `draft false`, `publicationDate {"dateTime": "...", "timezone": "Europe/London"}`,
+2. Metricool `getBrandSettings`: note the connected networks (`networksData`). Build `info` for every connected
+   one of YouTube / TikTok / Instagram / Facebook: `providers`, `media [<URL>]`, `text` = description,
+   `firstCommentText` = `first_comment`, `draft false`, `publicationDate {"dateTime": "<today> 10:00:00 or
+   16:00:00", "timezone": "Europe/London"}` (if the slot has passed: 30 minutes from now),
    `youtubeData {"title", "type":"short", "privacy":"public", "madeForKids":false, "isAiGeneratedContent":true,
-   "category":"EDUCATION", "tags"}`, and only for connected networks:
-   `tiktokData {"title": <title without #shorts>, "privacyOption":"PUBLIC_TO_EVERYONE", "isAigc":true}`,
-   `instagramData {"type":"REEL", "showReelOnFeed":true, "isAiGenerated":true}`,
-   `facebookData {"type":"REEL", "title": <title without #shorts>}`.
-   If the call is rejected because of `firstCommentText` or one network, retry once without that part and say
-   so in the report. **Cover upload: OFF.** (Frame 0 is the cover, which YouTube can use.) When the owner
-   confirms the channel can set Shorts thumbnails, switch this to ON: host `build/cover.jpg` on the upload
-   branch next to the video and pass its URL as `videoThumbnailUrl`. Check the response: `media` must now point at `static.metricool.com` (Metricool keeps its
-   own copy).
-3. Empty the upload branch straight away so the file is no longer in the repository:
+   "category":"EDUCATION", "tags"}`, and if connected `tiktokData {"title": <title without #shorts>,
+   "privacyOption":"PUBLIC_TO_EVERYONE", "isAigc":true}`, `instagramData {"type":"REEL", "showReelOnFeed":true,
+   "isAiGenerated":true}`, `facebookData {"type":"REEL", "title": <title without #shorts>}`.
+   (Set the AI flags to false only for a video voiced by the owner with no synthetic voice.)
+3. **Review path A (preferred):** `createScheduledPostForReview` with that `info` (`autoPublish true` — the
+   approval gates it), `reviewers "theeconomistai1@gmail.com"`, `approvalSystem "any"`, `notify true`.
+   **Review path B** (if A returns a plan/permission error): `createScheduledPost` with the same `info` but
+   **`autoPublish false`** — Metricool then asks the owner in its app to publish by hand at the slot, and that
+   tap is her approval. Never use `autoPublish true` outside path A. Check the response: `media` must point at
+   `static.metricool.com`. Keep the `plannerUrl`.
+4. Empty the upload branch straight away:
    ```bash
    cd "$U" && git checkout -q --orphan empty && git rm -q --cached video-NNN.mp4 && rm -f video-NNN.mp4
    git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q --allow-empty -m "Clear temporary upload"
    git push -q -f https://github.com/theeconomistai1/pound-for-pound empty:upload
    ```
+   Cover upload is OFF (frame 0 is the cover). When the owner confirms her channel can set Shorts thumbnails,
+   host `build/cover.jpg` next to the video and pass it as `videoThumbnailUrl`.
 
-## 7. Record
-- Copy `build/cover.jpg` to `covers/NNN.jpg` (the cover gallery).
-- Mark the topic `done (NNN)` in `topics.md`; commit the video folder and the cover (build/ is ignored) and push to `main`
-  (`git fetch origin main && git rebase origin/main` first — the other slot's run may have pushed).
+## 7. Record and report
+- Add `"durationSec"` (from `build/timings.json` total) to meta.json. Copy `build/cover.jpg` to `covers/NNN.jpg`.
+  Mark the topic `review (NNN)` in `topics.md`. Commit the video
+  folder and the cover (build/ is ignored); `git fetch origin main && git rebase origin/main`; push to `main`.
 - Studio page https://claude.ai/artifact/2SbNVqQh6hMzCyCmHzNkaj — with `ArtifactData`, set `videos/short-NNN`:
-  `{title, type:"Short", status:"scheduled", publishAt (ISO with offset), durationSec, description, tags, plannerUrl}`.
-  Also check earlier posts with Metricool `getScheduledPosts` (extendedRange true, last 2 days): for each that is
-  PUBLISHED on YouTube, update its row to `status:"published"` and `youtubeUrl` (the post's `publicUrl`).
-  If the Artifact tools are unavailable, skip this step.
-- Finish with a two-line summary: the video's title and publish time, or what went wrong.
+  `{title, type:"Short", format, status:"awaiting review", reviewPath:"A"|"B", publishAt (ISO with offset),
+  durationSec, description, tags, plannerUrl}`. Also check posts from the last 2 days with `getScheduledPosts`
+  (extendedRange true): published ones → `status:"published"`, `youtubeUrl` (the post's `publicUrl`), and
+  mark their topic `done (NNN)`. If the Artifact tools are unavailable, skip the studio page.
+- **The final message is the review sheet** (it reaches the owner's phone). Keep it in this order:
+  1. `REVIEW: <title> — <slot>, <format>, <seconds> s` and the review path (A: approve in Metricool; B: Metricool
+     will ask you to publish at the slot).
+  2. The script, numbered.
+  3. Every number: figure — how — source link.
+  4. The cover words and the comment question.
+  5. The Metricool `plannerUrl`. If the pillar has a full video in `pillars.json`: "Set it as this Short's
+     Related video in YouTube Studio once it's live."
+  6. "Reply in this chat with: **approve**, **change** <line> to <text>, **my take:** <your line>, or **reject**."
+
+## 8. When the owner replies (in the run's chat, or a new one)
+- **approve** → path A: ask her to tap Approve in Metricool (the API can't approve for her); path B: she taps
+  Publish when Metricool asks. Set `review.status "approved"` in meta.json and the studio row.
+- **change …** / **my take: …** → edit spec.json (a take becomes one sentence before the loop line, shown with
+  `take_card`), re-voice, rebuild, `qa.py` PASS, re-host the file, `updateScheduledPost` with the new media
+  (same uuid, full original content otherwise), empty the upload branch, push, and send the new review sheet.
+- **reject** → don't publish: `updateScheduledPost` → `draft true` (or leave a path-B post unpublished), mark the
+  topic `rejected (NNN): <her reason>`, set the studio row to `status:"rejected"`.
+
+## 9. The owner's own voice (optional)
+If `videos/NNN-slug/voice/` holds her recordings (`01.m4a`, `02.m4a`, … one per sentence, in order), the build
+uses them instead of the synthetic voice (`pipeline/owner_voice.py`; see its docstring). Then set
+`review.owner_voice true`, and the AI-content flags may be false if nothing else in the video is synthetic.
 
 ## Older styles
-Video 001 used `pipeline/build.sh` + `vidlib.py` (yellow-on-violet, kinetic captions). Videos 002–004 used the
-pre-brand house style (`motion.frame`, no `BRAND = True`). From 005 every video uses brand-v1 (`BRAND.md`).
+Video 001: `pipeline/build.sh` + `vidlib.py`. Videos 002–004: pre-brand house style. brand-v1 (45–60 s, share
+line last): `samples/005-penny-challenge`. From now on every video is brand-v2.
