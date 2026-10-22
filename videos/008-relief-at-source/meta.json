@@ -1,0 +1,104 @@
+{
+  "id": "008",
+  "slot": "2026-10-22 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "pensions",
+  "title": "Pay £80, Get £100 in Your Pension: Where the £20 Comes From 🫙💷 #shorts",
+  "description": "Pay £80 into a pension and £100 lands in your pot.\n\nWith relief at source (all personal and stakeholder pensions, and some workplace pensions), you pay in £80 and your provider claims £20 of basic rate tax relief from HMRC. That £20 is 20% of the £100 in your pension, but a 25% top-up on the £80 you actually paid.\n\nIf you pay 40% tax, you can claim another £20 back (20% extra relief on income taxed at 40%), so £100 in your pension costs you £60. That extra isn't automatic: you claim it yourself, through Self Assessment or HMRC's online claim.\n\nOne thing people miss: even with no earnings, you can pay in up to £2,880 a year and get £720 of tax relief added, so £3,600 goes into your pension.\n\nSources: https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief · https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220 · https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044100 · https://www.gov.uk/guidance/claim-tax-relief-on-your-private-pension-payments · https://www.gov.uk/income-tax-rates\n\nIf you pay 45% tax, what does £100 in your pension cost you? Comment 👇\n📩 Send this to the friend who thinks a pension is just money taken off their pay.\n\nIllustration only. 2026/27 rates for England, Wales and Northern Ireland (Scotland's income tax bands and relief rates differ). Relief at source schemes only (net pay workplace schemes work differently). Assumes the £100 sits within income taxed at 40%. Tax relief is limited to 100% of your earnings, or £3,600 gross with no earnings; annual allowance rules apply. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#pension #taxrelief #reliefatsource #personalfinanceuk #ukmoney",
+  "comment_question": "If you pay 45% tax, what does £100 in your pension cost you?",
+  "first_comment": "If you pay 45% tax, what does £100 in your pension cost you? 👇 📩 Send this to the friend who thinks a pension is just money taken off their pay. Every number is checked against official sources.",
+  "tags": [
+    "pension tax relief",
+    "relief at source",
+    "higher rate tax relief",
+    "pension contributions UK",
+    "SIPP tax relief",
+    "£2,880 pension",
+    "income tax 2026/27",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£80",
+      "how": "net contribution: £100 less 20% basic-rate relief (HMRC example)",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£100",
+      "how": "gross contribution after the scheme claims basic-rate relief",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£20",
+      "how": "basic-rate relief claimed by the provider (£100 − £80); also the extra a 40% taxpayer claims (20% of £100)",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "20%",
+      "how": "basic rate of income tax / relief at source rate; £20 ÷ £100",
+      "source": "https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "25%",
+      "how": "£20 ÷ £80, arithmetic in scenes.py",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "40%",
+      "how": "higher rate of income tax 2026/27; extra relief 20% on income taxed at 40%",
+      "source": "https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£60",
+      "how": "£80 paid − £20 claimed back by a 40% taxpayer",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£2,880",
+      "how": "most a person with no earnings can pay in and get 20% relief",
+      "source": "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£720",
+      "how": "£3,600 − £2,880 (20% of £3,600), arithmetic in scenes.py",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044100",
+      "checked": "2026-10-22"
+    },
+    {
+      "figure": "£3,600",
+      "how": "the 'basic amount' that gets relief with no earnings (s190 FA 2004); shown on screen",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044100",
+      "checked": "2026-10-22"
+    }
+  ],
+  "assumptions": [
+    "2026/27 rates, England, Wales and Northern Ireland; Scotland's rates differ (19% starter rate still gets 20% relief; extra relief at 21%/42%/45%/48% differs).",
+    "Relief at source schemes only; net pay arrangements give relief through payroll instead.",
+    "The 40% example assumes the whole £100 gross is within income taxed at 40%.",
+    "Comment-question answer (not shown): 25% extra relief on £100 = £25, so £100 costs £55."
+  ],
+  "sources": [
+    "https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief",
+    "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+    "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044100",
+    "https://www.gov.uk/guidance/claim-tax-relief-on-your-private-pension-payments",
+    "https://www.gov.uk/income-tax-rates"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-3813475653200294649"
+  },
+  "durationSec": 36.3
+}

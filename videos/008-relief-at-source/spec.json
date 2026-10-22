@@ -1,0 +1,16 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "Pay {£80|eighty pounds} into a pension, and {£100|a hundred pounds} lands in your pot.",
+  "Your provider claims the other {£20|twenty pounds} as basic rate tax relief.",
+  "That {£20|twenty pounds} is {20%|twenty per cent} of your {£100.|hundred.}",
+  "But on the {£80|eighty} you paid, it's a {25%|twenty five per cent} top up.",
+  "Pay {40%|forty per cent} tax? Claim another {£20,|twenty pounds,} and that {£100|hundred} costs just {£60.|sixty.}",
+  "That extra isn't automatic: you have to claim it yourself.",
+  "Even with no earnings, {£2,880|two thousand, eight hundred and eighty pounds} paid in gets {£720|seven hundred and twenty} added.",
+  "So next time {£80|eighty pounds} goes into a pension, remember:"
+ ]
+}
