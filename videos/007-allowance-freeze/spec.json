@@ -1,0 +1,15 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "since",
+ "sentences": [
+  "About {£776|seven hundred and seventy six pounds} a year: that's what the frozen tax free allowance costs a basic rate taxpayer.",
+  "In {2010,|twenty ten,} it was {£6,475.|six thousand, four hundred and seventy five pounds.}",
+  "Kept in line with prices, that's about {£10,460|ten thousand, four hundred and sixty} today.",
+  "Instead it hit {£12,570|twelve thousand, five hundred and seventy} in {2021,|twenty twenty one,} then froze until {2031.|twenty thirty one.}",
+  "Had it kept up since then, it'd be about {£16,450.|sixteen thousand, four hundred and fifty.}",
+  "That's {£3,880|three thousand, eight hundred and eighty pounds} more of your pay taxed at {20%.|twenty percent.}",
+  "So when someone says tax rates haven't gone up, remember:"
+ ]
+}

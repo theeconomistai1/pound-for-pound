@@ -1,0 +1,110 @@
+{
+ "id": "007",
+ "slot": "2026-10-22 10:00 Europe/London",
+ "format": "since",
+ "pillar": "tax",
+ "title": "Frozen Tax-Free Allowance: About £776 a Year for Basic-Rate Taxpayers 🧊💷 #shorts",
+ "description": "About £776 a year: that's what the frozen tax-free Personal Allowance costs a basic-rate taxpayer.\n\nIn 2010-11 the Personal Allowance was £6,475. Kept in line with prices (ONS CPI, April 2010 to September 2026) that would be about £10,460 today, so until 2021 the allowance rose much faster than prices: it reached £12,570 in 2021-22. Then it was frozen, and it stays at £12,570 until April 2031.\n\nHad it kept up with prices since April 2021, it would be about £16,450 now. That's £3,880 more of your pay taxed at 20%: about £776 a year.\n\nSources: legislation.gov.uk/ukpga/2010/13/section/1 (2010-11 allowance) · legislation.gov.uk/uksi/2021/111 (2021-22 allowance) · gov.uk/income-tax-rates (2026/27) · gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031 · ONS CPI index D7BT: ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23\n\nIf you pay 40% tax, what would that same £3,880 cost you a year? Comment 👇\n📩 Send this to the friend who says tax hasn't gone up.\n\nIllustration only. \"Kept up with prices\" = the allowance scaled by the CPI index from the April it was set to September 2026 (the latest month). £776 = 20% of £3,880, for a basic-rate taxpayer earning at least £16,450 in England, Wales or Northern Ireland (Scotland's income tax bands differ). Ignores National Insurance and other thresholds. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#personalallowance #incometax #fiscaldrag #personalfinanceuk #ukmoney",
+ "comment_question": "If you pay 40% tax, what would that same £3,880 cost you a year?",
+ "first_comment": "If you pay 40% tax, what would that same £3,880 cost you a year? 👇 📩 Send this to the friend who says tax hasn't gone up. Every number is checked against official sources.",
+ "tags": [
+  "personal allowance",
+  "tax free allowance",
+  "income tax freeze",
+  "fiscal drag",
+  "personal allowance since 2010",
+  "income tax 2026/27",
+  "inflation UK",
+  "personal finance UK",
+  "UK money"
+ ],
+ "facts": [
+  {
+   "figure": "£776",
+   "how": "20% basic rate × £3,880 = £776 (unrounded £776.36: (£16,451.82 − £12,570) × 20%)",
+   "source": "arithmetic in scenes.py; rate from https://www.gov.uk/income-tax-rates",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "2010",
+   "how": "2010-11 tax year, the start of the series",
+   "source": "official: https://www.legislation.gov.uk/ukpga/2010/13/section/1/notes/data.htm",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "£6,475",
+   "how": "standard (under-65s) Personal Allowance 2010-11, same as 2009-10",
+   "source": "https://www.legislation.gov.uk/ukpga/2010/13/section/1/notes/data.htm",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "£10,460",
+   "how": "£6,475 × CPI Sep 2026 (144.1) ÷ CPI Apr 2010 (89.2) = £10,460.29, rounded to £10",
+   "source": "arithmetic in scenes.py; CPI https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "£12,570",
+   "how": "Personal Allowance from 2021-22 (SI 2021/111) and still in 2026-27",
+   "source": "https://legislation.gov.uk/uksi/2021/111/made ; https://www.gov.uk/income-tax-rates",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "2021",
+   "how": "2021-22 tax year: allowance set at £12,570",
+   "source": "https://legislation.gov.uk/uksi/2021/111/made",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "2031",
+   "how": "allowance maintained at £12,570 to 5 April 2031 (policy paper, 26 Nov 2025)",
+   "source": "https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "£16,450",
+   "how": "£12,570 × CPI Sep 2026 (144.1) ÷ CPI Apr 2021 (110.1) = £16,451.82, rounded to £10",
+   "source": "arithmetic in scenes.py; CPI https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "£3,880",
+   "how": "£16,450 − £12,570",
+   "source": "arithmetic in scenes.py",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "20%",
+   "how": "basic rate of income tax 2026/27 (£12,571 to £50,270), England, Wales & NI",
+   "source": "https://www.gov.uk/income-tax-rates",
+   "checked": "2026-10-22"
+  },
+  {
+   "figure": "144.1 / 89.2 / 110.1",
+   "how": "ONS CPI index (2015=100) for Sep 2026, Apr 2010, Apr 2021; release 21 Oct 2026 (chart also uses Apr/Oct values 2022-2026)",
+   "source": "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
+   "checked": "2026-10-22"
+  }
+ ],
+ "assumptions": [
+  "'Kept in line with prices' = allowance scaled by ONS CPI (D7BT) from April of the year it was set to September 2026, the latest month published (21 Oct 2026).",
+  "£776 applies to a basic-rate taxpayer earning at least £16,450 in England, Wales or NI; ignores National Insurance and the frozen higher-rate threshold.",
+  "Bar chart shows three verified points only (no interpolated years). Exact figures: £10,460.29, £16,451.82, £776.36.",
+  "Comment-question answer (not shown): £3,880 × 40% = £1,552 a year, assuming the basic-rate band width stays £37,700."
+ ],
+ "sources": [
+  "https://www.legislation.gov.uk/ukpga/2010/13/section/1/notes/data.htm",
+  "https://legislation.gov.uk/uksi/2021/111/made",
+  "https://www.gov.uk/income-tax-rates",
+  "https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031",
+  "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23"
+ ],
+ "review": {
+  "status": "scheduled",
+  "owner_take": "",
+  "owner_voice": false,
+  "notes": "",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-8728838374358038933"
+ },
+ "durationSec": 37.3
+}
