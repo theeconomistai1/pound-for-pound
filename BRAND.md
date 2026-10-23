@@ -47,6 +47,46 @@ Still true from the rules below: every number checked on the day, education not 
 calls to action, loop ending, 20–40 s (aim for 25–35 s). `qa.py` warns when a script breaks rules 3–4: treat
 those warnings as failures and fix them. Worked example: `videos/010-lisa-withdrawal-charge`.
 
+## 0b. Three questions before you make it (the owner's rule, 23 Oct 2026)
+
+Answer these **before writing the script**, not after a video flops, and write the answers into `meta.json` →
+`brief` (template: `template/<format>/meta.json`). If you can't give a good answer, the video will be weak:
+find a sharper angle, or skip the topic. `qa.py` fails a video without a full brief.
+
+**1. Why would people watch to the end?** (`brief.why_watch`)
+- `hook` — the first second: what makes a thumb stop? (a surprise, a contradiction, a loss)
+- `curiosity` — "what happens next?": the question the hook opens, and where in the video it's answered
+  (late, in the last third)
+- `tempo` — rhythm: the picture changes every 5–8 s, a re-hook line every 5–8 s, no slow stretches
+- `feeling` — the emotion the video runs on: shock, "that's not fair", relief, smugness ("I knew it")
+
+**2. Why would they comment or share?** Watching alone isn't enough: comments and shares push a video further,
+so give people something to talk about.
+- Comment (`brief.why_comment`):
+  - `take_sides` — the moment in the video where viewers pick a side (fair or not? would you or wouldn't
+    you?). Show it on screen in the loop scene as the comment chip, e.g. `comment="FAIR OR NOT? COMMENT"`.
+  - `debate` — what reasonable people will disagree about
+  - `something_to_say` — the easy reply ("I nearly did this", "my bank never told me")
+  - `see_yourself` — who watches and thinks "that's me" (first-time buyer, someone near £100k, a new parent)
+- Share (`brief.why_share`):
+  - `send_to` — "I have to send this to…" a specific person (becomes the 📩 line)
+  - `memorable_line` — one quotable line the video says word for word, ≤ 12 words
+    ("The government gives you £1,000… then takes back even more.")
+  - `thats_me` — the "this is so me" moment
+  - `short_and_clear` — the whole point in one sentence a friend would get; 25–35 s
+
+**3. Why would they follow the account?** (`brief.why_follow`) Copying a trend can get views but doesn't earn
+follows; originality does. Every video must add to the channel's reason to stick around:
+- **The promise:** the UK money small print nobody tells you, in 30 seconds, every number checked on GOV.UK.
+- **The rituals viewers learn to expect:** the cover question (FREE **£1,000?**), the GOV.UK CHECKED stamp,
+  the loop that never quite ends, and **"fair or not?"**: every video ends with viewers taking a side.
+- Say how this video fits that promise and what it sets up next (a related trap, the other side of the
+  rule, a myth that follows on). Never a spoken "follow" (no calls to action).
+
+The comment question (meta.json `comment_question`) is a **take-sides or about-you** question, not a quiz:
+"Is a 25% charge on your own money fair?" · "Would you still open one?" · "Which one are you?" Never ask for or
+give advice.
+
 ---
 
 ## 1. Formats (rotate — never the same format twice in a row)
@@ -77,8 +117,8 @@ The weekly performance check (`WEEKLY.md`) can switch a format off in `formats.j
    0.5 s blends into frame 0.
 7. **Trust stamp**: `checked("GOV.UK · 2026/27 RATES · CHECKED 21 OCT 2026")` whenever an official figure
    appears. The brand's signature.
-8. **Comment question** (a definite answer, never given) and **share prompt** (a specific person) live in the
-   first comment and the description; the loop scene can show the question as a small chip.
+8. **Comment question** (a take-sides or about-you question, §0b) and **share prompt** (a specific person)
+   live in the first comment and the description; the loop scene shows the take-sides question as a chip.
 
 ## 3. Visual identity
 

@@ -36,7 +36,7 @@ def s_tip(L, t):  # sentences 5-6
 
 
 def s_loop(L, t):  # sentence 7: the loop line, the picture rebuilds the cover
-    loop_close(L, t, 7, comment="TODO SHORT QUESTION? COMMENT")
+    loop_close(L, t, 7, comment="TODO TAKE-SIDES QUESTION, e.g. FAIR OR NOT? COMMENT")
 
 
 SCENES = [(0, 1), (2, 3), (4, 4), (5, 6), (7, 7)]

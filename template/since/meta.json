@@ -1,11 +1,32 @@
 {
+  "brief": {
+    "why_watch": {
+      "hook": "TODO the first second: the surprise or contradiction that stops the thumb",
+      "curiosity": "TODO the question the hook opens, and the sentence where it's answered (last third)",
+      "tempo": "TODO the re-hook lines and where the picture changes (every 5-8 s)",
+      "feeling": "TODO the emotion: shock, unfair, relief, 'I knew it'"
+    },
+    "why_comment": {
+      "take_sides": "TODO the moment viewers pick a side; shown as the loop chip",
+      "debate": "TODO what reasonable people will disagree about",
+      "something_to_say": "TODO the easy reply people will type",
+      "see_yourself": "TODO who watches and thinks 'that's me'"
+    },
+    "why_share": {
+      "send_to": "TODO the specific person they send it to (the 📩 line)",
+      "memorable_line": "TODO one line the video says word for word, <= 12 words",
+      "thats_me": "TODO the 'this is so me' moment",
+      "short_and_clear": "TODO the whole point in one sentence a friend would get"
+    },
+    "why_follow": "TODO how this fits the channel promise (UK small print, checked on GOV.UK, 30 s) and what it sets up next"
+  },
   "id": "NNN",
   "slot": "YYYY-MM-DD HH:MM Europe/London",
   "format": "since",
   "pillar": "TODO one of: isa, pensions, tax, saving, debt, property, investing, bills",
   "title": "TODO the number + curiosity, one or two emoji, <= 100 chars #shorts",
   "description": "TODO one-line claim with the payoff number.\n\nTODO the key numbers and how they're worked out.\n\nSources: TODO gov.uk/... (every official figure)\n\nTODO comment question 👇\n📩 Send this to TODO.\n\nIllustration only. TODO assumptions. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#TODO #TODO #personalfinanceuk #ukmoney",
-  "comment_question": "TODO a question with a number answer (never answered in the video)",
+  "comment_question": "TODO a take-sides or about-you question (BRAND.md §0b), e.g. Is a 25% charge on your own money fair?",
   "first_comment": "TODO the comment question + 📩 Send this to <a specific person>. Every number is checked against official sources.",
   "tags": [
     "TODO",

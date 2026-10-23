@@ -1,4 +1,25 @@
 {
+  "brief": {
+    "why_watch": {
+      "hook": "Free money that costs you money: 'The government gives you £1,000… then takes back even more.'",
+      "curiosity": "How can a bonus cost more than it gives? Answered in sentence 7 (£4,000 comes back as £3,750).",
+      "tempo": "Re-hooks 'Sounds amazing, right?' and 'Not just the free money'; six scenes, none longer than 8.5 s.",
+      "feeling": "Delight at free money, then shock and 'that's not fair' when your own savings go too."
+    },
+    "why_comment": {
+      "take_sides": "Is a 25% charge that takes your own money too fair? (Missing on screen in 010: the loop chip was a quiz. Rule added for 011 on.)",
+      "debate": "Is the LISA still worth it for first-time buyers, given the £450,000 cap and the planned replacement?",
+      "something_to_say": "'I nearly took mine out', 'my house is over £450k', 'nobody told me this'.",
+      "see_yourself": "Anyone under 40 saving for a first home, especially in London and the South East."
+    },
+    "why_share": {
+      "send_to": "The friend saving for a house in a Lifetime ISA.",
+      "memorable_line": "The government gives you £1,000… then takes back even more.",
+      "thats_me": "'I was going to dip into it for a car / a wedding.'",
+      "short_and_clear": "Take money out of a Lifetime ISA early and you lose more than the bonus; 33 s."
+    },
+    "why_follow": "UK small print nobody tells you, checked on GOV.UK. Sets up the ISA run: next, the £20,000 allowance since 1999."
+  },
   "id": "010",
   "slot": "2026-10-23 16:00 Europe/London",
   "format": "calc",

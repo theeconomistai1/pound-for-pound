@@ -118,6 +118,17 @@ def check_timing():
         report("FAIL", f"length {total:.1f}s — cut to 20-40 s")
     (report("PASS", f"voice starts at {first:.2f}s") if first <= 0.35 else
      report("FAIL", f"voice starts late ({first:.2f}s) — the hook must land in the first 1-2 seconds"))
+    # tempo and rhythm + short and clear (BRAND.md §0b)
+    if total > 35:
+        report("WARN", f"length {total:.1f}s — short and clear: aim for 25-35 s (BRAND.md §0b)")
+    sc = Mo.SCENE.SCENES
+    slow = []
+    for k, (a, _) in enumerate(sc):
+        end = Mo.S(sc[k + 1][0]) if k + 1 < len(sc) else total
+        if end - Mo.S(a) > 8.5:
+            slow.append(f"scene {k + 1} ({end - Mo.S(a):.1f}s)")
+    (report("WARN", f"slow scenes: {', '.join(slow)} — change the picture every 5-8 s (BRAND.md §0b)") if slow else
+     report("PASS", "tempo: every scene is 8.5 s or shorter"))
 
 
 def check_layout():
@@ -224,6 +235,64 @@ def check_meta(video_dir, spec):
         report("WARN", f"numbers said in the video but not in the description: {not_in_desc}")
 
 
+BRIEF = {  # BRAND.md §0b: answered BEFORE the script is written
+    "why_watch": ("hook", "curiosity", "tempo", "feeling"),
+    "why_comment": ("take_sides", "debate", "something_to_say", "see_yourself"),
+    "why_share": ("send_to", "memorable_line", "thats_me", "short_and_clear"),
+}
+
+
+def _norm(x):
+    return re.sub(r"[^a-z0-9£%]+", " ", x.lower()).strip()
+
+
+def check_brief(video_dir, spec):
+    path = os.path.join(video_dir, "meta.json")
+    if not os.path.exists(path):
+        return
+    m = json.load(open(path, encoding="utf-8"))
+    b = m.get("brief")
+    if not isinstance(b, dict):
+        report("FAIL", "meta.json has no brief — answer why watch / comment / share / follow BEFORE writing the "
+                       "script (BRAND.md §0b)")
+        return
+    weak = []
+    for group, keys in BRIEF.items():
+        g = b.get(group) or {}
+        for k in keys:
+            v = str(g.get(k, "")).strip()
+            if len(v) < 10 or "TODO" in v:
+                weak.append(f"{group}.{k}")
+    v = str(b.get("why_follow", "")).strip()
+    if len(v) < 10 or "TODO" in v:
+        weak.append("why_follow")
+    if weak:
+        report("FAIL", f"brief answers missing or too thin: {weak} — no good answer means a weak video: "
+                       "sharpen the angle or pick another topic (BRAND.md §0b)")
+    else:
+        report("PASS", "brief: why watch, why comment, why share and why follow all answered")
+    shown = _norm(" ".join(re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", x) for x in spec["sentences"]))
+    said = _norm(" ".join(spoken(x) for x in spec["sentences"]))
+    line = _norm(str((b.get("why_share") or {}).get("memorable_line", "")))
+    if line and line not in shown and line not in said:
+        report("FAIL", "brief.why_share.memorable_line must be a line the video actually says, word for word")
+    elif line and len(line.split()) > 12:
+        report("WARN", "memorable line is over 12 words — make it short enough to quote (BRAND.md §0b)")
+    yous = sum(1 for x in spec["sentences"] if re.search(r"\byou(r|'re|'ll|'d)?\b", spoken(x), re.I))
+    (report("PASS", f"talks to 'you' in {yous} sentences") if yous >= 2 else
+     report("WARN", "the script hardly says 'you/your' — viewers need to see themselves in it (BRAND.md §0b)"))
+    q = m.get("comment_question", "")
+    if re.search(r"\b(how much|how many)\b", q, re.I) or re.match(r"\s*(what is|what's|what does)\b", q, re.I):
+        report("WARN", "the comment question is a quiz with one answer — ask one people take sides on or answer "
+                       "about themselves (BRAND.md §0b)")
+    src = open(os.path.join(video_dir, "scenes.py"), encoding="utf-8").read()
+    if "TODO" in src:
+        report("FAIL", "scenes.py still has TODO placeholders")
+    if not re.search(r"loop_close\([^)]*comment=", src):
+        report("WARN", "the loop scene has no take-sides chip — loop_close(..., comment=\"FAIR OR NOT? COMMENT\") "
+                       "(BRAND.md §0b)")
+
+
 def contact_sheet(video_dir):
     b = os.path.join(video_dir, "build")
     total = Mo.T["total"]
@@ -264,6 +333,7 @@ def main():
     check_layout()
     check_glyphs()
     check_meta(video_dir, spec)
+    check_brief(video_dir, spec)
     contact_sheet(video_dir)
     if "FAIL" in results:
         print("RESULT: FAIL — fix the lines above before publishing")

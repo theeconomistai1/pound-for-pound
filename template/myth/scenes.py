@@ -34,7 +34,7 @@ def s_exception(L, t):  # sentences 4-5
 
 
 def s_loop(L, t):  # sentence 6
-    loop_close(L, t, 6, comment="TODO SHORT QUESTION? COMMENT")
+    loop_close(L, t, 6, comment="TODO TAKE-SIDES QUESTION, e.g. FAIR OR NOT? COMMENT")
 
 
 SCENES = [(0, 0), (1, 1), (2, 3), (4, 5), (6, 6)]

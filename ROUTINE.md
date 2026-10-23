@@ -30,7 +30,11 @@ Lines in `topics.md` look like `- todo · <format> · <pillar> — <topic>` (opt
    `spec.json` `format`) and (b) is `true` in `formats.json`.
 3. Never remake another creator's video. If a topic has no UK-specific angle, mark it
    `skipped: not UK-specific` and take the next.
-4. Next video number = highest `NNN` in `videos/` + 1. If the line names a `sample:`, copy that folder to
+4. **Answer the three questions first** (BRAND.md §0b): why would people watch to the end, why would they
+   comment or share, why would they follow? Write them as `brief` in meta.json before the script. If there's
+   no good answer, find a sharper angle; if there still isn't one, mark the topic `skipped: weak angle — <why>`
+   and take the next.
+5. Next video number = highest `NNN` in `videos/` + 1. If the line names a `sample:`, copy that folder to
    `videos/NNN-slug` as the starting point and re-verify everything.
 
 ## 3. Research (every time)
@@ -52,7 +56,7 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
 - **scenes.py** — `COVER` (one or two words, the hook word highlighted, a scene that clearly fits the subject,
   no "$" objects), `cover_hook` first, `loop_close` last, the format's blocks between. Every element on its word
   (`tk(sentence, "word")`). A `checked(...)` stamp on official figures. Vary blocks and emoji from recent videos.
-- **meta.json** — `format`, `pillar`, title (≤100 chars, the number + curiosity, one or two emoji, ends
+- **meta.json** — `brief` (written first, step 2.4; every field answered), `format`, `pillar`, title (≤100 chars, the number + curiosity, one or two emoji, ends
   `#shorts`), description (every number said, sources as URLs or gov.uk paths, the comment question, the
   "📩 Send this to …" line, assumptions, "General education, not financial advice.", "Music and sound effects:
   original, made for this channel.", 4–5 hashtags), `comment_question`, `first_comment`, tags (6–10),
@@ -63,7 +67,7 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
 ## 5. Build and check
 ```bash
 KEEP_VOICE=1 pipeline/build_v3.sh videos/NNN-slug     # drop KEEP_VOICE=1 if spec.json changed since voicing
-python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS; fix every WARN that cites BRAND.md §0
+python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS; fix every WARN that cites BRAND.md §0 or §0b
 ```
 - If tts prints `MISSING`, reword the spoken text or add the word to `EXTRA` in `pipeline/tts.py`.
 - `qa.py` checks length (20–40 s), sentence count, format rotation, the hook, the loop line, the fact sheet,
@@ -115,7 +119,8 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS; f
   1. `SCHEDULED: <title> — publishes <slot>, <format>, <seconds> s`.
   2. The script, numbered.
   3. Every number: figure — how — source link.
-  4. The cover words and the comment question.
+  4. The cover words, the comment question, and the brief in three lines: **Watch:** <hook + feeling> ·
+     **Comment/share:** <take-sides moment + who they send it to> · **Follow:** <why_follow>.
   5. The Metricool `plannerUrl`. If the pillar has a full video in `pillars.json`: "Set it as this Short's
      Related video in YouTube Studio once it's live."
   6. "It publishes automatically. To change it before then, reply here with **change** <line> to <text>,

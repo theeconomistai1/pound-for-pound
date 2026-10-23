@@ -34,7 +34,7 @@ def s_means(L, t):  # sentence 4
 
 
 def s_loop(L, t):  # sentence 5
-    loop_close(L, t, 5, comment="TODO SHORT QUESTION? COMMENT")
+    loop_close(L, t, 5, comment="TODO TAKE-SIDES QUESTION, e.g. FAIR OR NOT? COMMENT")
 
 
 SCENES = [(0, 0), (1, 1), (2, 3), (4, 4), (5, 5)]
