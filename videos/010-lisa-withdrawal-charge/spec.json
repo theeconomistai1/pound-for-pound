@@ -1,0 +1,17 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "Put {£4,000|four thousand} in a Lifetime ISA, take it out early, and get back {£3,750.|three thousand, seven hundred and fifty.}",
+  "That's {£250|two hundred and fifty pounds} less than you paid in.",
+  "The government adds a {25%|twenty five per cent} bonus: {£1,000.|a thousand pounds.}",
+  "So the pot holds {£5,000.|five thousand.}",
+  "But the {25%|twenty five per cent} charge comes off the whole pot: {£1,250.|twelve hundred and fifty.}",
+  "It takes back the bonus, plus {6.25%|six and a quarter per cent} of your own money.",
+  "No charge on a first home up to {£450,000,|four hundred and fifty thousand pounds,} or from age {60.|sixty.}",
+  "Above that price, even a first home pays the charge.",
+  "So before you dip into a Lifetime ISA, remember:"
+ ]
+}
