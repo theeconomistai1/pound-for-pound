@@ -17,6 +17,38 @@ data, rotating formats, the owner's own take when she adds one, no presenter or 
 
 ---
 
+## 0. Simple and gripping (the owner's rule, 23 Oct 2026 — this wins over anything below)
+
+The owner's feedback: earlier videos had too much maths and were hard to follow. Every Short now is a tiny
+**story with a surprise**, not a worked calculation. Viewers should *feel* something (surprise, "that's not
+fair", relief) and want to see the end.
+
+1. **Hook in the first 2 seconds: a surprise or a contradiction**, not a sum. Make the viewer think "wait,
+   what?". Good: "The government gives you £1,000… then takes back even more." · "Earn £1 more, and you
+   could lose £600." · "This pension trick gives you £20 for free." Bad: "Pay £4,000 in, take it out early,
+   and get back £3,750." (correct, but it's a sum). The hook must still be true and match the video.
+2. **Open a loop, close it late.** The hook raises a question; the full answer lands in the last third.
+   Add a re-hook every 5–8 seconds: "Sounds amazing, right?" · "But here's the catch." · "And it gets worse."
+3. **Maximum 5 different numbers said aloud** (fewer is better), round and friendly (£1,000, a quarter,
+   half). No decimals, no percentages of percentages, no equations said aloud. Every other figure goes in the
+   description and the fact sheet — still verified.
+4. **One idea per sentence, ≤ 14 spoken words**, everyday words, talk to "you" ("your £4,000"). Short
+   reaction lines are good ("Sounds amazing, right?" · "Not just the bonus. Your own money too.").
+5. **One thing on screen at a time**: one big number, or two cards side by side (before / after, you save /
+   you get back). No formula lines, no bar charts with more than 2 bars, no blocks of small text (except the
+   one-line caveat).
+6. **Emotion beats**: the deal (😀) → the catch (😱) → the result in pounds (what *you* lose or gain) → the
+   thing people miss → loop. Use emoji and sound (coin on a win, boom on a loss) to carry the feeling.
+7. **Cover words tease, they don't explain**: FREE **£1,000?** · **60%** TAX? · PENSION **TRICK**.
+8. **Title = curiosity + the number**, e.g. "The Government Gives You £1,000… Then Takes Back £1,250 😱🏠".
+   Never a claim the video doesn't back up (no "guaranteed", no fake urgency).
+
+Still true from the rules below: every number checked on the day, education not advice, no persona, no spoken
+calls to action, loop ending, 20–40 s (aim for 25–35 s). `qa.py` warns when a script breaks rules 3–4: treat
+those warnings as failures and fix them. Worked example: `videos/010-lisa-withdrawal-charge`.
+
+---
+
 ## 1. Formats (rotate — never the same format twice in a row)
 
 Every Short is **20–40 seconds, 6–10 sentences** (voice `bf_emma`, speed 1.15, gap 0.08). Sentence 1 carries
@@ -108,12 +140,12 @@ use words or `L.arrow`), or if frame 0 is empty.
   return promises, no "guaranteed".
 - **No persona.** No AI presenter, avatar or character; the narrator never claims to be a person or an expert.
   The only "I" on the channel is the owner's own take (`take_card`, label MY TAKE), in her words.
-- British spelling, plain English, ≤ 20 spoken words a sentence. Numbers as `{£50,270|fifty thousand, two
+- British spelling, plain English, ≤ 14 spoken words a sentence (§0). Numbers as `{£50,270|fifty thousand, two
   hundred and seventy pounds}`.
-- **Hook formulas** (`<X>` = a figure computed and verified for that video):
-  *calc* "Earn £<X> and part of your next pay rise is taxed at <X>%." · *myth* "Go £1 over the higher rate
-  line, and you still keep 58p of it." · *since* "£1,000 put away in <year> is worth £<X> today." · *news*
-  "From <date>, <thing> goes up to £<X>."
+- **Hook formulas** (surprise first — see §0; `<X>` = a figure verified for that video):
+  *calc* "The government gives you £<X>… then takes back even more." · "Earn £1 more, and you could lose
+  £<X>." · *myth* "Everyone says <belief>. It's wrong." · *since* "In <year>, £<X> bought this. Today it buys
+  that." · *news* "From <date>, <thing> changes — and it's <good/bad> news for you."
 - **Loop lines** (hand over into sentence 1): "So next time someone turns down a pay rise because of tax,
   remember:" · "Which is why, from April," · "And that's the real reason that"
 - **Title:** ≤ 100 characters, the number + curiosity, one or two emoji, ends `#shorts`.

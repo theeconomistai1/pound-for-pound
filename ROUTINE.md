@@ -43,7 +43,8 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
 ## 4. Write `videos/NNN-slug/` (brand-v2)
 `cp -r template/<format> videos/NNN-slug`, then:
 - **spec.json** — `format`, 6–10 sentences, **20–40 seconds** at speed 1.15, gap 0.08, voice `bf_emma`.
-  Sentence 1 = the payoff number. Follow the format's beats (BRAND.md §1). **Last sentence = the loop line**,
+  Sentence 1 = the surprise hook, with a number (BRAND.md §0: simple and gripping — max 5 numbers said, no
+  decimals or equations, ≤ 14 words a sentence, a re-hook every 5–8 s). Follow the format's beats (BRAND.md §1). **Last sentence = the loop line**,
   ending on a hand-over (":" "," or "…") that runs into sentence 1. No spoken calls to action (like, follow,
   share, comment, send). Education, not advice; no persona (BRAND.md §4). Numbers as `{shown|spoken}`.
   Voice it straight away for real word timings:
@@ -62,7 +63,7 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
 ## 5. Build and check
 ```bash
 KEEP_VOICE=1 pipeline/build_v3.sh videos/NNN-slug     # drop KEEP_VOICE=1 if spec.json changed since voicing
-python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS
+python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS; fix every WARN that cites BRAND.md §0
 ```
 - If tts prints `MISSING`, reword the spoken text or add the word to `EXTRA` in `pipeline/tts.py`.
 - `qa.py` checks length (20–40 s), sentence count, format rotation, the hook, the loop line, the fact sheet,

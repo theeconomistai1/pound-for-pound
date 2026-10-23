@@ -85,6 +85,16 @@ def check_script(spec, video_dir):
     long = [i for i, s in enumerate(ss) if len(spoken(s).split()) > 20]
     if long:
         report("WARN", f"long sentences (>20 spoken words): {long}")
+    # Simple & gripping (BRAND.md §0, owner's request 23 Oct 2026)
+    busy = [i for i, s in enumerate(ss) if len(spoken(s).split()) > 16]
+    if busy:
+        report("WARN", f"sentences over 16 spoken words: {busy} — one idea per sentence (BRAND.md §0)")
+    nums = shown_numbers(spec)
+    (report("PASS", f"{len(nums)} different numbers said") if len(nums) <= 5 else
+     report("WARN", f"{len(nums)} different numbers said ({', '.join(nums)}) — max 5; keep the rest in the "
+                    "description (BRAND.md §0)"))
+    if any(re.search(r"\d\.\d", re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", x)) for x in ss):
+        report("WARN", "a decimal is said in the video — round it or keep it in the description (BRAND.md §0)")
 
 
 def previous_format(video_dir):

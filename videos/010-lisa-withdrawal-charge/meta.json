@@ -1,12 +1,12 @@
 {
   "id": "010",
-  "slot": "2026-10-23 16:00 Europe/London",
+  "slot": "2026-10-23 18:00 Europe/London",
   "format": "calc",
   "pillar": "isa",
-  "title": "Lifetime ISA: Pay In £4,000, Take It Out Early, Get Back £3,750 🏠💷 #shorts",
-  "description": "Put £4,000 in a Lifetime ISA, take it out early, and you get back £3,750: £250 less than you paid in.\n\nThe government adds a 25% bonus on what you pay in (up to £4,000 a year, so up to £1,000 of bonus), so £4,000 becomes a £5,000 pot. But the 25% withdrawal charge comes off the whole amount you take out: 25% of £5,000 is £1,250. That takes back the £1,000 bonus, plus £250 of your own money: 6.25% of the £4,000 you paid in.\n\nOne thing people miss: there's no charge on a first home costing up to £450,000 (bought at least 12 months after your first payment, through a conveyancer or solicitor, with a mortgage), from age 60, or if you're terminally ill. Above £450,000, even a first home pays the 25% charge.\n\nThe government plans to replace the Lifetime ISA with a new First Time Buyer ISA (no launch date yet); until then, existing Lifetime ISAs keep the current rules.\n\nSources: https://www.gov.uk/lifetime-isa/summary · https://www.gov.uk/lifetime-isa/withdrawing-money-from-your-lifetime-isa · https://www.gov.uk/guidance/lifetime-isa-withdrawal-charges-and-charge-free-withdrawals · https://assets.publishing.service.gov.uk/media/6a33c4586422bec01b117765/FTB_ISA_Condoc.pdf\n\nPay £1,000 into a Lifetime ISA and take it all out early: how much do you get back? Comment 👇\n📩 Send this to the friend saving for a house in a Lifetime ISA.\n\nIllustration only. Assumes no interest or investment growth, the bonus already paid in, and the whole pot withdrawn. Rules as at 23 October 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#lifetimeisa #isa #firsttimebuyer #personalfinanceuk #ukmoney",
-  "comment_question": "Pay £1,000 into a Lifetime ISA and take it all out early: how much do you get back?",
-  "first_comment": "Pay £1,000 into a Lifetime ISA and take it all out early: how much do you get back? 👇 📩 Send this to the friend saving for a house in a Lifetime ISA. Every number is checked against official sources.",
+  "title": "The Government Gives You £1,000… Then Takes Back £1,250 😱🏠 #shorts",
+  "description": "The government gives you £1,000… then takes back even more.\n\nIt's the Lifetime ISA. Save £4,000 in a year and the government adds a 25% bonus: £1,000 free, so your pot is £5,000. But take the money out for anything other than a first home (or before 60), and a quarter of what you take out is gone: 25% of £5,000 is £1,250. That's the £1,000 bonus back, plus £250 of your own savings. Your £4,000 comes back as £3,750.\n\nOne thing people miss: a first home over £450,000 counts as \"anything else\", so the 25% charge applies. No charge from age 60, or if you're terminally ill. To buy a first home charge-free you also need to buy at least 12 months after your first payment, through a conveyancer or solicitor, with a mortgage.\n\nThe government plans to replace the Lifetime ISA with a new First Time Buyer ISA (no launch date yet); until then, existing Lifetime ISAs keep the current rules.\n\nSources: https://www.gov.uk/lifetime-isa/summary · https://www.gov.uk/lifetime-isa/withdrawing-money-from-your-lifetime-isa · https://www.gov.uk/guidance/lifetime-isa-withdrawal-charges-and-charge-free-withdrawals · https://assets.publishing.service.gov.uk/media/6a33c4586422bec01b117765/FTB_ISA_Condoc.pdf\n\nSave £1,000 in a Lifetime ISA, then take it all out early: how much do you get back? Comment 👇\n📩 Send this to the friend saving for a house in a Lifetime ISA.\n\nIllustration only. Assumes no interest or investment growth, the bonus already paid in, and the whole pot withdrawn. Rules as at 23 October 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#lifetimeisa #isa #firsttimebuyer #personalfinanceuk #ukmoney",
+  "comment_question": "Save £1,000 in a Lifetime ISA, then take it all out early: how much do you get back?",
+  "first_comment": "Save £1,000 in a Lifetime ISA, then take it all out early: how much do you get back? 👇 📩 Send this to the friend saving for a house in a Lifetime ISA. Every number is checked against official sources.",
   "tags": [
     "lifetime ISA",
     "LISA withdrawal charge",
@@ -62,20 +62,8 @@
       "checked": "2026-10-23"
     },
     {
-      "figure": "6.25%",
-      "how": "£250 ÷ £4,000, arithmetic in scenes.py",
-      "source": "https://www.gov.uk/lifetime-isa/withdrawing-money-from-your-lifetime-isa",
-      "checked": "2026-10-23"
-    },
-    {
       "figure": "£450,000",
       "how": "first-home price limit for a charge-free withdrawal",
-      "source": "https://www.gov.uk/lifetime-isa/withdrawing-money-from-your-lifetime-isa",
-      "checked": "2026-10-23"
-    },
-    {
-      "figure": "60",
-      "how": "age from which withdrawals are charge-free",
       "source": "https://www.gov.uk/lifetime-isa/withdrawing-money-from-your-lifetime-isa",
       "checked": "2026-10-23"
     }
@@ -84,7 +72,8 @@
     "No interest or investment growth; the £1,000 bonus has been paid in; the whole £5,000 pot is withdrawn for a non-qualifying reason.",
     "Charge-free: first home ≤ £450,000 (12+ months after first payment, via conveyancer, with a mortgage), age 60+, terminal illness (<12 months to live).",
     "The Lifetime ISA is to be replaced by a First Time Buyer ISA (HM Treasury consultation, June 2026; no launch date); existing LISA rules continue until then. The Autumn Budget may change rules after 23 Oct 2026.",
-    "Comment-question answer (not shown): £1,000 + £250 bonus = £1,250; 25% charge = £312.50; you get back £937.50."
+    "Comment-question answer (not shown): £1,000 + £250 bonus = £1,250; 25% charge = £312.50; you get back £937.50.",
+    "\"A quarter\" (spoken) = the 25% withdrawal charge; \"takes back even more\" = £1,250 charge > £1,000 bonus on a full withdrawal."
   ],
   "sources": [
     "https://www.gov.uk/lifetime-isa/summary",
@@ -96,8 +85,8 @@
     "status": "scheduled",
     "owner_take": "",
     "owner_voice": false,
-    "notes": "",
+    "notes": "Remade 23 Oct at the owner's request: simpler maths, stronger hook. Moved from 16:00 to 18:00.",
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-2239189478706098364"
   },
-  "durationSec": 38.5
+  "durationSec": 33.0
 }

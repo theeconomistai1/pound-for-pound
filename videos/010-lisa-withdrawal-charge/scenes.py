@@ -19,7 +19,7 @@ from motion import *  # noqa: F401,F403
 from brand import *  # noqa: F401,F403
 
 BRAND = True
-COVER = dict(words=("LISA", "PENALTY"), highlight=1, hero="House with garden", left="Key", right="Warning",
+COVER = dict(words=("FREE", "£1,000?"), highlight=1, hero="House with garden", left="Key", right="Warning",
              particles="Coin")
 
 # ---- figures (gov.uk, checked 23 Oct 2026) -----------------------------------------------------------------
@@ -47,73 +47,79 @@ assert CHARGE == BONUS + LOSS                       # takes back the bonus, plus
 assert (HOME_CAP, FREE_AGE) == (450_000, 60)
 # gov.uk's own worked example uses the same maths: £800 + £200 bonus, charge £250, back £750
 assert (800 + 800 * BONUS_RATE) * (1 - CHARGE_RATE) == 750
+QUARTER = "a quarter"  # spoken for 25%
 # comment-question answer (not shown): £1,000 in -> £1,250 pot -> £937.50 back
 assert (1_000 * (1 + BONUS_RATE)) * (1 - CHARGE_RATE) == 937.5
 
 STAMP = "GOV.UK · LIFETIME ISA · CHECKED 23 OCT 2026"
 
 
-def s_hook(L, t):  # sentences 0-1
-    cover_hook(L, t, gbp(BACK), sub=f"from {gbp(PAID)} paid in", number_at=tk(0, "£3,750"),
-               kicker="LIFETIME ISA, TAKEN OUT EARLY",
-               extra=lambda L, t: chip(L, f"{gbp(LOSS)} LESS THAN YOU PAID IN", W / 2, 1170, t, tk(1, "£250"),
-                                       "red", 32, emoji="chart_decreasing"))
+
+def s_hook(L, t):  # sentences 0-1: the surprise
+    cover_hook(L, t, "+" + gbp(BONUS), sub="...then it takes back even more", number_at=tk(0, "£1,000"),
+               kicker="FROM THE GOVERNMENT",
+               extra=lambda L, t: chip(L, "THE LIFETIME ISA", W / 2, 1170, t, tk(1, "Lifetime"), "white", 34,
+                                       emoji="house"))
 
 
-def s_maths(L, t):  # sentences 2-3
-    beat(L, "maths", t, S(2) - 0.1)
-    value_card(L, W / 2, 470, 880, t, S(2), "pound_banknote", "YOU PAY IN", gbp(PAID), color=Wt,
-               value_at=S(2) + 0.2, h=140, sub="the most a year")
-    value_card(L, W / 2, 640, 880, t, tk(2, "25%"), "wrapped_gift", "25% GOVERNMENT BONUS", "+" + gbp(BONUS),
-               color=C, value_at=tk(2, "£1,000"), h=140, sub="up to £1,000 a year")
-    a = panel(L, W / 2, 900, 760, 230, t, tk(3, "pot") - 0.15, "green")
-    L.text("IN YOUR POT", W / 2, 830, 30, M, a, weight="ExtraBold")
+def s_deal(L, t):  # sentences 2-3: the deal, one number at a time
+    beat(L, "THE DEAL", t, S(2) - 0.1)
+    value_card(L, W / 2, 500, 880, t, S(2), "pound_banknote", "YOU SAVE", gbp(PAID), color=Wt,
+               value_at=tk(2, "£4,000"), h=150)
+    value_card(L, W / 2, 690, 880, t, tk(2, "£1,000") - 0.2, "wrapped_gift", "YOU GET FREE", "+" + gbp(BONUS),
+               color=G, value_at=tk(2, "£1,000"), h=150)
+    a = ramp(t, tk(3, "amazing"), 0.25)
     if a > 0:
-        big_number(L, gbp(POT), W / 2, 925, t, tk(3, "£5,000"), size=130, alpha=a)
-    checked(L, STAMP, W / 2, 1100, t, tk(3, "£5,000") + 0.4)
+        L.emoji("party_popper", W / 2, 940, 150, t, tk(3, "amazing"), bounce=True)
+        L.text("SOUNDS AMAZING?", W / 2, 1090, 56, Wt, a, weight="Black")
 
 
-def s_twist(L, t):  # sentences 4-5
-    beat(L, "twist", t, S(4) - 0.1, sub="25% OF THE WHOLE POT", sub_at=tk(4, "whole"))
-    timed_line(L, [("25%", RED, tk(4, "25%")), ("OF", M, tk(4, "charge")), (gbp(POT), G, tk(4, "whole")),
-                   ("=", M, tk(4, "£1,250")), ("-" + gbp(CHARGE), RED, tk(4, "£1,250"))], W / 2, 440, 66, t)
-    bar_chart(L, t, S(4) + 0.2, [PAID, POT, BACK], ["YOU PAID", "POT", "YOU GET"], (200, 560, 880, 900),
-              [Wt, G, RED], dur=0.6, stagger=0.15,
-              value_tags={0: (gbp(PAID), Wt, S(4) + 0.4), 1: (gbp(POT), G, S(4) + 0.6),
-                          2: (gbp(BACK), RED, tk(4, "£1,250") + 0.2)})
-    chip(L, f"BONUS {gbp(BONUS)} + {gbp(LOSS)} OF YOUR OWN", W / 2, 1020, t, tk(5, "bonus"), "red", 30,
-         emoji="warning")
-    a = ramp(t, tk(5, "6.25%"), 0.25)
-    L.text(f"{gbp(LOSS)} = {LOSS_PCT:.2f}% OF {gbp(PAID)}", W / 2, 1120, 40, G, a, weight="Black")
-    checked(L, STAMP, W / 2, 1200, t, tk(5, "6.25%") + 0.4)
+def s_catch(L, t):  # sentences 4-6: the catch
+    beat(L, "catch", t, S(4) - 0.1)
+    a = ramp(t, tk(4, "quarter"), 0.2)
+    if a > 0:
+        big_number(L, "-25%", W / 2, 560, t, tk(4, "quarter"), size=200, color=RED, alpha=a)
+        L.text("OF EVERYTHING YOU TAKE OUT", W / 2, 700, 34, M, a, weight="ExtraBold")
+    chip(L, "THE FREE £1,000 + YOUR OWN SAVINGS", W / 2, 850, t, tk(5, "Your"), "red", 32, emoji="warning")
 
 
-def s_miss(L, t):  # sentences 6-7
-    beat(L, "miss", t, S(6) - 0.1)
-    value_card(L, W / 2, 470, 880, t, S(6), "house", "NO CHARGE: FIRST HOME UP TO", gbp(HOME_CAP), color=G,
-               value_at=tk(6, "£450,000"), h=140)
-    value_card(L, W / 2, 640, 880, t, tk(6, "£450,000") + 0.3, "old_woman", "NO CHARGE: FROM AGE", str(FREE_AGE),
-               color=G, value_at=tk(6, "60"), h=140)
-    chip(L, f"FIRST HOME OVER {gbp(HOME_CAP)}? 25% CHARGE", W / 2, 820, t, tk(7, "price"), "red", 30,
-         emoji="cross_mark")
-    checked(L, STAMP, W / 2, 930, t, tk(7, "charge"))
-    caveat(L, t, tk(7, "charge") + 0.3, ["Also charge-free if terminally ill. Assumes no growth.",
-                                         "General education, not financial advice."], cy=1050, size=26)
+def s_result(L, t):  # sentence 6: the result
+    beat(L, "THE RESULT", t, S(6) - 0.1)
+    versus(L, t,
+           dict(title="YOU SAVED", label="", value=gbp(PAID), color=Wt, start=S(6), at=tk(6, "£4,000"),
+                emoji="pound_banknote"),
+           dict(title="YOU GET BACK", label="", value=gbp(BACK), color=RED, start=tk(6, "£3,750") - 0.3,
+                at=tk(6, "£3,750"), tone="red", emoji="chart_decreasing"),
+           cy=620, h=340)
+    chip(L, f"{gbp(LOSS)} LESS THAN YOU SAVED", W / 2, 900, t, tk(6, "£3,750") + 0.3, "red", 36)
 
 
-def s_loop(L, t):  # sentence 8: the loop line, the picture rebuilds the cover
-    loop_close(L, t, 8, comment="£1,000 IN, ALL OUT EARLY: YOU GET? COMMENT")
+def s_miss(L, t):  # sentence 7
+    beat(L, "miss", t, S(7) - 0.1)
+    L.emoji("house", W / 2, 560, 220, t, S(7), bounce=True)
+    a = ramp(t, tk(7, "£450,000"), 0.25)
+    if a > 0:
+        L.text("FIRST HOME OVER", W / 2, 740, 40, M, a, weight="ExtraBold")
+        big_number(L, gbp(HOME_CAP), W / 2, 850, t, tk(7, "£450,000"), size=140, alpha=a)
+    chip(L, "STILL LOSES 25%", W / 2, 990, t, tk(7, "counts"), "red", 36, emoji="cross_mark")
+    checked(L, STAMP, W / 2, 1090, t, tk(7, "counts") + 0.3)
+    caveat(L, t, tk(7, "counts") + 0.5, ["No charge from 60 or if terminally ill. General education, not advice."],
+           cy=1170, size=24)
 
 
-SCENES = [(0, 1), (2, 3), (4, 5), (6, 7), (8, 8)]
-DRAW = [s_hook, s_maths, s_twist, s_miss, s_loop]
+def s_loop(L, t):  # sentence 8: loop line back into sentence 1
+    loop_close(L, t, 8, comment="£1,000 OUT EARLY: YOU GET? COMMENT")
+
+
+SCENES = [(0, 1), (2, 3), (4, 5), (6, 6), (7, 7), (8, 8)]
+DRAW = [s_hook, s_deal, s_catch, s_result, s_miss, s_loop]
 
 
 def events():
-    ev = [{"t": tk(0, "£3,750") + 0.05, "kind": "pop"},
-          {"t": tk(1, "£250"), "kind": "boom"},
-          {"t": tk(2, "£1,000"), "kind": "coin"}, {"t": tk(3, "£5,000"), "kind": "coin"},
-          {"t": tk(4, "£1,250"), "kind": "boom"}, {"t": tk(5, "6.25%"), "kind": "pop"},
-          {"t": tk(6, "£450,000"), "kind": "pop"}, {"t": tk(6, "60"), "kind": "pop"},
-          {"t": tk(7, "price"), "kind": "boom"}]
+    ev = [{"t": tk(0, "£1,000") + 0.05, "kind": "coin"},
+          {"t": tk(0, "takes"), "kind": "boom"},
+          {"t": tk(2, "£4,000"), "kind": "pop"}, {"t": tk(2, "£1,000"), "kind": "coin"},
+          {"t": tk(4, "quarter"), "kind": "boom"},
+          {"t": tk(6, "£3,750"), "kind": "boom"},
+          {"t": tk(7, "£450,000"), "kind": "pop"}]
     return scene_events(ev)
