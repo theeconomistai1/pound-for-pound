@@ -1,6 +1,6 @@
 {
   "id": "010",
-  "slot": "2026-10-23 18:00 Europe/London",
+  "slot": "2026-10-23 16:00 Europe/London",
   "format": "calc",
   "pillar": "isa",
   "title": "The Government Gives You £1,000… Then Takes Back £1,250 😱🏠 #shorts",
@@ -85,7 +85,7 @@
     "status": "scheduled",
     "owner_take": "",
     "owner_voice": false,
-    "notes": "Remade 23 Oct at the owner's request: simpler maths, stronger hook. Moved from 16:00 to 18:00.",
+    "notes": "Remade 23 Oct at the owner's request: simpler maths, stronger hook. Kept at 16:00 at the owner's request.",
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-2239189478706098364"
   },
   "durationSec": 33.0
