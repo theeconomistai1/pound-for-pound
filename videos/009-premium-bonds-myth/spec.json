@@ -1,0 +1,16 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "Put {£1,000|a thousand pounds} in Premium Bonds for a year, and there's a {56%|fifty six per cent} chance you win nothing.",
+  "People say Premium Bonds pay {4.35%,|four point three five per cent,} beating savings.",
+  "But that's an average, lifted by two {£1 million|one million pound} jackpots a month.",
+  "Without prizes of {£1,000|a thousand pounds} and up, they pay about {3.7%.|three point seven per cent.}",
+  "That's below {NS&I's|N S and I's} own Direct Saver, at {3.75%.|three point seven five per cent.}",
+  "The catch: prizes are tax free, interest isn't.",
+  "Pay {40%|forty per cent} tax on your interest, and {3.75%|three point seven five per cent} becomes {2.25%.|two point two five per cent.}",
+  "So before you switch to Premium Bonds, remember:"
+ ]
+}

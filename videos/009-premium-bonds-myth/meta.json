@@ -1,0 +1,110 @@
+{
+  "id": "009",
+  "slot": "2026-10-23 10:00 Europe/London",
+  "format": "myth",
+  "pillar": "saving",
+  "title": "Premium Bonds Pay 4.35%? Why £1,000 Has a 56% Chance of Winning Nothing 🎟️💷 #shorts",
+  "description": "Put £1,000 in Premium Bonds for a year, and there's a 56% chance you win nothing.\n\nThe 4.35% prize fund rate is an average across every Bond, lifted by two £1 million jackpots a month. Leave out prizes of £1,000 and up, and the £25, £50, £100 and £500 prizes pay about 3.7% (3.74%), below the 3.75% on NS&I's own easy-access Direct Saver.\n\nThe catch: Premium Bond prizes are tax free, savings interest isn't. If you pay 40% tax on your interest (a higher-rate taxpayer above the £500 Personal Savings Allowance), 3.75% becomes 2.25%. Savings income tax rises by 2 points (to 42% for higher-rate taxpayers) from April 2027.\n\nHow it's worked out: NS&I's October 2026 draw had 137,483,797,618 eligible £1 Bonds and 6,546,849 prizes worth £498,378,775 (odds 21,000 to 1). £1,000 = 1,000 Bonds over 12 monthly draws: (1 − 1/21,000)^12,000 ≈ 56% chance of no prize.\n\nSources: https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex · https://www.nsandi.com/about-us/press-releases/2026/boost-for-premium-bonds-including-around-308k-extra-tax-free-prizes-plus-improved-rates-four-other-nsi-savings-products · https://www.nsandi.com/products/direct-saver · https://www.gov.uk/apply-tax-free-interest-on-savings/how-much-is-tax-free · https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income\n\nWith the maximum £50,000 in Premium Bonds, how many prizes would you expect in a year? Comment 👇\n📩 Send this to the friend who keeps all their savings in Premium Bonds.\n\nIllustration only. Assumes the October 2026 odds and prize mix stay the same for 12 draws, and all £1,000 is eligible for every draw (new Bonds wait one full calendar month). NS&I rates are variable. 40% = higher-rate tax on savings interest above the Personal Savings Allowance, 2026/27. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#premiumbonds #savings #nsandi #personalfinanceuk #ukmoney",
+  "comment_question": "With the maximum £50,000 in Premium Bonds, how many prizes would you expect in a year?",
+  "first_comment": "With the maximum £50,000 in Premium Bonds, how many prizes would you expect in a year? 👇 📩 Send this to the friend who keeps all their savings in Premium Bonds. Every number is checked against official sources.",
+  "tags": [
+    "premium bonds",
+    "premium bonds odds",
+    "NS&I",
+    "prize fund rate",
+    "premium bonds vs savings account",
+    "personal savings allowance",
+    "savings UK",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£1,000",
+      "how": "the illustrative holding: 1,000 £1 Bonds",
+      "source": "illustration",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "56%",
+      "how": "(1 − 6,546,849/137,483,797,618)^(1,000 × 12) = 0.565: chance 1,000 Bonds win nothing in 12 draws; arithmetic in scenes.py",
+      "source": "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "4.35%",
+      "how": "Premium Bonds prize fund rate, October 2026 draw (since September 2026); check: £498,378,775 × 12 ÷ 137,483,797,618 = 4.35%",
+      "source": "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "£1 million",
+      "how": "two £1,000,000 jackpots in each monthly draw (October 2026: 2)",
+      "source": "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "3.7%",
+      "how": "prizes under £1,000 (£25, £50, £100, £500) = £398,703,775 × 12 ÷ 137,483,797,618 = 3.74%; arithmetic in scenes.py",
+      "source": "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "3.75%",
+      "how": "NS&I Direct Saver, gross/AER, variable, interest taxable (from 18 Aug 2026)",
+      "source": "https://www.nsandi.com/products/direct-saver",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "40%",
+      "how": "higher rate of tax on savings income, 2026/27",
+      "source": "https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "2.25%",
+      "how": "3.75% × (1 − 40%), arithmetic in scenes.py",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "£500",
+      "how": "Personal Savings Allowance for higher-rate taxpayers (on screen)",
+      "source": "https://www.gov.uk/apply-tax-free-interest-on-savings/how-much-is-tax-free",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "21,000 to 1",
+      "how": "odds per £1 Bond per draw, October 2026 (on screen in description)",
+      "source": "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+      "checked": "2026-10-23"
+    },
+    {
+      "figure": "42%",
+      "how": "higher-rate tax on savings income from April 2027 (on screen)",
+      "source": "https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income",
+      "checked": "2026-10-23"
+    }
+  ],
+  "assumptions": [
+    "October 2026 odds (21,000 to 1) and prize mix held for 12 draws; all 1,000 Bonds eligible every draw",
+    "'Prizes of £1,000 and up' excluded = £1,000, £5,000, £10,000, £25,000, £50,000, £100,000, £1,000,000 prizes",
+    "2.25% = Direct Saver interest taxed at 40% (higher-rate taxpayer whose interest is above the £500 Personal Savings Allowance); England/Wales/NI and Scotland use the same savings rates",
+    "Comment answer (not shown): £50,000 × 12 ÷ 21,000 ≈ 29 prizes a year (28.6)"
+  ],
+  "sources": [
+    "https://www.nsandi.com/about-us/press-releases/2026/october-premium-bonds-two-millionaires-somerset-and-east-sussex",
+    "https://www.nsandi.com/about-us/press-releases/2026/boost-for-premium-bonds-including-around-308k-extra-tax-free-prizes-plus-improved-rates-four-other-nsi-savings-products",
+    "https://www.nsandi.com/products/direct-saver",
+    "https://www.gov.uk/apply-tax-free-interest-on-savings/how-much-is-tax-free",
+    "https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "Figures verified on nsandi.com and gov.uk 23 Oct 2026",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=2443653540684777279"
+  },
+  "durationSec": 38.84
+}
