@@ -1,0 +1,17 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "since",
+ "sentences": [
+  "The full new State Pension is {£22|twenty two pounds} from being taxed.",
+  "In {2016,|twenty sixteen,} it was nearly {£3,000|three thousand pounds} below the line.",
+  "Since then, the pension has gone up {55%.|fifty five per cent.}",
+  "Prices? Only about {44%.|forty four per cent.}",
+  "Thank the triple lock: the highest of prices, wages or two and a half per cent.",
+  "But your tax-free allowance? Frozen for years.",
+  "So one more rise, and it crosses the line.",
+  "The good news: the government says if it's your only income, you won't pay that tax.",
+  "Which is why, right now,"
+ ]
+}

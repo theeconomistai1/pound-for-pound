@@ -22,7 +22,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (008) · calc · pensions — Relief at source: how £80 becomes £100 in a pension, and the extra a higher-rate taxpayer can claim back
 - done (009) · myth · saving — "Premium Bonds are a good investment": the prize fund rate vs easy-access savings, and the odds per £1 (NS&I)
 - done (010) · calc · isa — Lifetime ISA: the 25% bonus, and why the 25% withdrawal charge costs more than the bonus
-- todo · since · pensions — The full new State Pension since 2016 vs earnings and prices: the triple lock in one chart (gov.uk)
+- done (011) · since · pensions — The full new State Pension since 2016 vs earnings and prices: the triple lock in one chart (gov.uk)
 - todo · calc · tax — Child Benefit after £60,000: the High Income Child Benefit Charge, worked through for one and two children
 - todo · myth · pensions — "The State Pension is enough to live on": the full new State Pension vs the PLSA Retirement Living Standards
 - todo · calc · pensions — Salary sacrifice vs a pay rise: the take-home difference on one example (NI and tax)
