@@ -1,0 +1,126 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: 'Earn £80,000 this tax year, and all your Child Benefit goes back.' Who (you, a parent), what (all your Child Benefit), by when (this tax year).",
+      "curiosity": "Loop 1: how do the neighbours on £100,000 keep it all? Answered at 15 s (each parent, not the household). Loop 2: so is stopping the claim the fix? Answered in the last third: it can cost State Pension credits.",
+      "tempo": "Seven scenes, none over 7.7 s; rehooks 'Wait, how?' and 'But here's the bigger mistake:'.",
+      "feeling": "Shock (all of it gone), 'that's not fair' (the neighbours on more keep it), then a sting (the fix costs more)."
+    },
+    "why_comment": {
+      "take_sides": "Is it fair that one earner on £80,000 loses it all while two on £50,000 keep it? Shown as the loop chip 'FAIR OR NOT? COMMENT'.",
+      "debate": "Individual vs household assessment; single-earner families vs dual earners; should Child Benefit be universal?",
+      "something_to_say": "'We're a one-income family and it's so unfair', 'I stopped claiming and didn't know about the credits', 'We're the neighbours'.",
+      "see_yourself": "Parents with one earner near £60,000–£80,000, stay-at-home parents, couples on two middling salaries."
+    },
+    "why_share": {
+      "send_to": "The parent who stopped claiming Child Benefit (or a partner earning near £60,000).",
+      "memorable_line": "The charge looks at each parent, not the household.",
+      "thats_me": "'That's us, one salary, two kids' for single-earner families.",
+      "short_and_clear": "Child Benefit is clawed back on one parent's income from £60,000 to £80,000, so two moderate earners keep it all; and stopping the claim can cost a stay-at-home parent State Pension credits; 35 s."
+    },
+    "why_follow": "UK small print, checked on GOV.UK, in 35 seconds. Follows the £100k trap (006) with the other tax-trap families hit, four days before the 28 Oct Budget; sets up the Marriage Allowance myth next (another rule that looks at each partner separately).",
+    "risk": {
+      "who": "You, a parent of two with one income",
+      "stake": "All your Child Benefit: over £2,300 a year",
+      "deadline": "This tax year (2026/27, to 5 April 2027) if your income reaches £80,000"
+    },
+    "loops": [
+      {
+        "question": "The couple next door earn £100,000 together and keep every penny: how?",
+        "twist": "Everyone thinks the charge is on household income. Actually it looks at each parent alone: two on £50,000 never reach £60,000.",
+        "new_question": "So what do families do to avoid it, and is that a mistake?"
+      },
+      {
+        "question": "Some parents stop claiming to dodge the charge: does that solve it?",
+        "twist": "Everyone thinks stopping the claim is the safe fix. Actually a parent at home then loses NI credits towards their State Pension.",
+        "new_question": "The loop line hands back to the risk: earn £80,000 and it all goes back."
+      }
+    ]
+  },
+  "id": "012",
+  "slot": "2026-10-24 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "tax",
+  "title": "Earn £80,000 and Lose ALL Your Child Benefit… Your Neighbours on £100,000 Keep It 😤👶 #shorts",
+  "description": "Earn £80,000 this tax year, and all your Child Benefit goes back.\n\nChild Benefit in 2026/27 is £27.05 a week for the eldest child and £17.90 for each other child: £44.95 a week, or £2,337.40 a year for two children (over £2,300). The High Income Child Benefit Charge takes back 1% of it for every £200 of adjusted net income over £60,000, so at £80,000 the whole £2,337.40 goes back. With two kids, every £200 over £60,000 costs £23.37 (at £70,000 it's £1,168.70, half).\n\nThe twist: the charge looks at each parent's own income, not the household's. Two parents on £50,000 each (£100,000 together) are both under £60,000, so they keep every penny. If both partners are over £60,000, whoever has the higher income pays.\n\nThe bigger mistake: some parents stop claiming to avoid the charge. But claiming Child Benefit for a child under 12 gives National Insurance credits, which count towards the State Pension, for a parent who isn't working or doesn't earn enough to pay National Insurance. Opting out of the payments keeps you registered, so you keep the credits and don't pay the charge.\n\nSources: https://www.gov.uk/child-benefit/what-youll-get · https://www.gov.uk/child-benefit-tax-charge · https://www.gov.uk/government/publications/changes-to-the-high-income-child-benefit-charge/information-on-changes-to-the-high-incomechild-benefit-charge · https://www.gov.uk/child-benefit-tax-charge/stop-child-benefit · https://www.gov.uk/child-benefit\n\nOne parent on £80,000 loses it all, two on £50,000 each keep it all. Fair or not? Comment 👇\n📩 Send this to the parent who stopped claiming Child Benefit.\n\nIllustration only. \"Earn\" = adjusted net income (income after things like pension contributions and Gift Aid). A year = 52 weeks. The neighbours each have £50,000 adjusted net income. NI credits: child under 12, parent not earning enough to pay National Insurance. Rules as at 24 October 2026; the Budget on 28 October 2026 could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#childbenefit #hicbc #parents #personalfinanceuk #ukmoney",
+  "comment_question": "One parent on £80,000 loses it all, two on £50,000 each keep it all. Fair or not?",
+  "first_comment": "One parent on £80,000 loses it all, two on £50,000 each keep it all. Fair or not? 👇 📩 Send this to the parent who stopped claiming Child Benefit. Every number is checked against official sources.",
+  "tags": [
+    "child benefit",
+    "high income child benefit charge",
+    "HICBC",
+    "child benefit £60,000",
+    "child benefit 2026/27",
+    "national insurance credits",
+    "parents money UK",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£80,000",
+      "how": "HICBC: over £80,000 adjusted net income you pay all the Child Benefit back (1% per £200 over £60,000; 100 × £200 = £20,000)",
+      "source": "https://www.gov.uk/child-benefit-tax-charge",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "£2,300",
+      "how": "'over £2,300': (£27.05 + £17.90) × 52 = £2,337.40 a year for two children, arithmetic in scenes.py",
+      "source": "https://www.gov.uk/child-benefit/what-youll-get",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "£100,000",
+      "how": "Illustration: two parents on £50,000 adjusted net income each; neither over £60,000, so no charge (asserted in scenes.py)",
+      "source": "https://www.gov.uk/child-benefit-tax-charge",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "£60,000",
+      "how": "HICBC threshold: adjusted net income over £60,000, tax years from 2024 to 2025; based on each partner's own income, the higher earner pays",
+      "source": "https://www.gov.uk/child-benefit-tax-charge ; https://www.gov.uk/government/publications/changes-to-the-high-income-child-benefit-charge/information-on-changes-to-the-high-incomechild-benefit-charge",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "'each parent, not the household'",
+      "how": "The charge is on the individual's adjusted net income; if both are over the threshold, whoever has the higher income pays",
+      "source": "https://www.gov.uk/government/publications/changes-to-the-high-income-child-benefit-charge/information-on-changes-to-the-high-incomechild-benefit-charge",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "'loses credits towards their State Pension'",
+      "how": "NI credits come automatically when you claim Child Benefit for a child under 12; they count towards the State Pension; opting out of payments keeps them",
+      "source": "https://www.gov.uk/child-benefit ; https://www.gov.uk/child-benefit-tax-charge/stop-child-benefit",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "£23.37 / £1,168.70 (description only)",
+      "how": "£2,337.40 × 1% per £200; at £70,000: 50 steps = 50% = £1,168.70, arithmetic in scenes.py",
+      "source": "https://www.gov.uk/child-benefit-tax-charge ; https://www.gov.uk/child-benefit/what-youll-get",
+      "checked": "2026-10-24"
+    }
+  ],
+  "assumptions": [
+    "'Earn' = adjusted net income.",
+    "A year = 52 weeks; 2026/27 rates £27.05 and £17.90 a week.",
+    "Neighbours: £50,000 adjusted net income each.",
+    "NI credits: child under 12, parent at home not earning enough to pay NI.",
+    "Rules as at 24 Oct 2026; the 28 Oct 2026 Budget could change them."
+  ],
+  "sources": [
+    "https://www.gov.uk/child-benefit/what-youll-get",
+    "https://www.gov.uk/child-benefit-tax-charge",
+    "https://www.gov.uk/government/publications/changes-to-the-high-income-child-benefit-charge/information-on-changes-to-the-high-incomechild-benefit-charge",
+    "https://www.gov.uk/child-benefit-tax-charge/stop-child-benefit",
+    "https://www.gov.uk/child-benefit"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-6342708032954939642",
+    "metricoolUuid": "-6342708032954939642"
+  },
+  "durationSec": 33.9
+}

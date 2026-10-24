@@ -23,7 +23,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (009) · myth · saving — "Premium Bonds are a good investment": the prize fund rate vs easy-access savings, and the odds per £1 (NS&I)
 - done (010) · calc · isa — Lifetime ISA: the 25% bonus, and why the 25% withdrawal charge costs more than the bonus
 - done (011) · since · pensions — The full new State Pension since 2016 vs earnings and prices: the triple lock in one chart (gov.uk)
-- todo · calc · tax — Child Benefit after £60,000: the High Income Child Benefit Charge, worked through for one and two children
+- done (012) · calc · tax — Child Benefit after £60,000: the High Income Child Benefit Charge, worked through for one and two children
 - todo · myth · pensions — "The State Pension is enough to live on": the full new State Pension vs the PLSA Retirement Living Standards
 - todo · calc · pensions — Salary sacrifice vs a pay rise: the take-home difference on one example (NI and tax)
 - todo · since · saving — What £100 from 2010 buys today (ONS CPI), and what cash at Bank Rate would have done since then (Bank of England)

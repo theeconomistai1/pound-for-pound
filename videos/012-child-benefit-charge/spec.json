@@ -1,0 +1,30 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "Earn {£80,000|eighty thousand pounds} this tax year, and all your Child Benefit goes back.",
+  "Two kids? That's over {£2,300|two thousand, three hundred pounds} a year.",
+  "Next door, two parents earn {£100,000|a hundred thousand pounds} together… and keep it all.",
+  "Wait, how?",
+  "The charge looks at each parent, not the household.",
+  "It starts at {£60,000|sixty thousand pounds}, and two on half each never cross it.",
+  "But here's the bigger mistake:",
+  "Some parents stop claiming to dodge it.",
+  "Then a parent at home loses credits towards their State Pension.",
+  "So before you stop claiming, remember:"
+ ],
+ "steps": [
+  "risk",
+  "risk",
+  "question",
+  "rehook",
+  "twist",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "loop"
+ ]
+}
