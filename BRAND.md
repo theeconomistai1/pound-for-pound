@@ -89,6 +89,40 @@ give advice.
 
 ---
 
+## 0c. The dopamine loop (the owner's rule, 24 Oct 2026 — the script skeleton for every format)
+
+A casino keeps you at the table by making you *wait*, not by letting you win: the brain lights up while it waits
+to see whether the reward comes. A Short does the same: **every answer opens a new question.** Every script is
+built from four steps, and the steps run as a loop **at least twice** (about one loop every 12–20 s; a 30–40 s
+Short = 2 loops):
+
+| Step | In the casino | In the Short | Rules |
+|---|---|---|---|
+| **1 · risk** | the bet that sits you down | the viewer cares | In the first 3 seconds it is clear **who** could lose **what**, **by when**: a person the viewer sides with ("you", "your mum", or a named illustrative person — never a narrator persona), something to lose (money, a bonus, a home), and a deadline ("next April", "by 5 April", not "one day"). Sentence 1 still carries the number. |
+| **2 · question** | "what's the next card?" | "what happens now?" forms in their head | Don't ask it — give one piece of information too few so the viewer asks it. **One question at a time.** Delay the answer, but let them feel it's coming. |
+| **3 · twist** | the card you didn't expect | they expect A, they see B | "Everyone thinks ___. Actually ___." Opposite of the expected cause · the bad thing turns out good (or the praised thing is the problem) · the obvious answer was the wrong place to look. A twist is never a lie: it must not contradict anything said earlier — viewers should think "how did I miss that?", not "I was tricked". |
+| **4 · rehook** | the next hand, dealt at once | a new question opens before the old one closes | No gap after an answer. Bridges: "But that wasn't the real problem." · "Here's the strange part:" · "And that's where it changes." · "But there was a catch." · "Very few people notice this:" · "The second mistake costs more." |
+
+The **loop line** (the last sentence, §2.6) is the final rehook: it hands the viewer straight back to the risk in
+sentence 1.
+
+**In spec.json** label each sentence with its step, in order: `"steps": ["risk", "question", "twist", "rehook",
+…, "loop"]` (other labels allowed for a plain fact: `"answer"`, `"context"`). `qa.py` FAILs a script whose
+`steps` don't match the sentences, or that has no `risk` in the first two sentences, fewer than two
+`question`→`twist` loops, no `rehook` between them, or a last step other than `loop`.
+
+**In meta.json → brief** add `loops`: one entry per loop, `{"question": …, "twist": "Everyone thinks … Actually
+…", "new_question": …}`, plus `risk: {"who", "stake", "deadline"}`. Write them before the script (step 2.4).
+
+**Check before publishing** (also in the summary sheet): in the first 3 s, is it clear who could lose what? Is
+there one single, clear question in the viewer's head? Does every twist agree with what was said before? Does it
+flow read aloud — shorten any sentence you stumble on.
+
+This runs inside §0 (max 5 numbers, ≤ 14 words a sentence, 20–40 s) and the formats below: the format decides
+*what* the video is about, the loop decides *how the script is told*.
+
+---
+
 ## 1. Formats (rotate — never the same format twice in a row)
 
 Every Short is **20–40 seconds, 6–10 sentences** (voice `bf_emma`, speed 1.15, gap 0.08). Sentence 1 carries

@@ -1,10 +1,10 @@
 {
   "brief": {
     "why_watch": {
-      "hook": "Shock: 'The full new State Pension is £22 from being taxed.' Pensioners assume it's tax-free.",
-      "curiosity": "How did it get so close, and will pensioners actually pay? Answered in sentences 6 and 7 (one more rise crosses; the government's no-tax pledge).",
-      "tempo": "Seven scenes, none over 8.5 s; re-hooks 'Prices?', 'But the tax-free allowance?', 'The good news:'.",
-      "feeling": "Surprise, then 'that's not fair' (frozen allowance), then relief (the pledge)."
+      "hook": "Risk in the first 3 s: 'Your mum's full State Pension is £22 from being taxed.' Who (your mum), what (her tax-free pension), by when (next April's rise).",
+      "curiosity": "Loop 1: how did it get so close? → the allowance has been frozen since 2021. Loop 2: so does she get a tax bill? → no, if it's her only income… but with a workplace pension she's probably paying already.",
+      "tempo": "Eight scenes, none over 8.5 s; rehooks 'So what changed?', 'And here's the part nobody tells her:', 'But…', 'Got a small workplace pension too?'.",
+      "feeling": "Worry for mum, then 'that's not fair' (the freeze), relief (the pledge), then a sting (she may already pay)."
     },
     "why_comment": {
       "take_sides": "Should the State Pension ever be taxed? Shown as the loop chip 'TAX IT? YES OR NO?'.",
@@ -14,20 +14,37 @@
     },
     "why_share": {
       "send_to": "The parent or grandparent on the State Pension.",
-      "memorable_line": "The full new State Pension is £22 from being taxed.",
+      "memorable_line": "Your mum's full State Pension is £22 from being taxed.",
       "thats_me": "'That's exactly my pension' for anyone on the full new rate.",
-      "short_and_clear": "The pension rose faster than prices while the tax-free allowance froze, so they've nearly met; 35 s."
+      "short_and_clear": "The full State Pension has nearly caught up with the frozen tax-free allowance; she won't pay if it's her only income, but other pensions are already taxed; 35 s."
     },
-    "why_follow": "UK small print, checked on GOV.UK. Lands four days before the 28 Oct Budget, which sets out the details: the natural follow-up is a news video on what the Budget changed."
+    "why_follow": "UK small print, checked on GOV.UK. Lands four days before the 28 Oct Budget, which sets out the details: the natural follow-up is a news video on what the Budget changed.",
+    "risk": {
+      "who": "Your mum, on the full new State Pension (the viewer sides with her)",
+      "stake": "Her pension stops being tax-free: a tax bill on her State Pension",
+      "deadline": "Next April's yearly rise (April 2027) is enough to tip it over"
+    },
+    "loops": [
+      {
+        "question": "In 2016 it was nearly £3,000 below the line, so how did it get this close?",
+        "twist": "Everyone thinks pensions just rose too fast. Actually the tax-free allowance has been frozen since 2021.",
+        "new_question": "So when she crosses the line, does a tax bill land on her doormat?"
+      },
+      {
+        "question": "Cross the line and HMRC would normally send her a bill: will she pay?",
+        "twist": "Everyone expects a bill. Actually, if the State Pension is her only income, the government says she won't pay… but with a small workplace pension she's probably paying already.",
+        "new_question": "The loop line hands back to the risk: right now, she's £22 from being taxed."
+      }
+    ]
   },
   "id": "011",
   "slot": "2026-10-24 10:00 Europe/London",
   "format": "since",
   "pillar": "pensions",
-  "title": "The Full State Pension Is Now £22 From Being Taxed 😳👴 #shorts",
-  "description": "The full new State Pension is £22 a year from being taxed.\n\nIn 2016/17 the full new State Pension was £155.65 a week (£8,093.80 a year), nearly £3,000 below the £11,000 tax-free Personal Allowance. Since then it has gone up 55%, to £241.30 a week (£12,547.60 a year) in 2026/27. Prices (CPI) rose about 44% from April 2016 to September 2026. That's the triple lock: the State Pension rises each year by the highest of inflation, average earnings growth or 2.5%.\n\nBut the tax-free allowance has been frozen at £12,570 since April 2021, and stays there until April 2031. So the full new State Pension is now £22.40 a year below it, and one more rise takes it over the line.\n\nThe good news: at Budget 2025 the government said pensioners whose only income is the basic or new State Pension (without extra amounts) won't have to pay that small amount of tax from 2027-28, and a minister later said they \"will not have to pay income tax over this Parliament\". Details are due at the Budget on 28 October 2026. If you have other income too (a workplace or private pension, say), the State Pension already counts towards your tax.\n\nSources: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/524117/benefit-and-pension-rates-from-6-april-2016.pdf · https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027 · https://www.gov.uk/government/publications/tax-and-tax-credit-rates-and-thresholds-for-2016-17/tax-and-tax-credit-rates-and-thresholds-for-2016-17 · https://www.gov.uk/income-tax-rates · https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031 · ONS CPI D7BT: https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23 · Triple lock: https://www.gov.uk/government/news/huge-income-boost-for-millions-of-pensioners-and-working-people · House of Commons Library, Taxation of state pension (CBP-10250): https://researchbriefings.files.parliament.uk/documents/CBP-10250/CBP-10250.pdf · https://www.gov.uk/guidance/how-your-state-pension-is-taxed\n\nShould the State Pension ever be taxed? Yes or no, and why? Comment 👇\n📩 Send this to the parent or grandparent on the State Pension.\n\nIllustration only. A year = 52 weeks of the full new State Pension (people reaching State Pension age from April 2016; the basic State Pension is lower). Prices = ONS CPI index, April 2016 to September 2026. Rules as at 23 October 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#statepension #triplelock #pensioners #personalfinanceuk #ukmoney",
+  "title": "Your Mum's State Pension Is £22 From Being Taxed 😳👵 #shorts",
+  "description": "Your mum's full State Pension is £22 from being taxed.\n\nThe full new State Pension is £241.30 a week in 2026/27 (£12,547.60 a year), just £22.40 below the £12,570 tax-free Personal Allowance. Any rise above 0.18% takes it over the line, so next April's yearly rise could do it.\n\nIn 2016/17 the full new State Pension was £155.65 a week (£8,093.80 a year), nearly £3,000 below the £11,000 Personal Allowance. Since then the pension has gone up 55% under the triple lock (the highest of inflation, average earnings growth or 2.5%), while the tax-free allowance has been frozen at £12,570 since 2021 and stays there until 5 April 2031.\n\nCross that line with no other income and HMRC would normally send a Simple Assessment letter (a tax bill). But at Budget 2025 the government said pensioners whose only income is the basic or new State Pension (without extra amounts) won't have to pay that small amount of tax from 2027-28. Details are due at the Budget on 28 October 2026.\n\nIf she has a workplace or private pension too, the State Pension already counts towards her tax: HMRC usually collects it through that pension's tax code.\n\nSources: https://www.gov.uk/new-state-pension/what-youll-get · https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027 · https://www.legislation.gov.uk/uksi/2016/227/contents/made · https://www.gov.uk/government/publications/tax-and-tax-credit-rates-and-thresholds-for-2016-17/tax-and-tax-credit-rates-and-thresholds-for-2016-17 · https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past · https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031 · House of Commons Library, Taxation of state pension (CBP-10250): https://commonslibrary.parliament.uk/research-briefings/CBP-10250/ · https://taxconfident.campaign.gov.uk/tax-in-retirement/how-state-pension-works/\n\nShould the State Pension ever be taxed? Yes or no, and why? Comment 👇\n📩 Send this to your mum, or anyone on the full State Pension.\n\nIllustration only. \"Your mum\" = anyone on the full new State Pension (people reaching State Pension age from April 2016; the basic State Pension is lower). A year = 52 weeks. Assumes no other allowances (such as Marriage Allowance). Rules as at 24 October 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#statepension #pensioners #personalallowance #personalfinanceuk #ukmoney",
   "comment_question": "Should the State Pension ever be taxed? Yes or no, and why?",
-  "first_comment": "Should the State Pension ever be taxed? Yes or no, and why? 👇 📩 Send this to the parent or grandparent on the State Pension. Every number is checked against official sources.",
+  "first_comment": "Should the State Pension ever be taxed? Yes or no, and why? 👇 📩 Send this to your mum, or anyone on the full State Pension. Every number is checked against official sources.",
   "tags": [
     "state pension",
     "state pension tax",
@@ -43,59 +60,75 @@
     {
       "figure": "£22",
       "how": "£12,570 Personal Allowance − £241.30 × 52 (£12,547.60) = £22.40, arithmetic in scenes.py",
-      "source": "https://www.gov.uk/income-tax-rates ; https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027",
-      "checked": "2026-10-23"
+      "source": "https://www.gov.uk/new-state-pension/what-youll-get ; https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past",
+      "checked": "2026-10-24"
     },
     {
       "figure": "2016",
-      "how": "2016/17 tax year: first year of the new State Pension (£155.65 a week)",
-      "source": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/524117/benefit-and-pension-rates-from-6-april-2016.pdf",
-      "checked": "2026-10-23"
+      "how": "2016/17: first year of the new State Pension, full rate £155.65 a week",
+      "source": "https://www.legislation.gov.uk/uksi/2016/227/contents/made",
+      "checked": "2026-10-24"
     },
     {
       "figure": "£3,000",
       "how": "'nearly £3,000': £11,000 Personal Allowance − £155.65 × 52 (£8,093.80) = £2,906.20, arithmetic in scenes.py",
-      "source": "https://www.gov.uk/government/publications/tax-and-tax-credit-rates-and-thresholds-for-2016-17/tax-and-tax-credit-rates-and-thresholds-for-2016-17 ; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/524117/benefit-and-pension-rates-from-6-april-2016.pdf",
-      "checked": "2026-10-23"
+      "source": "https://www.gov.uk/government/publications/tax-and-tax-credit-rates-and-thresholds-for-2016-17/tax-and-tax-credit-rates-and-thresholds-for-2016-17 ; https://www.legislation.gov.uk/uksi/2016/227/contents/made",
+      "checked": "2026-10-24"
     },
     {
-      "figure": "55%",
+      "figure": "2021",
+      "how": "Personal Allowance £12,570 'the level it reached in 2021/22', frozen since; held to 5 April 2031",
+      "source": "https://commonslibrary.parliament.uk/research-briefings/CBP-10250/ ; https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "55% (description only)",
       "how": "£241.30 ÷ £155.65 − 1 = 55.0%, arithmetic in scenes.py",
-      "source": "https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027 ; https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/524117/benefit-and-pension-rates-from-6-april-2016.pdf",
-      "checked": "2026-10-23"
+      "source": "https://www.gov.uk/new-state-pension/what-youll-get ; https://www.legislation.gov.uk/uksi/2016/227/contents/made",
+      "checked": "2026-10-24"
     },
     {
-      "figure": "44%",
-      "how": "ONS CPI D7BT 144.1 (Sep 2026) ÷ 100.2 (Apr 2016) − 1 = 43.8%, 'about 44%', arithmetic in scenes.py",
-      "source": "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
-      "checked": "2026-10-23"
+      "figure": "0.18% (description only)",
+      "how": "£22.40 ÷ £12,547.60 = 0.18%: any rise above this crosses the line",
+      "source": "https://www.gov.uk/new-state-pension/what-youll-get ; https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "'won't pay' pledge",
+      "how": "Budget 2025: from 2027-28, pensioners whose sole income is the basic or new State Pension won't pay small amounts of tax via Simple Assessment; details not yet published",
+      "source": "https://commonslibrary.parliament.uk/research-briefings/CBP-10250/",
+      "checked": "2026-10-24"
+    },
+    {
+      "figure": "'probably paying already'",
+      "how": "With a workplace/private pension, HMRC changes that pension's tax code to include the State Pension and collects the tax through it",
+      "source": "https://taxconfident.campaign.gov.uk/tax-in-retirement/how-state-pension-works/",
+      "checked": "2026-10-24"
     }
   ],
   "assumptions": [
-    "A year = 52 weeks of the full new State Pension (for people reaching State Pension age from 6 April 2016); the full basic State Pension is lower (£184.90 a week in 2026/27).",
-    "'Prices' = ONS CPI index from April 2016 to September 2026 (latest month, released 21 Oct 2026).",
-    "Triple lock (spoken as 'two and a half per cent'): highest of inflation, average earnings growth or 2.5% (gov.uk). Not in law as a floor; a government commitment for this Parliament (Budget 2025).",
-    "'One more rise crosses the line': any rise above 0.18% (£22.40 ÷ £12,547.60) takes £241.30 × 52 above £12,570 while the allowance is frozen to April 2031.",
-    "'You won't pay that tax': Budget 2025 para 4.167 and the Exchequer Secretary (Jan 2026), as reported by the House of Commons Library (CBP-10250, 22 Sep 2026); applies to people whose only income is the basic or new State Pension without increments; details due at the Budget on 28 Oct 2026.",
-    "On screen only (not spoken): £8,094 and £11,000 (2016/17), £12,570 and £12,548 (2026/27), 2.5%, frozen until 2031."
+    "'Your mum' = anyone on the full new State Pension (State Pension age from 6 April 2016).",
+    "A year = 52 weeks.",
+    "'Next April's rise could tip her over': any rise above 0.18% does; the triple lock's floor is 2.5% (a government commitment, not a legal floor). The April 2027 rate is not yet confirmed.",
+    "'Probably paying already': with a workplace pension above about £22 a year and no other allowances.",
+    "Prices (CPI) no longer quoted in this version."
   ],
   "sources": [
-    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/524117/benefit-and-pension-rates-from-6-april-2016.pdf",
+    "https://www.gov.uk/new-state-pension/what-youll-get",
     "https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027",
+    "https://www.legislation.gov.uk/uksi/2016/227/contents/made",
     "https://www.gov.uk/government/publications/tax-and-tax-credit-rates-and-thresholds-for-2016-17/tax-and-tax-credit-rates-and-thresholds-for-2016-17",
-    "https://www.gov.uk/income-tax-rates",
+    "https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past",
     "https://www.gov.uk/government/publications/maintaining-income-tax-and-equivalent-national-insurance-contributions-thresholds-until-5-april-2031",
-    "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
-    "https://www.gov.uk/government/news/huge-income-boost-for-millions-of-pensioners-and-working-people",
-    "https://researchbriefings.files.parliament.uk/documents/CBP-10250/CBP-10250.pdf",
-    "https://www.gov.uk/guidance/how-your-state-pension-is-taxed"
+    "https://commonslibrary.parliament.uk/research-briefings/CBP-10250/",
+    "https://taxconfident.campaign.gov.uk/tax-in-retirement/how-state-pension-works/"
   ],
   "review": {
     "status": "scheduled",
     "owner_take": "",
     "owner_voice": false,
-    "notes": "Made the evening before at the owner's request; first video built on BRAND.md §0 and §0b.",
+    "notes": "Remade 24 Oct 2026 on the dopamine loop (BRAND.md §0c) at the owner's request; replaces the 23 Oct cut in the same Metricool post.",
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-8845146600293449390"
   },
-  "durationSec": 33.1
+  "durationSec": 33.9
 }

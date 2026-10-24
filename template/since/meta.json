@@ -18,7 +18,24 @@
       "thats_me": "TODO the 'this is so me' moment",
       "short_and_clear": "TODO the whole point in one sentence a friend would get"
     },
-    "why_follow": "TODO how this fits the channel promise (UK small print, checked on GOV.UK, 30 s) and what it sets up next"
+    "why_follow": "TODO how this fits the channel promise (UK small print, checked on GOV.UK, 30 s) and what it sets up next",
+    "risk": {
+      "who": "TODO the person the viewer sides with (you, your mum, a named illustrative person)",
+      "stake": "TODO what they could lose, in pounds",
+      "deadline": "TODO by when (a date, not 'one day')"
+    },
+    "loops": [
+      {
+        "question": "TODO the question loop 1 opens (never asked aloud)",
+        "twist": "TODO Everyone thinks ... Actually ...",
+        "new_question": "TODO the question the rehook opens"
+      },
+      {
+        "question": "TODO loop 2's question",
+        "twist": "TODO Everyone thinks ... Actually ...",
+        "new_question": "TODO what the loop line hands back to sentence 1"
+      }
+    ]
   },
   "id": "NNN",
   "slot": "YYYY-MM-DD HH:MM Europe/London",

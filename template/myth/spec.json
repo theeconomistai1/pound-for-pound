@@ -3,14 +3,25 @@
  "speed": 1.15,
  "gap": 0.08,
  "format": "myth",
- "_notes": "6-10 sentences, 20-40 s (aim 25-35). FOLLOW BRAND.md §0: sentence 1 = a SURPRISE hook with a number; max 5 numbers said, round, no decimals or equations; <=14 words a sentence; a re-hook every 5-8 s ('Sounds amazing, right?', 'But here's the catch.'). Last sentence = the loop line, ending on a hand-over (':' ',' or '…') that runs into sentence 1. No spoken calls to action. Palette rotates automatically; add \"theme\" to override.",
+ "_notes": "6-10 sentences, 20-40 s (aim 25-35). FOLLOW BRAND.md §0: sentence 1 = a SURPRISE hook with a number; max 5 numbers said, round, no decimals or equations; <=14 words a sentence; a re-hook every 5-8 s ('Sounds amazing, right?', 'But here's the catch.'). Last sentence = the loop line, ending on a hand-over (':' ',' or '…') that runs into sentence 1. No spoken calls to action. Palette rotates automatically; add \"theme\" to override. Tell it as the DOPAMINE LOOP (BRAND.md §0c): risk (who could lose what, by when) in the first 3 s; at least two question -> twist loops joined by a rehook; 'steps' labels every sentence (risk / question / twist / rehook / answer / context / loop).",
  "sentences": [
-  "TODO SURPRISE HOOK: the myth and why it's wrong, e.g. Everyone says a pay rise can leave you worse off. It can't.",
-  "TODO the myth the way people say it.",
-  "TODO re-hook, e.g. Here's what really happens.",
-  "TODO the truth, one round number.",
-  "TODO the result for YOU in pounds.",
-  "TODO the exception where it IS true.",
+  "TODO RISK + HOOK: the myth costs someone money, with one number.",
+  "TODO QUESTION: the myth the way people say it — leave the 'is it true?' open.",
+  "TODO TWIST: Everyone thinks ___. Actually ___ (one round number).",
+  "TODO REHOOK bridge, e.g. Here's the strange part:",
+  "TODO QUESTION 2: so when IS it true?",
+  "TODO TWIST 2: the exception, the result for YOU in pounds.",
+  "TODO REHOOK, e.g. Very few people notice this:",
   "TODO LOOP LINE back into sentence 1, e.g. So next time someone tells you"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "rehook",
+  "loop"
  ]
 }

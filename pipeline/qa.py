@@ -293,6 +293,62 @@ def check_brief(video_dir, spec):
                        "(BRAND.md §0b)")
 
 
+STEP_NAMES = ("risk", "question", "twist", "rehook", "answer", "context", "loop")
+BRIDGE = re.compile(r"^(but|and|here's|here is|the twist|the catch|so|very few|the second|now|then|wait|sure|plot twist)\b", re.I)
+
+
+def check_loop(video_dir, spec):
+    """The dopamine loop (BRAND.md §0c): risk -> question -> twist -> rehook, at least twice."""
+    st = spec.get("steps")
+    ss = spec["sentences"]
+    if not isinstance(st, list) or len(st) != len(ss):
+        report("FAIL", "spec.json needs \"steps\": one label per sentence (risk / question / twist / rehook / "
+                       "answer / context / loop) — the dopamine loop (BRAND.md §0c)")
+        return
+    bad = [x for x in st if x not in STEP_NAMES]
+    if bad:
+        report("FAIL", f"unknown steps {bad} — use {STEP_NAMES}")
+        return
+    if "risk" not in st[:2]:
+        report("FAIL", "no risk in the first two sentences — who could lose what, by when (BRAND.md §0c step 1)")
+    if st[-1] != "loop":
+        report("FAIL", "the last step must be the loop line")
+    loops, open_q, rehook_between = 0, False, True
+    for x in st:
+        if x == "question":
+            open_q = True
+        elif x == "twist" and open_q:
+            if loops and not rehook_between:
+                break
+            loops += 1
+            open_q, rehook_between = False, False
+        elif x == "rehook":
+            rehook_between = True
+    (report("PASS", f"dopamine loop: {loops} question -> twist loops, joined by a rehook") if loops >= 2 else
+     report("FAIL", f"only {loops} complete loop(s) — need at least two question -> twist loops with a rehook "
+                    "between them (BRAND.md §0c)"))
+    weak = [i for i, x in enumerate(st) if x == "rehook" and not BRIDGE.search(spoken(ss[i]).strip())]
+    if weak:
+        report("WARN", f"rehook sentences {weak} don't open on a bridge ('But…', 'Here's the strange part:') — "
+                       "BRAND.md §0c step 4")
+    for i, x in enumerate(st):
+        if x == "question" and spoken(ss[i]).strip().endswith("?") and len(spoken(ss[i]).split()) > 6:
+            report("WARN", f"sentence {i} asks the big question out loud — give one fact too few and let the "
+                           "viewer ask it (BRAND.md §0c step 2)")
+    m = json.load(open(os.path.join(video_dir, "meta.json"), encoding="utf-8")) if os.path.exists(
+        os.path.join(video_dir, "meta.json")) else {}
+    b = m.get("brief") or {}
+    r = b.get("risk") or {}
+    lp = b.get("loops") or []
+    thin = [k for k in ("who", "stake", "deadline") if len(str(r.get(k, ""))) < 4 or "TODO" in str(r.get(k, ""))]
+    thin += [f"loops[{i}].{k}" for i, l in enumerate(lp) for k in ("question", "twist", "new_question")
+             if len(str(l.get(k, ""))) < 8 or "TODO" in str(l.get(k, ""))]
+    if len(lp) < 2:
+        thin.append("loops (need 2)")
+    (report("FAIL", f"brief.risk / brief.loops missing or thin: {thin} (BRAND.md §0c)") if thin else
+     report("PASS", "brief: risk (who, stake, deadline) and both loops planned"))
+
+
 def contact_sheet(video_dir):
     b = os.path.join(video_dir, "build")
     total = Mo.T["total"]
@@ -334,6 +390,7 @@ def main():
     check_glyphs()
     check_meta(video_dir, spec)
     check_brief(video_dir, spec)
+    check_loop(video_dir, spec)
     contact_sheet(video_dir)
     if "FAIL" in results:
         print("RESULT: FAIL — fix the lines above before publishing")

@@ -4,14 +4,27 @@
  "gap": 0.08,
  "format": "since",
  "sentences": [
-  "The full new State Pension is {£22|twenty two pounds} from being taxed.",
-  "In {2016,|twenty sixteen,} it was nearly {£3,000|three thousand pounds} below the line.",
-  "Since then, the pension has gone up {55%.|fifty five per cent.}",
-  "Prices? Only about {44%.|forty four per cent.}",
-  "Thank the triple lock: the highest of prices, wages or two and a half per cent.",
-  "But your tax-free allowance? Frozen for years.",
-  "So one more rise, and it crosses the line.",
-  "The good news: the government says if it's your only income, you won't pay that tax.",
+  "Your mum's full State Pension is {£22|twenty two pounds} from being taxed.",
+  "And next April's rise could tip her over.",
+  "In {2016,|twenty sixteen,} it was nearly {£3,000|three thousand pounds} below.",
+  "So what changed? Not just the pension.",
+  "Her tax-free allowance has been frozen since {2021.|twenty twenty one.}",
+  "And here's the part nobody tells you:",
+  "Cross that line, and the taxman would normally send her a bill.",
+  "But if it's her only income, the government says she won't pay.",
+  "Got a workplace pension too? She's probably paying already.",
   "Which is why, right now,"
+ ],
+ "steps": [
+  "risk",
+  "risk",
+  "question",
+  "rehook",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "twist",
+  "loop"
  ]
 }

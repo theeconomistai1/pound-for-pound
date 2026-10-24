@@ -34,6 +34,8 @@ Lines in `topics.md` look like `- todo · <format> · <pillar> — <topic>` (opt
    comment or share, why would they follow? Write them as `brief` in meta.json before the script. If there's
    no good answer, find a sharper angle; if there still isn't one, mark the topic `skipped: weak angle — <why>`
    and take the next.
+   Then plan the **dopamine loop** (BRAND.md §0c): `brief.risk` (who · stake · deadline) and `brief.loops`
+   (at least two: question → twist → new question).
 5. Next video number = highest `NNN` in `videos/` + 1. If the line names a `sample:`, copy that folder to
    `videos/NNN-slug` as the starting point and re-verify everything.
 
@@ -48,7 +50,8 @@ topic `blocked: <reason>` and take the next. Record every number in `meta.json` 
 `cp -r template/<format> videos/NNN-slug`, then:
 - **spec.json** — `format`, 6–10 sentences, **20–40 seconds** at speed 1.15, gap 0.08, voice `bf_emma`.
   Sentence 1 = the surprise hook, with a number (BRAND.md §0: simple and gripping — max 5 numbers said, no
-  decimals or equations, ≤ 14 words a sentence, a re-hook every 5–8 s). Follow the format's beats (BRAND.md §1). **Last sentence = the loop line**,
+  decimals or equations, ≤ 14 words a sentence, a re-hook every 5–8 s). Follow the format's beats (BRAND.md §1), told as the dopamine loop (BRAND.md §0c): risk in the
+  first 3 s, at least two question → twist loops joined by a rehook, and `"steps"` labelling every sentence. **Last sentence = the loop line**,
   ending on a hand-over (":" "," or "…") that runs into sentence 1. No spoken calls to action (like, follow,
   share, comment, send). Education, not advice; no persona (BRAND.md §4). Numbers as `{shown|spoken}`.
   Voice it straight away for real word timings:
@@ -119,7 +122,7 @@ python3 -I pipeline/qa.py videos/NNN-slug             # must end RESULT: PASS; f
   1. `SCHEDULED: <title> — publishes <slot>, <format>, <seconds> s`.
   2. The script, numbered.
   3. Every number: figure — how — source link.
-  4. The cover words, the comment question, and the brief in three lines: **Watch:** <hook + feeling> ·
+  4. The loops in one line each (question → twist), then the cover words, the comment question, and the brief in three lines: **Watch:** <hook + feeling> ·
      **Comment/share:** <take-sides moment + who they send it to> · **Follow:** <why_follow>.
   5. The Metricool `plannerUrl`. If the pillar has a full video in `pillars.json`: "Set it as this Short's
      Related video in YouTube Studio once it's live."
