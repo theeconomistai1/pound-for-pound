@@ -1,0 +1,30 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "{£1,000|A thousand pounds} into your pension can cost you just {£720|seven hundred and twenty pounds}.",
+  "Pay the usual way this tax year, and it's {£800|eight hundred}.",
+  "Same pension, same {£1,000|thousand pounds}, different price.",
+  "Here's the strange part:",
+  "Give up that pay, and your boss pays it in.",
+  "So it's never taxed, and skips National Insurance too.",
+  "But that's where it changes.",
+  "From April {2029|twenty twenty-nine}, the National Insurance break gets a cap.",
+  "Swap under {£2,000|two thousand pounds} a year, and nothing changes.",
+  "So before you pay in the usual way, remember:"
+ ],
+ "steps": [
+  "risk",
+  "risk",
+  "question",
+  "rehook",
+  "twist",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "loop"
+ ]
+}

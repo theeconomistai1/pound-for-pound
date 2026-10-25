@@ -1,0 +1,125 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: '£1,000 into your pension can cost you just £720' then 'the usual way this tax year, it's £800'. Who: you, paying into a pension. Stake: £80 of every £1,000. When: this tax year.",
+      "curiosity": "Loop 1: same pension, same £1,000, why a different price? Answered at ~15-20 s (salary sacrifice skips National Insurance too). Loop 2: the NI break gets a cap from April 2029: does the deal die? Answered in the last third (under £2,000 a year, nothing changes).",
+      "tempo": "Seven scenes, none over 7 s; rehooks 'Here's the strange part:' and 'But that's where it changes.'",
+      "feeling": "Mild outrage ('I've been paying £80 too much'), then the smug 'I knew a trick', then relief (the cap won't hit most people)."
+    },
+    "why_comment": {
+      "take_sides": "Would you swap £1,000 of pay for £1,000 in your pension? Shown as the loop chip 'WOULD YOU SWAP? COMMENT'.",
+      "debate": "Is capping salary sacrifice fair? Is it worth a lower official salary (mortgage, maternity pay)? Should employers pass on their NI saving?",
+      "something_to_say": "'My employer doesn't even offer it', 'I've done this for years', 'My HR never explained this'.",
+      "see_yourself": "Employees on £20k-£50k paying into a workplace pension; anyone deciding how much to put in this tax year."
+    },
+    "why_share": {
+      "send_to": "The colleague who's never heard of salary sacrifice.",
+      "memorable_line": "Same pension, same £1,000, different price.",
+      "thats_me": "'I'm paying the usual way: that's £80 per £1,000 I didn't need to'.",
+      "short_and_clear": "Salary sacrifice makes £1,000 of pension cost £720 instead of £800 because it skips NI too, and the 2029 cap only bites above £2,000 a year; 35 s."
+    },
+    "why_follow": "UK small print, checked on GOV.UK, in 35 seconds. Follows relief at source (008: £80 becomes £100) with the cheaper route almost nobody explains, three days before the 28 Oct Budget; sets up the payslip tax code (1257L) explainer next.",
+    "risk": {
+      "who": "You, a basic-rate employee paying into a workplace pension",
+      "stake": "£80 of every £1,000 you put in (£800 vs £720)",
+      "deadline": "This tax year (2026/27, to 5 April 2027); the NI cap from 6 April 2029"
+    },
+    "loops": [
+      {
+        "question": "Same pension, same £1,000: why does one way cost £800 and the other £720?",
+        "twist": "Everyone thinks pension tax relief is only income tax. Actually salary sacrifice skips National Insurance too.",
+        "new_question": "But that's where it changes: is this break going away?"
+      },
+      {
+        "question": "From April 2029 the NI break gets a cap: does salary sacrifice stop being worth it?",
+        "twist": "Everyone thinks the cap kills the perk. Actually under £2,000 a year nothing changes.",
+        "new_question": "The loop line hands back to the risk: £1,000 into your pension can cost just £720."
+      }
+    ]
+  },
+  "id": "014",
+  "slot": "2026-10-25 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "pensions",
+  "title": "£1,000 Into Your Pension for Just £720? The Payslip Trick Most People Miss 😮💷 #shorts",
+  "description": "£1,000 into your pension can cost you just £720.\n\nPay £1,000 into a workplace or personal pension the usual way (relief at source or net pay) and, as a basic-rate taxpayer, you get income tax relief only: 20% of £1,000 = £200, so it costs £800 of take-home pay. With salary sacrifice you give up £1,000 of salary and your employer pays the £1,000 into your pension instead. That pay is never taxed and skips employee National Insurance too: £200 income tax + £80 NI (8% between £12,570 and £50,270 in 2026/27) = £280 saved, so your take-home drops by just £720. Your employer also saves 15% NI (£150), and some employers add it to your pension.\n\nThe catch: from 6 April 2029 (the 2029-30 tax year), the National Insurance break is capped at £2,000 of salary sacrificed into a pension a year. Swap under £2,000 a year and nothing changes; above it, employee and employer NI are due on the extra (e.g. swap £3,000 and NI is due on £1,000: £80 for a basic-rate employee). It stays free of income tax. Higher-rate taxpayers save 40% tax + 2% NI, so £1,000 costs them about £580 today.\n\nSources: https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027 · https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220 · https://www.gov.uk/workplace-pensions/what-you-your-employer-and-the-government-pay · https://www.gov.uk/guidance/salary-sacrifice-and-the-effects-on-paye · https://www.gov.uk/government/publications/changes-to-salary-sacrifice-for-pensions-from-april-2029/changes-to-salary-sacrifice-for-pensions-from-april-2029 · https://www.legislation.gov.uk/ukpga/2026/15\n\nWould you swap £1,000 of pay for £1,000 in your pension? Yes or no, and why? Comment 👇\n📩 Send this to the colleague who's never heard of salary sacrifice.\n\nIllustration only. Assumes a basic-rate taxpayer in England, Wales or Northern Ireland earning between £12,570 and £50,270 (e.g. £35,000), whose employer offers salary sacrifice and pays the whole amount in. Salary sacrifice is your employer's choice to offer, can't take pay below the National Minimum Wage, and lowers the pay that some things are based on (such as statutory maternity pay and some earnings-related benefits). Scottish income tax bands differ. Rules as at 25 October 2026; the Budget on 28 October 2026 could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#salarysacrifice #pension #nationalinsurance #personalfinanceuk #ukmoney",
+  "comment_question": "Would you swap £1,000 of pay for £1,000 in your pension? Yes or no, and why?",
+  "first_comment": "Would you swap £1,000 of pay for £1,000 in your pension? Yes or no, and why? 👇 📩 Send this to the colleague who's never heard of salary sacrifice. Every number is checked against official sources.",
+  "tags": [
+    "salary sacrifice",
+    "salary sacrifice pension",
+    "pension tax relief",
+    "national insurance",
+    "salary sacrifice cap 2029",
+    "workplace pension",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£1,000",
+      "how": "Illustration: £1,000 of salary paid into a pension",
+      "source": "illustration",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£720",
+      "how": "£1,000 − 20% income tax (£200) − 8% employee NI (£80) = £720 drop in take-home by salary sacrifice; basic-rate employee earning £12,570–£50,270; take_home() in scenes.py",
+      "source": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027 ; https://www.gov.uk/workplace-pensions/what-you-your-employer-and-the-government-pay",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£800",
+      "how": "Usual way (relief at source / net pay): income tax relief only, £1,000 − 20% = £800 (PTM044220: pay £80, scheme claims £20)",
+      "source": "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "2029",
+      "how": "NIC (Employer Pensions Contributions) Act 2026 has effect from the 2029-30 tax year (from 6 April 2029)",
+      "source": "https://www.legislation.gov.uk/ukpga/2026/15 ; https://www.gov.uk/government/publications/changes-to-salary-sacrifice-for-pensions-from-april-2029/changes-to-salary-sacrifice-for-pensions-from-april-2029",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£2,000",
+      "how": "The Act: first regulations must set the contributions limit at £2,000 a tax year; gov.uk: NI exemption capped at £2,000 a year, above it employer and employee NI due, still income-tax free",
+      "source": "https://www.legislation.gov.uk/ukpga/2026/15 ; https://www.gov.uk/government/publications/changes-to-salary-sacrifice-for-pensions-from-april-2029/changes-to-salary-sacrifice-for-pensions-from-april-2029",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£200 / £80 / £280 / £150 / £580 (description only)",
+      "how": "20% and 8% of £1,000; employer 15% NI = £150; higher rate 40% tax + 2% NI → £1,000 costs £580; asserted in scenes.py",
+      "source": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£12,570 / £50,270 / 8% (description only)",
+      "how": "Employee Class 1 NI 8% between the primary threshold £12,570 and the UEL £50,270 (2026/27)",
+      "source": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+      "checked": "2026-10-25"
+    }
+  ],
+  "assumptions": [
+    "Basic-rate taxpayer in England, Wales or NI earning £12,570–£50,270 (e.g. £35,000).",
+    "Employer offers salary sacrifice and pays the whole sacrificed amount in.",
+    "Usual way = relief at source or net pay (income tax relief only).",
+    "Rules as at 25 Oct 2026; the 28 Oct 2026 Budget could change them."
+  ],
+  "sources": [
+    "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+    "https://www.gov.uk/hmrc-internal-manuals/pensions-tax-manual/ptm044220",
+    "https://www.gov.uk/workplace-pensions/what-you-your-employer-and-the-government-pay",
+    "https://www.gov.uk/guidance/salary-sacrifice-and-the-effects-on-paye",
+    "https://www.gov.uk/government/publications/changes-to-salary-sacrifice-for-pensions-from-april-2029/changes-to-salary-sacrifice-for-pensions-from-april-2029",
+    "https://www.legislation.gov.uk/ukpga/2026/15"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-2563696898492709942",
+    "metricoolUuid": "-2563696898492709942"
+  },
+  "durationSec": 34.2
+}
