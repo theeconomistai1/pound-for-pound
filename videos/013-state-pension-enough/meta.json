@@ -1,0 +1,125 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: 'Retire alone on the full State Pension, and you're over £1,300 a year short.' Who (you, alone), what (£1,300+ a year), when (every year of retirement, from 2026/27 rates). Short of what? is the open question.",
+      "curiosity": "Loop 1: short of what? Answered at 8-17 s (Pensions UK's £13,900 Minimum vs £12,548). Loop 2: so is the myth just false? Answered in the last third: for a couple it's true, they clear their £22,500 Minimum.",
+      "tempo": "Seven scenes, none over 7.1 s; rehook 'But here's the strange part:' at 18 s; HALF TRUE stamp at 7 s.",
+      "feeling": "Worry (it's not enough), then 'that's not fair' (couples are fine, people alone aren't)."
+    },
+    "why_comment": {
+      "take_sides": "Is it fair that a couple clears the basics on two State Pensions while someone alone falls over £1,300 short? Shown as the loop chip 'FAIR OR NOT? COMMENT'.",
+      "debate": "Should single pensioners get more (like the single-person council tax discount)? Is the State Pension meant to cover the basics at all? Renters vs homeowners.",
+      "something_to_say": "'My mum's widowed and this is exactly her', 'And that's before rent!', 'This is why you need a workplace pension'.",
+      "see_yourself": "Single, widowed or divorced people near retirement; renters; adult children of a parent living alone."
+    },
+    "why_share": {
+      "send_to": "The friend who thinks the State Pension will cover it.",
+      "memorable_line": "A couple clears it. Alone, you don't.",
+      "thats_me": "'That's me: single, no private pension' / 'that's my widowed dad'.",
+      "short_and_clear": "The full State Pension is about £1,350 a year short of Pensions UK's bare-minimum budget for one person, but a couple on two State Pensions clears theirs; and that's before rent; 35 s."
+    },
+    "why_follow": "UK small print, checked on GOV.UK, in 35 seconds. Follows 011 (the State Pension is £22 from being taxed) with the other side: is it enough at all? Three days before the 28 Oct Budget; sets up the salary-sacrifice and 1%-fees videos (how people close the gap).",
+    "risk": {
+      "who": "You, retiring on your own (single, widowed or divorced)",
+      "stake": "Over £1,300 a year short of the bare-minimum budget",
+      "deadline": "Every year of retirement, starting with this tax year's rates (2026/27)"
+    },
+    "loops": [
+      {
+        "question": "Over £1,300 short of what? (people say the State Pension is enough to live on)",
+        "twist": "Everyone thinks the full State Pension covers the basics. Actually Pensions UK puts the basics for one at £13,900, and it pays about £12,500.",
+        "new_question": "But here's the strange part: what about two people?"
+      },
+      {
+        "question": "A couple needs £22,500 for the same basics: so are they even further short?",
+        "twist": "Everyone thinks a couple needs double. Actually £22,500 is less than double, and two full State Pensions pay over £25,000: a couple clears it, alone you don't.",
+        "new_question": "And that's before rent: the loop line hands back to 'retire alone… over £1,300 short'."
+      }
+    ]
+  },
+  "id": "013",
+  "slot": "2026-10-25 10:00 Europe/London",
+  "format": "myth",
+  "pillar": "pensions",
+  "title": "The State Pension Is Enough to Live On? Alone, You're Over £1,300 a Year Short 😬👴 #shorts",
+  "description": "Retire alone on the full State Pension, and you're over £1,300 a year short.\n\nThe full new State Pension is £241.30 a week in 2026/27: about £12,500 a year (£12,547.60 over 52 weeks). That's under the £12,570 Personal Allowance, so with no other income no income tax is due on it.\n\nPensions UK's Retirement Living Standards (June 2026) say a Minimum retirement lifestyle costs £13,900 a year for one person, after tax. On the State Pension alone that leaves you £1,352.40 a year short (over £1,300). To cover the gap from a taxable private pension, Pensions UK puts the before-tax figure at £14,232 a year, about £1,684 on top of the State Pension.\n\nThe twist: a couple needs £22,500 for the same Minimum, not double (£27,800). Two full State Pensions pay £25,095.20, over £25,000, so a couple clears the Minimum by about £2,595 while someone alone doesn't. For a Moderate lifestyle (£32,700 for one person), the full State Pension covers only about 38%.\n\nAnd that's before rent: the standards assume you own your home outright. Rent and mortgage payments are not included (council tax and household bills are). Figures are for outside London.\n\nSources: https://www.gov.uk/new-state-pension/what-youll-get · https://www.gov.uk/income-tax-rates · Pensions UK, Retirement Living Standards update, 3 June 2026: https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough- · https://www.retirementlivingstandards.org.uk/details\n\nA couple on two State Pensions clears the basics, someone alone falls over £1,300 short. Fair or not? Comment 👇\n📩 Send this to the friend who thinks the State Pension will cover it.\n\nIllustration only. Assumes the full new State Pension (35 qualifying years; people reaching State Pension age from April 2016), no other income, a home owned outright, outside London, a year = 52 weeks. Pensions UK is the trading name of the Pensions and Lifetime Savings Association; its standards are calculated by Loughborough University's Centre for Research in Social Policy. Rules as at 25 October 2026; the Budget on 28 October 2026 could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#statepension #retirement #pensionsuk #personalfinanceuk #ukmoney",
+  "comment_question": "A couple on two State Pensions clears the basics, someone alone falls over £1,300 short. Fair or not?",
+  "first_comment": "A couple on two State Pensions clears the basics, someone alone falls over £1,300 short. Fair or not? 👇 📩 Send this to the friend who thinks the State Pension will cover it. Every number is checked against official sources.",
+  "tags": [
+    "state pension",
+    "is the state pension enough",
+    "retirement living standards",
+    "pensions uk",
+    "new state pension 2026/27",
+    "retirement income UK",
+    "single pensioners",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£1,300",
+      "how": "'over £1,300 a year short': £13,900 Minimum (one person) − £241.30 × 52 = £13,900 − £12,547.60 = £1,352.40, arithmetic in scenes.py",
+      "source": "https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough- ; https://www.gov.uk/new-state-pension/what-youll-get",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£13,900",
+      "how": "Pensions UK Retirement Living Standards, Minimum, one-person household, a year after tax, excludes rent/mortgage, outside London (June 2026 update)",
+      "source": "https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough- ; https://www.retirementlivingstandards.org.uk/details",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£12,500",
+      "how": "'about £12,500': full new State Pension £241.30 a week × 52 = £12,547.60 a year (below the £12,570 Personal Allowance, so no tax with no other income)",
+      "source": "https://www.gov.uk/new-state-pension/what-youll-get ; https://www.gov.uk/income-tax-rates",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£22,500",
+      "how": "Pensions UK Retirement Living Standards, Minimum, two-person household, a year after tax (less than double the one-person £13,900 = £27,800)",
+      "source": "https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough- ; https://www.retirementlivingstandards.org.uk/details",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£25,000",
+      "how": "'over £25,000': 2 × £12,547.60 = £25,095.20; minus £22,500 = £2,595.20 spare, arithmetic in scenes.py",
+      "source": "https://www.gov.uk/new-state-pension/what-youll-get",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "'before rent'",
+      "how": "The standards assume you own your home outright: rent and mortgage payments are not included",
+      "source": "https://www.retirementlivingstandards.org.uk/details",
+      "checked": "2026-10-25"
+    },
+    {
+      "figure": "£14,232 / £1,684 / £32,700 / 38% (description only)",
+      "how": "Pensions UK's before-tax Minimum for one person and the amount needed from pension savings; Moderate one-person £32,700; £12,547.60 / £32,700 = 38%, arithmetic in scenes.py",
+      "source": "https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough-",
+      "checked": "2026-10-25"
+    }
+  ],
+  "assumptions": [
+    "Full new State Pension (35 qualifying years), £241.30 a week, a year = 52 weeks.",
+    "No other income; no income tax (under the £12,570 Personal Allowance).",
+    "Home owned outright: no rent or mortgage (Pensions UK standards exclude housing costs).",
+    "Outside London.",
+    "Rules as at 25 Oct 2026; the 28 Oct 2026 Budget could change them."
+  ],
+  "sources": [
+    "https://www.gov.uk/new-state-pension/what-youll-get",
+    "https://www.gov.uk/income-tax-rates",
+    "https://www.pensionsuk.org.uk/Press-Centre/Press-Releases/Article/Retirement-Living-Standards-update-shows-the-nation-is-not-saving-enough-",
+    "https://www.retirementlivingstandards.org.uk/details"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=7752994550445199063",
+    "metricoolUuid": "7752994550445199063"
+  },
+  "durationSec": 34.0
+}

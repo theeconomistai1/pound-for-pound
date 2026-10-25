@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "Retire alone on the full State Pension, and you're over {£1,300|thirteen hundred pounds} a year short.",
+  "People say it's enough to live on.",
+  "{Pensions UK|Pensions U K} says one person needs {£13,900|thirteen thousand, nine hundred pounds} for the basics.",
+  "The State Pension pays about {£12,500.|twelve and a half thousand pounds.}",
+  "But here's the strange part:",
+  "A couple needs just {£22,500|twenty two and a half thousand pounds} for the same.",
+  "Two State Pensions pay over {£25,000.|twenty five thousand pounds.}",
+  "A couple clears it. Alone, you don't.",
+  "That's before rent. So when they say it's enough:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
