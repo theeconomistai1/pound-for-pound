@@ -1,0 +1,30 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "New job? Your first payslip could be almost {£210|two hundred and ten pounds} short.",
+  "Blame the tiny code next to your name.",
+  "Most people's says {1257L|twelve fifty-seven L} right there.",
+  "That's not random: it's your {£12,570|twelve thousand, five hundred and seventy pounds} tax-free.",
+  "But here's the catch.",
+  "Without your {P45|P forty-five}, a new boss may use {0T|zero T} instead.",
+  "Then not one pound of your pay is tax-free.",
+  "But here's the twist:",
+  "Once {HMRC|H M R C} has your details, it comes back in your pay.",
+  "So before your next new job, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "context",
+  "twist",
+  "rehook",
+  "question",
+  "answer",
+  "rehook",
+  "twist",
+  "loop"
+ ]
+}

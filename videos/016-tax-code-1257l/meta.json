@@ -1,0 +1,134 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "A new job, and your first payslip is almost £210 short: a loss on the day you expected a win",
+      "curiosity": "Why would a new job short your pay? Answered in sentences 5-6 (the 0T code), and whether the money's gone in sentence 8, the last third",
+      "tempo": "Picture changes every 3-7 s: cover, payslip code, £12,570 decode, 0T warning, versus cards, refund card; rehooks at 'But here's the catch.' and 'But here's what most people miss:'",
+      "feeling": "Shock at the short payslip, then 'I didn't know that' at 1257L, then relief that it comes back"
+    },
+    "why_comment": {
+      "take_sides": "Is it fair that a new job taxes every pound until HMRC catches up? Shown as the loop chip FAIR OR NOT? COMMENT",
+      "debate": "Some say it's the system working (no details, no allowance); others say employees shouldn't carry HMRC's admin delay",
+      "something_to_say": "'That happened on my first payslip', 'I always thought 1257L was random', 'mine says BR'",
+      "see_yourself": "Anyone who's just started or is about to start a new job, students in a first job, people with two jobs"
+    },
+    "why_share": {
+      "send_to": "the friend who's just started a new job",
+      "memorable_line": "Without your P45, a new boss may use 0T instead.",
+      "thats_me": "Looking at your own payslip and finally knowing what 1257L means",
+      "short_and_clear": "1257L is your £12,570 tax-free allowance; a new job's 0T code taxes every pound, but it comes back once HMRC has your details"
+    },
+    "why_follow": "The channel promise in 30 s: the UK payslip small print nobody explains, checked on GOV.UK. It sets up the next ones: BR and K codes, Marriage Allowance (the M and N codes) and the Personal Savings Allowance",
+    "risk": {
+      "who": "You, starting a new job without your P45",
+      "stake": "Almost £210 (£209.50) of your first month's pay",
+      "deadline": "Your first payday at the new job"
+    },
+    "loops": [
+      {
+        "question": "What is that tiny code next to my name, and why does it matter?",
+        "twist": "Everyone thinks 1257L is a random reference number. Actually it's your £12,570 tax-free allowance with the last digit dropped.",
+        "new_question": "So what happens if the code isn't 1257L?"
+      },
+      {
+        "question": "A new boss uses 0T: is that £210 just gone?",
+        "twist": "Everyone thinks the extra tax is lost to HMRC. Actually, once HMRC has your details, your employer pays it back in your pay.",
+        "new_question": "So what does the code on your next new payslip say? (hands back to 'New job?')"
+      }
+    ]
+  },
+  "id": "016",
+  "slot": "2026-10-26 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "tax",
+  "title": "New Job? Your First Payslip Could Be Almost £210 Short 😱🧾 #shorts",
+  "description": "New job? Your first payslip could be almost £210 short, because of the code next to your name.\n\n1257L is the code for most people with one job and no untaxed income or taxable benefits, and the emergency code for all employees in 2026/27. It isn't a reference number: 1257 is your £12,570 tax-free Personal Allowance with the last digit dropped, and L means you get the standard allowance. Start a new job without a P45 and your employer may use 0T (or BR) instead: none of your pay from that job is tax-free. On £2,500 in your first month, 1257L takes £290.50 in tax; 0T takes £500. That's £209.50 more (almost £210), the same as one month of the allowance (£12,570 ÷ 12 × 20%).\n\nThe part most people miss: it isn't lost. Once HMRC has your details (a P45 helps) it updates your code, usually within 35 days of you starting, and your employer refunds the overpaid tax through your pay. If your old employer never confirms you've left, HMRC sorts it out after the tax year ends.\n\nSources: https://www.gov.uk/tax-codes/what-your-tax-code-means · https://www.gov.uk/employee-tax-codes · https://www.gov.uk/government/publications/p9x-tax-codes/p9x-tax-codes-to-use-from-6-april-2026 · https://www.gov.uk/guidance/changes-to-your-tax-code-when-you-start-a-new-job · https://www.gov.uk/tax-codes/if-youve-paid-too-much-or-too-little-tax · https://www.gov.uk/tax-codes/emergency-tax-codes · https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past\n\nShould a new job tax every pound you earn until HMRC catches up? Fair or not? Comment 👇\n📩 Send this to the friend who's just started a new job.\n\nIllustration only. Assumes rates for England, Wales or Northern Ireland (Scotland's bands differ), paid monthly, a 0T or BR code applied non-cumulatively in month one, £2,500 a month (£30,000 a year), no other income, benefits or deductions; anyone paid between £1,047.50 and £3,141.67 a month pays the same £209.50 extra. Rules as at 26 October 2026; the Budget on 28 October 2026 could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#taxcode #1257L #payslip #personalfinanceuk #ukmoney",
+  "comment_question": "Should a new job tax every pound you earn until HMRC catches up? Fair or not?",
+  "first_comment": "Should a new job tax every pound you earn until HMRC catches up? Fair or not? 👇 📩 Send this to the friend who's just started a new job. Every number is checked against official sources.",
+  "tags": [
+    "tax code",
+    "1257L",
+    "emergency tax code",
+    "0T tax code",
+    "payslip",
+    "new job tax",
+    "personal allowance",
+    "HMRC",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£210",
+      "how": "Spoken 'almost £210' = £209.50: month-one tax on £2,500 under 0T (£500.00) minus under 1257L (£290.50) = £12,570 ÷ 12 × 20%; month_tax() in scenes.py",
+      "source": "https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past ; https://www.gov.uk/tax-codes/what-your-tax-code-means",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "1257L",
+      "how": "Official: 'The emergency code is 1257L for all employees' (2026-27); the number is the £12,570 allowance with its last digit replaced by L (standard Personal Allowance); gov.uk/employee-tax-codes: the most common code, 'used for most people with one job and no untaxed income, unpaid tax or taxable benefits' (spoken: 'Most people's says 1257L')",
+      "source": "https://www.gov.uk/government/publications/p9x-tax-codes/p9x-tax-codes-to-use-from-6-april-2026 ; https://www.gov.uk/tax-codes/what-your-tax-code-means ; https://www.gov.uk/employee-tax-codes",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "£12,570",
+      "how": "Official: Personal Allowance 2026-27, whole UK",
+      "source": "https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "P45",
+      "how": "Official: without a P45 or starter checklist a new employer may give a BR or 0T code; a P45 helps HMRC get your details",
+      "source": "https://www.gov.uk/guidance/changes-to-your-tax-code-when-you-start-a-new-job",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "0T",
+      "how": "Official: 0T = Personal Allowance used up, or a new job where the employer lacks the details to give a code: no tax-free pay from that job",
+      "source": "https://www.gov.uk/tax-codes/what-your-tax-code-means",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "£290.50 / £500.00 / £209.50 (on screen)",
+      "how": "£2,500 month one: 1257L (£2,500 − £1,047.50) × 20% = £290.50; 0T £2,500 × 20% = £500.00; difference £209.50",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "35 days (on screen, description)",
+      "how": "Official: HMRC usually updates your tax code within 35 days of you starting a new job",
+      "source": "https://www.gov.uk/tax-codes/emergency-tax-codes",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "comes back in your pay",
+      "how": "Official: HMRC asks your employer to refund the difference through your pay once the new code applies; no refund until HMRC has your income details",
+      "source": "https://www.gov.uk/tax-codes/if-youve-paid-too-much-or-too-little-tax",
+      "checked": "2026-10-26"
+    }
+  ],
+  "assumptions": [
+    "England, Wales or Northern Ireland income tax rates (20% basic rate on the first £37,700 above the allowance); Scotland differs",
+    "Paid monthly; 0T (or BR) applied non-cumulatively in month one; £2,500 a month (£30,000 a year); no other income, benefits or deductions",
+    "Any monthly pay between £1,047.50 and £3,141.67 gives the same £209.50 difference; above that 0T costs more",
+    "Rules as at 26 October 2026; the Budget on 28 October 2026 could change them",
+    "Comment question has no right answer; not shown"
+  ],
+  "sources": [
+    "https://www.gov.uk/tax-codes/what-your-tax-code-means",
+    "https://www.gov.uk/employee-tax-codes",
+    "https://www.gov.uk/government/publications/p9x-tax-codes/p9x-tax-codes-to-use-from-6-april-2026",
+    "https://www.gov.uk/guidance/changes-to-your-tax-code-when-you-start-a-new-job",
+    "https://www.gov.uk/tax-codes/if-youve-paid-too-much-or-too-little-tax",
+    "https://www.gov.uk/tax-codes/emergency-tax-codes",
+    "https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=4464730469212506334"
+  },
+  "durationSec": 34.0
+}
