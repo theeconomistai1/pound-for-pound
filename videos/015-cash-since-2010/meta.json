@@ -1,0 +1,130 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "A contradiction in the first second: 'Your £100 grew to £127… and buys less.' More money, less stuff.",
+      "curiosity": "How can more money buy less? Answered at ~12-16 s (prices rose to £164). Loop 2: does cash always lose? Answered in the last third: right now Bank Rate beats inflation, only just, and the old loss stays.",
+      "tempo": "Seven scenes, none over 8 s; chart draws cash then prices; rehook 'But here's the strange part:' at ~17 s.",
+      "feeling": "Quiet shock ('my savings shrank'), then surprise (cash is winning right now), then the sting (the loss isn't coming back)."
+    },
+    "why_comment": {
+      "take_sides": "Would you still keep your savings in cash? Shown as the loop chip 'STILL KEEP CASH? COMMENT'.",
+      "debate": "Cash vs investing; whether savers were treated fairly by 12 years of near-zero rates; whether rates should fall on 5 November.",
+      "something_to_say": "'My bank never paid anything like Bank Rate', 'That's why I keep my emergency fund only', 'Lost a quarter, great'.",
+      "see_yourself": "Anyone with money sitting in a savings account since the 2010s; parents and grandparents who keep everything in cash."
+    },
+    "why_share": {
+      "send_to": "The parent who keeps everything in a savings account.",
+      "memorable_line": "Your £100 grew to £127… and buys less.",
+      "thats_me": "'I've had the same savings account since 2010.'",
+      "short_and_clear": "£100 of cash at Bank Rate since 2010 is £127, but prices mean you'd need £164; right now cash beats inflation, only just; 33 s."
+    },
+    "why_follow": "UK small print, checked on official data, in 33 seconds. Follows the Personal Allowance freeze (007) and State Pension (011) 'since' videos with savers' side of the story, ten days before the 5 November rate decision; sets up the Personal Savings Allowance (when your interest gets taxed) next.",
+    "risk": {
+      "who": "You, with savings in cash",
+      "stake": "Nearly a quarter of your savings' buying power (£100 in 2010 now buys what £77 did)",
+      "deadline": "The Bank of England's next rate decision, 5 November 2026 (next month)"
+    },
+    "loops": [
+      {
+        "question": "Your £100 grew to £127, so how can it buy less?",
+        "twist": "Everyone thinks a bigger balance means you're richer. Actually prices rose faster: what cost £100 now costs £164.",
+        "new_question": "But here's the strange part: so does cash always lose to prices?"
+      },
+      {
+        "question": "Everyone says cash always loses to prices: is that still true?",
+        "twist": "Everyone thinks cash always loses. Actually, right now, Bank Rate (3.75%) is beating inflation (3.5%), only just.",
+        "new_question": "The loop line hands back to the risk: if you've kept cash since 2010, your £100 grew to £127 and buys less."
+      }
+    ]
+  },
+  "id": "015",
+  "slot": "2026-10-26 10:00 Europe/London",
+  "format": "since",
+  "pillar": "saving",
+  "title": "Your £100 Grew to £127… So Why Does It Buy Less? 😬🛒 #shorts",
+  "description": "Your £100 grew to £127… and buys less.\n\nPut £100 in cash on 1 January 2010 and let it earn exactly Bank Rate, interest added daily and left in, and by the end of September 2026 it's £126.73 (about £127). For twelve years it earned almost nothing: Bank Rate was between 0.1% and 0.75% from 2010 to 2021, so the £100 was only about £105.50 by January 2022.\n\nMeanwhile prices raced ahead: the Consumer Prices Index went from 87.8 in January 2010 to 144.1 in September 2026, so what cost £100 then costs about £164 now (£164.12). Your £127 buys what about £77 bought in 2010: roughly 23% of its buying power gone.\n\nThe twist: right now Bank Rate is 3.75% (held on 17 September 2026) and CPI inflation was 3.5% in the 12 months to September 2026, so cash at Bank Rate is beating prices, but only just. The next Bank Rate decision is on 5 November 2026.\n\nSources: Bank of England Bank Rate history https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp · https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate · ONS CPI index (D7BT) https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23 · ONS Consumer price inflation, September 2026 https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026\n\nHave you kept cash since 2010, or moved it? Would you still keep it in cash? Comment 👇\n📩 Send this to the parent who keeps everything in a savings account.\n\nIllustration only. Assumes £100 deposited on 1 January 2010 earning exactly Bank Rate (a benchmark, not a savings account: real accounts paid more or less), interest added daily at rate/365 and reinvested, no tax, to 30 September 2026 (the latest CPI month; the figure is still about £127 to today). Prices = CPI, January 2010 to September 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#savings #inflation #bankofengland #personalfinanceuk #ukmoney",
+  "comment_question": "Would you still keep your savings in cash? Yes or no, and why?",
+  "first_comment": "Would you still keep your savings in cash? Yes or no, and why? 👇 📩 Send this to the parent who keeps everything in a savings account. Every number is checked against official sources.",
+  "tags": [
+    "savings",
+    "inflation",
+    "bank rate",
+    "cash savings",
+    "cost of living",
+    "bank of england",
+    "CPI inflation",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£100",
+      "how": "Illustration: £100 in cash on 1 January 2010",
+      "source": "illustration",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "£127",
+      "how": "£100 from 1 Jan 2010 to 30 Sep 2026 at Bank Rate, interest daily (rate/365), reinvested: £126.73; cash_at() in scenes.py (£127.07 to 26 Oct 2026)",
+      "source": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "2010",
+      "how": "Start date: 1 January 2010 (Bank Rate 0.5% since 5 Mar 2009)",
+      "source": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "£164",
+      "how": "£100 × CPI Sep 2026 (144.1) / CPI Jan 2010 (87.8) = £164.12",
+      "source": "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "next month",
+      "how": "Next Bank Rate decision 5 November 2026; Bank Rate 3.75%, held 17 Sep 2026",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "almost nothing",
+      "how": "Bank Rate 0.1%-0.75% from 2010 to 2021: £100 became £105.53 by 1 Jan 2022",
+      "source": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "Bank Rate is beating inflation",
+      "how": "Bank Rate 3.75% vs CPI 3.5% in the 12 months to Sep 2026",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate ; https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026",
+      "checked": "2026-10-26"
+    },
+    {
+      "figure": "£77 / 23% (on screen)",
+      "how": "£126.73 × 87.8 / 144.1 = £77.22 in Jan 2010 prices; 100 − 77 = 23%",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-26"
+    }
+  ],
+  "assumptions": [
+    "£100 deposited 1 Jan 2010, earning exactly Bank Rate, interest added daily at rate/365 and reinvested, no tax, to 30 Sep 2026 (latest CPI month): £126.73; to 26 Oct 2026: £127.07.",
+    "Bank Rate is a benchmark, not a savings account rate; real accounts paid more or less.",
+    "Prices = ONS CPI (D7BT, 2015=100), Jan 2010 87.8 to Sep 2026 144.1.",
+    "Comment-question answer: none (opinion question)."
+  ],
+  "sources": [
+    "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+    "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
+    "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23",
+    "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=3697062705830315336",
+    "metricool_uuid": "3697062705830315336"
+  },
+  "durationSec": 33.3
+}

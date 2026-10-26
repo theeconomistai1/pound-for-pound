@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "since",
+ "sentences": [
+  "Your {£100|hundred pounds} grew to {£127|a hundred and twenty seven}… and buys less.",
+  "That's cash since {2010,|twenty ten,} at a rate the Bank reviews next month.",
+  "For years, your cash earned almost nothing.",
+  "But prices raced ahead: what cost {£100|a hundred} now costs {£164.|a hundred and sixty four.}",
+  "But here's the strange part:",
+  "Everyone says cash always loses to prices.",
+  "Right now, it doesn't: Bank Rate is beating inflation.",
+  "Only just, though: the buying power you lost isn't coming back soon.",
+  "So if you've kept cash since {2010,|twenty ten,} remember:"
+ ],
+ "steps": [
+  "risk",
+  "risk",
+  "question",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
