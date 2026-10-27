@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "Pay the minimum on {£2,000|two grand} all year, and still owe over {£1,750.|seventeen hundred and fifty.}",
+  "People say minimum payments are fine.",
+  "That year, you'd pay almost {£600.|six hundred pounds.}",
+  "But most of it was interest, not your debt.",
+  "And here's the strange part:",
+  "The minimum does keep your card up to date.",
+  "Yet keep it up for {18 months|eighteen months}, and the regulator calls it persistent debt.",
+  "Then your card company has to step in.",
+  "So when the minimum looks fine, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "context",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}

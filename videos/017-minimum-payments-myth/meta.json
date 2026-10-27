@@ -1,0 +1,144 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: 'Pay the minimum on £2,000 all year, and still owe over £1,750.' Who (you, with a card balance), what (£1,750+ still owed after paying all year), when (a year from now). How can that be? is the open question.",
+      "curiosity": "Loop 1: where did the money go? Answered at ~9-13 s: almost £600 paid, most of it interest. Loop 2: so is the minimum at least 'fine'? Answered in the last third: it keeps you up to date, but after 18 months the FCA calls it persistent debt and the card company must step in.",
+      "tempo": "Six scenes, each under 7 s; MYTH stamp at ~5 s; rehook 'And here's the strange part:' at ~13 s; a new number or chip every 2-4 s.",
+      "feeling": "Shock (£600 paid, debt barely moved), then unease ('the regulator has a name for me?')."
+    },
+    "why_comment": {
+      "take_sides": "Is paying the minimum on time 'fine' (you never miss a payment) or a trap? Shown as the loop chip 'FINE OR NOT? COMMENT'.",
+      "debate": "Should card companies set higher minimums? Is it the borrower's job to pay more? Is persistent-debt contact helpful or patronising?",
+      "something_to_say": "'I got that persistent debt letter', 'I always thought the minimum was the safe option', 'This is why I clear it every month'.",
+      "see_yourself": "Anyone carrying a credit card balance and paying the minimum; young adults with a first card; people who've had a persistent debt letter."
+    },
+    "why_share": {
+      "send_to": "The friend who only ever pays the minimum.",
+      "memorable_line": "But most of it was interest, not your debt.",
+      "thats_me": "'That's me: I pay the minimum and the balance never moves.'",
+      "short_and_clear": "Pay only the minimum on £2,000 at today's typical rate and after a year you've paid almost £600 but still owe over £1,750; do it for 18 months and the FCA calls it persistent debt; 30 s."
+    },
+    "why_follow": "The UK small print nobody tells you, every number checked against official sources, in 30 seconds. First debt-pillar Short; sets up the overdraft (£500 at ~40% APR) and 'overpaying your mortgage' videos.",
+    "risk": {
+      "who": "You, carrying £2,000 on a credit card and paying only the minimum",
+      "stake": "Almost £600 paid in a year, and over £1,750 still owed",
+      "deadline": "A year from now (and 18 months, when the FCA's persistent-debt test kicks in)"
+    },
+    "loops": [
+      {
+        "question": "How can you pay all year and still owe over £1,750? (people say the minimum is fine)",
+        "twist": "Everyone thinks paying every month pays the debt down. Actually of almost £600 paid, about £373 was interest and only about £227 came off the debt.",
+        "new_question": "And here's the strange part: is the minimum at least 'fine' in some way?"
+      },
+      {
+        "question": "The minimum keeps your card up to date, so is it fine after all?",
+        "twist": "Everyone thinks being up to date means you're doing fine. Actually keep it up for 18 months and the FCA calls it persistent debt, and your card company has to step in.",
+        "new_question": "The loop line 'So when the minimum looks fine, remember:' hands back to 'Pay the minimum on £2,000 all year…'."
+      }
+    ]
+  },
+  "id": "017",
+  "slot": "2026-10-27 10:00 Europe/London",
+  "format": "myth",
+  "pillar": "debt",
+  "title": "Paid Almost £600 on Your Card… Still Owe Over £1,750? The Minimum Payment Myth 😱💳 #shorts",
+  "description": "Pay the minimum on £2,000 all year, and still owe over £1,750.\n\nAt the typical UK credit card rate (the Bank of England's effective rate on interest-charging cards was 21.55% in August 2026) and a common minimum (that month's interest plus 1% of the balance), the first minimum is about £52.79. Over 12 months you pay £599.80 (almost £600), but only £227.23 comes off the debt: £372.56 is interest. You still owe £1,772.77.\n\nThe part that is true: paying at least the minimum on time keeps your card up to date, so no missed payment and no late fee.\n\nThe twist: if over 18 months you've paid more in interest, fees and charges than you've repaid of the borrowing, the FCA calls it persistent debt. On this example that happens (£542.66 interest vs £330.97 repaid). Your card company then has to contact you and offer help; after 27 months it sends a reminder, and at 36 months it must offer ways to repay faster, or forbearance if you can't. Paying only the minimum (with a £25 floor) this £2,000 would take over 11 years to clear and cost about £2,271 in interest.\n\nSources: Bank of England Money and Credit, August 2026: https://www.bankofengland.co.uk/statistics/money-and-credit/2026/august-2026 · FCA persistent debt: https://www.fca.org.uk/publication/documents/help-for-consumers-who-are-in-persistent-credit-card-debt.pdf · https://www.fca.org.uk/publication/documents/customer-persistent-debt-infographic.pdf · https://www.fca.org.uk/news/press-releases/new-credit-card-rules-introduced-fca · Example minimum payment formula (Nationwide): https://www.nationwide.co.uk/credit-cards/help/minimum-payments\n\nPaying the minimum on time: fine, or a trap? Which side are you on? Comment 👇\n📩 Send this to the friend who only ever pays the minimum.\n\nIllustration only. Assumes a £2,000 balance, no new spending and no fees, 21.55% APR converted to a monthly rate (1.64%), a minimum of interest + 1% of the balance with a £25 floor, every payment on time. Lenders' minimum formulas and rates vary: check your statement. Rules as at 27 October 2026; the Budget on 28 October 2026 could change other rules. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#creditcard #debt #minimumpayment #personalfinanceuk #ukmoney",
+  "comment_question": "Paying the minimum on time: fine, or a trap? Which side are you on?",
+  "first_comment": "Paying the minimum on time: fine, or a trap? Which side are you on? 👇 📩 Send this to the friend who only ever pays the minimum. Every number is checked against official sources.",
+  "tags": [
+    "credit card",
+    "minimum payment",
+    "credit card debt",
+    "persistent debt",
+    "FCA",
+    "credit card interest",
+    "debt UK",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£2,000",
+      "how": "Illustrative credit card balance (no new spending, no fees)",
+      "source": "assumption",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£1,750",
+      "how": "'still owe over £1,750': balance falls 1% a month when the minimum = interest + 1%: £2,000 × 0.99^12 = £1,772.77, loop in scenes.py",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/august-2026 ; https://www.nationwide.co.uk/credit-cards/help/minimum-payments",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£600",
+      "how": "'almost £600': 12 minimums at 21.55% APR (monthly 1.2155^(1/12)−1 = 1.64%) = £599.80 (£372.56 interest + £227.23 off the debt), loop in scenes.py",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/august-2026",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "21.55% (on screen)",
+      "how": "Bank of England effective rate on interest-charging credit cards, August 2026 (Money and Credit, published 29 Sep 2026); used as the typical APR",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/august-2026",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "'most of it was interest' / £373 and £227 (on screen)",
+      "how": "£372.56 of £599.80 is interest (62%); £227.23 repaid the debt",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "interest + 1% (on screen)",
+      "how": "A common UK minimum: interest + 1% of the balance, with a floor (Nationwide: overdue charges and interest + 1% of the remaining statement balance, or £25 if greater); the £25 floor never bites in the first 18 months here",
+      "source": "https://www.nationwide.co.uk/credit-cards/help/minimum-payments",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "'keeps your card up to date' / no missed payment, no late fee",
+      "how": "Paying at least the minimum by the due date is what the card agreement requires each month",
+      "source": "https://www.nationwide.co.uk/credit-cards/help/minimum-payments",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "18 months",
+      "how": "FCA: persistent debt = over 18 months you've paid more in interest, fees and charges than you've repaid of the borrowing; here £542.66 interest vs £330.97 repaid over 18 months",
+      "source": "https://www.fca.org.uk/publication/documents/help-for-consumers-who-are-in-persistent-credit-card-debt.pdf ; https://www.fca.org.uk/publication/documents/customer-persistent-debt-infographic.pdf",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "'your card company has to step in'",
+      "how": "FCA rules (in force since 1 Mar 2018): the provider must contact you and offer help at 18 months, remind at 27 months, offer ways to repay faster or forbearance at 36 months",
+      "source": "https://www.fca.org.uk/publication/documents/help-for-consumers-who-are-in-persistent-credit-card-debt.pdf ; https://www.fca.org.uk/news/press-releases/new-credit-card-rules-introduced-fca",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£52.79 / 11 years / £2,271 (description only)",
+      "how": "First minimum = £32.79 interest + £20; paying only the minimum with a £25 floor clears £2,000 in 135 months (over 11 years) with £2,271.23 interest, loop in scenes.py",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-27"
+    }
+  ],
+  "assumptions": [
+    "£2,000 balance, no new spending, no fees.",
+    "21.55% APR (BoE August 2026 effective rate on interest-charging cards) as a monthly rate of 1.64%.",
+    "Minimum = that month's interest + 1% of the balance, £25 floor; lenders' formulas vary.",
+    "Every payment on time.",
+    "Rules as at 27 Oct 2026."
+  ],
+  "sources": [
+    "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/august-2026",
+    "https://www.fca.org.uk/publication/documents/help-for-consumers-who-are-in-persistent-credit-card-debt.pdf",
+    "https://www.fca.org.uk/publication/documents/customer-persistent-debt-infographic.pdf",
+    "https://www.fca.org.uk/news/press-releases/new-credit-card-rules-introduced-fca",
+    "https://www.nationwide.co.uk/credit-cards/help/minimum-payments"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-1684928916931329325",
+    "metricoolUuid": "-1684928916931329325"
+  },
+  "durationSec": 29.6
+}

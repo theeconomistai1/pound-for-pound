@@ -28,7 +28,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (014) · calc · pensions — Salary sacrifice vs a pay rise: the take-home difference on one example (NI and tax)
 - done (015) · since · saving — What £100 from 2010 buys today (ONS CPI), and what cash at Bank Rate would have done since then (Bank of England)
 - done (016) · calc · tax — What 1257L on your payslip means, and what the letters and an emergency code do
-- todo · myth · debt — "Minimum payments are fine": a £2,000 credit card balance at a typical APR, paid at the minimum (FCA / lender rules)
+- done (017) · myth · debt — "Minimum payments are fine": a £2,000 credit card balance at a typical APR, paid at the minimum (FCA / lender rules)
 - todo · calc · tax — Student loans: Plan 2 vs Plan 5 repayments on the same salary (gov.uk thresholds)
 - todo · since · isa — The ISA allowance since 1999 (PEP/TESSA to £20,000) vs inflation
 - todo · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
