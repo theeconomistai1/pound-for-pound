@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "Same salary, yet your little sister repays almost {£400|four hundred pounds} more a year.",
+  "Same job. Same degree. Same loan company.",
+  "But she started uni in autumn {2023,|twenty twenty-three,} on the newer plan.",
+  "Hers starts at {£25,000.|twenty-five thousand pounds.} Yours waits till nearly {£30,000.|thirty thousand.}",
+  "But here's the part nobody tells her.",
+  "Whatever's left at the end gets wiped.",
+  "Yours is wiped after thirty years. Hers runs ten years longer.",
+  "Her interest is a bit lower. But her loan can last longer.",
+  "So next time you compare payslips, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "answer",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}

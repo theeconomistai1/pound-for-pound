@@ -1,0 +1,132 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Same salary, but your little sister repays almost £400 more a year: an unfairness between siblings in the first 3 s",
+      "curiosity": "Why would the same job and degree cost her more? The plan is revealed in sentence 2, the threshold in 3, and the bigger catch (40 vs 30 years) lands in sentence 6, the last third",
+      "tempo": "Picture changes every 2-5 s: cover, two salary cards, PLAN 5 reveal, threshold versus, hourglass, 30 vs 40 bars, interest cards; rehook at 'But here's the part nobody tells her.'",
+      "feeling": "'That's not fair' at the £400, then surprise at ten extra years, then a grudging 'at least her interest is lower'"
+    },
+    "why_comment": {
+      "take_sides": "Is it fair that two people on the same pay repay differently just because of when they started uni? Shown as the loop chip FAIR OR NOT? COMMENT",
+      "debate": "Some say Plan 5 is fairer (lower interest, more graduates repay what they borrowed); others say a lower threshold and 40 years is a graduate tax on the youngest",
+      "something_to_say": "'I'm Plan 5 and never knew', 'my brother and I are exactly this', 'I didn't know mine gets wiped'",
+      "see_yourself": "Graduates who started uni from autumn 2023, their older siblings on Plan 2, parents of students"
+    },
+    "why_share": {
+      "send_to": "your sibling who started uni after 2023",
+      "memorable_line": "Yours is wiped after thirty years. Hers runs ten years longer.",
+      "thats_me": "Checking your payslip and realising you're on the newer plan",
+      "short_and_clear": "Plan 5 student loans start taking 9% at £25,000 instead of nearly £30,000 and run 40 years instead of 30, so the same salary repays almost £400 more a year"
+    },
+    "why_follow": "The channel promise in 30 s: the UK payslip small print nobody explains, checked on GOV.UK. It follows the 1257L tax-code video (another payslip line) and sets up Plan 1 vs Plan 4, the postgraduate loan, and whether overpaying a student loan makes sense",
+    "risk": {
+      "who": "Your little sister, on the same salary as you",
+      "stake": "Almost £400 (£396) more of her pay every year",
+      "deadline": "Every year from her first payday in repayment, for up to 40 years"
+    },
+    "loops": [
+      {
+        "question": "Same job, same degree, same loan company: so why does she pay more?",
+        "twist": "Everyone thinks a student loan is a student loan. Actually she started uni in autumn 2023, so she's on Plan 5, which starts at £25,000 instead of nearly £30,000.",
+        "new_question": "So is the extra £400 a year the only difference?"
+      },
+      {
+        "question": "Whatever's left gets wiped: so when?",
+        "twist": "Everyone thinks the newer loan is just a bit pricier each month. Actually it runs ten years longer before it's wiped: 40 years, not 30.",
+        "new_question": "So when you compare payslips with your sister, who's really paying more? (hands back to 'Same salary')"
+      }
+    ]
+  },
+  "id": "018",
+  "slot": "2026-10-27 16:00 Europe/London",
+  "format": "calc",
+  "pillar": "tax",
+  "title": "Same Salary… So Why Does Your Little Sister Repay Almost £400 More? 😱🎓 #shorts",
+  "description": "Same salary, yet your little sister repays almost £400 more a year, because she started uni in autumn 2023.\n\nStudent loans in England taken out for courses starting on or after 1 August 2023 are Plan 5; courses that started between 1 September 2012 and 31 July 2023 are Plan 2. Both take 9% of your income above a threshold. In 2026/27 Plan 5 starts at £25,000 a year; Plan 2 waits until £29,385 (nearly £30,000). On £36,000 a year, paid monthly, that's £82 a month on Plan 5 vs £49 on Plan 2: £984 vs £588 a year, £396 more (on yearly income the gap is £394.65 for any salary above £29,385).\n\nThe part nobody tells her: whatever's left at the end is cancelled. Plan 2 is cancelled 30 years after you're due to start repaying; Plan 5 runs for 40, ten years longer. Her interest is a bit lower: Plan 5 is RPI (4.1% from 1 September 2026), while Plan 2 on £36,000 is about 4.9% (RPI rising to RPI + 3% between £29,385 and £52,885, capped at 6% until 31 August 2027).\n\nSources: https://www.gov.uk/repaying-your-student-loan/what-you-pay · https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026 · https://www.gov.uk/government/publications/student-loans-a-guide-to-terms-and-conditions/student-loans-a-guide-to-terms-and-conditions-2026-to-2027 · https://www.gov.uk/government/news/student-loans-interest-rates-and-repayment-threshold-announcement--7 · https://www.gov.uk/guidance/how-interest-is-calculated-plan-2\n\nSame pay, different loan: is that fair or not? Comment 👇\n📩 Send this to your sibling who started uni after 2023.\n\nIllustration only. Assumes student loans from England (Plan 2 started before 1 August 2023, Plan 5 in autumn 2023), both already repaying, £36,000 a year paid monthly through PAYE (deductions rounded down to the pound), no other income or loans. Thresholds can change each April; rules as at 27 October 2026, and the Budget on 28 October 2026 could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#studentloan #plan5 #plan2 #personalfinanceuk #ukmoney",
+  "comment_question": "Same pay, different student loan: is that fair or not?",
+  "first_comment": "Same pay, different student loan: is that fair or not? 👇 📩 Send this to your sibling who started uni after 2023. Every number is checked against official sources.",
+  "tags": [
+    "student loan",
+    "Plan 5",
+    "Plan 2",
+    "student loan repayment",
+    "repayment threshold",
+    "graduate",
+    "payslip",
+    "Student Loans Company",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£400",
+      "how": "Spoken 'almost £400' = £396: on £36,000 a year paid monthly, Plan 5 £82 a month (£984 a year) minus Plan 2 £49 a month (£588 a year); 9% of pay above each monthly threshold, rounded down to the pound (monthly() in scenes.py). On yearly income the gap is 9% × (£29,385 − £25,000) = £394.65 for any salary above £29,385",
+      "source": "https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026 ; https://www.gov.uk/repaying-your-student-loan/what-you-pay",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "2023",
+      "how": "Official: Plan 5 = undergraduate courses starting on or after 1 August 2023 (England); Plan 2 = 1 September 2012 to 31 July 2023",
+      "source": "https://www.gov.uk/government/publications/student-loans-a-guide-to-terms-and-conditions/student-loans-a-guide-to-terms-and-conditions-2026-to-2027",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£25,000",
+      "how": "Official: Plan 5 repayment threshold from 6 April 2026, £25,000 a year",
+      "source": "https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026 ; https://www.gov.uk/repaying-your-student-loan/what-you-pay",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£30,000",
+      "how": "Spoken 'nearly £30,000' = the Plan 2 threshold from 6 April 2026, £29,385 a year",
+      "source": "https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026 ; https://www.gov.uk/repaying-your-student-loan/what-you-pay",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "thirty years / ten years longer (40)",
+      "how": "Official: Plan 2 is cancelled 30 years after you're due to start repaying, Plan 5 after 40 years; 40 − 30 = 10",
+      "source": "https://www.gov.uk/government/publications/student-loans-a-guide-to-terms-and-conditions/student-loans-a-guide-to-terms-and-conditions-2026-to-2027",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "9% (on screen)",
+      "how": "Official: both plans repay 9% of income over the threshold",
+      "source": "https://www.gov.uk/repaying-your-student-loan/what-you-pay",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "£36,000, £82 vs £49 a month (on screen)",
+      "how": "Illustration salary £3,000 a month; Plan 5 (£3,000 − £2,083.33) × 9% = £82.50 → £82; Plan 2 (£3,000 − £2,448.75) × 9% = £49.61 → £49",
+      "source": "arithmetic in scenes.py; thresholds from https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026",
+      "checked": "2026-10-27"
+    },
+    {
+      "figure": "4.1% vs 4.9% interest (on screen; spoken 'a bit lower')",
+      "how": "Official: from 1 September 2026 Plan 5 = RPI 4.1%; Plan 2 after study = RPI at £29,385 rising on a sliding scale to RPI + 3% at £52,885, capped at 6%: on £36,000 4.1 + 3 × 6,615/23,500 = 4.94% ≈ 4.9%",
+      "source": "https://www.gov.uk/government/news/student-loans-interest-rates-and-repayment-threshold-announcement--7 ; https://www.gov.uk/guidance/how-interest-is-calculated-plan-2",
+      "checked": "2026-10-27"
+    }
+  ],
+  "assumptions": [
+    "Student loans from England: Plan 2 sister started before 1 August 2023, Plan 5 sister in autumn 2023; both already repaying",
+    "£36,000 a year paid monthly through PAYE; deductions rounded down to the whole pound; no other income or loans",
+    "On yearly income the difference is £394.65 for any salary above £29,385 (smaller between £25,000 and £29,385, none below £25,000)",
+    "Thresholds as at 6 April 2026 and interest from 1 September 2026; rules as at 27 October 2026, the Budget on 28 October 2026 could change them",
+    "Comment question has no right answer; not shown"
+  ],
+  "sources": [
+    "https://www.gov.uk/repaying-your-student-loan/what-you-pay",
+    "https://www.gov.uk/government/publications/payroll-technical-specifications-student-loans/collection-of-student-loans-from-6-april-2026",
+    "https://www.gov.uk/government/publications/student-loans-a-guide-to-terms-and-conditions/student-loans-a-guide-to-terms-and-conditions-2026-to-2027",
+    "https://www.gov.uk/government/news/student-loans-interest-rates-and-repayment-threshold-announcement--7",
+    "https://www.gov.uk/guidance/how-interest-is-calculated-plan-2"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=5773537330183095410"
+  },
+  "durationSec": 34.1
+}
