@@ -1,0 +1,130 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Second one: 'Your ISA limit is £20,000, but it's quietly shrinking' — a number everyone thinks is generous, called shrinking, and a deadline (next April) for cash savers.",
+      "curiosity": "How can a limit that hasn't been cut be shrinking, and what happens to cash savers next April? The first is answered in sentences 5-7 (frozen 9+ years, £28,000 to keep pace), the second in sentence 8 (£12,000 cash ISA for under-65s).",
+      "tempo": "Picture changes every 3-7 s (calendar, first limit card, the two-line chart, the lock, the versus cards, the £12,000 number); rehooks: 'But here's the catch', 'Prices kept climbing', 'Next April'.",
+      "feeling": "Relief first ('your limit won'), then quiet unfairness: a freeze is a cut nobody announces, and cash savers get a real cut on top."
+    },
+    "why_comment": {
+      "take_sides": "Is a £20,000 tax-free limit, frozen since 2017 and with cash cut to £12,000, still generous? Loop chip: GENEROUS OR NOT? COMMENT.",
+      "debate": "£20,000 a year is more than most people can save, so the freeze barely matters to them; others say it's a stealth cut and the cash ISA cut pushes savers into risk.",
+      "something_to_say": "'I've never put £20,000 in anyway' / 'I max my cash ISA every year, this hits me' / 'they should index it'.",
+      "see_yourself": "Cash ISA savers under 65, people saving for a house deposit in cash, anyone who fills their ISA each April."
+    },
+    "why_share": {
+      "send_to": "The friend who keeps all their savings in a cash ISA.",
+      "memorable_line": "Your ISA limit is £20,000, but it's quietly shrinking.",
+      "thats_me": "The cash ISA saver under 65 seeing £12,000 land on screen.",
+      "short_and_clear": "The ISA limit beat inflation since 1999, but it's been frozen since 2017 and the cash part shrinks to £12,000 for under-65s next April."
+    },
+    "why_follow": "The UK small print nobody tells you, checked on GOV.UK in 30 seconds: here the freeze behind a 'generous' headline number. It follows video 007 (the frozen Personal Allowance) and sets up the Personal Savings Allowance (when your savings interest gets taxed outside an ISA) and today's Budget news at 16:00.",
+    "risk": {
+      "who": "You, saving in an ISA, especially in cash and under 65",
+      "stake": "Tax-free room: £8,000 a year less cash ISA allowance (£20,000 to £12,000), and a £20,000 limit worth about £14,000 in 2017 money",
+      "deadline": "Next April (6 April 2027)"
+    },
+    "loops": [
+      {
+        "question": "If prices almost doubled since ISAs began at £7,000, did the limit fall behind?",
+        "twist": "Everyone thinks allowances always lag inflation. Actually keeping pace only needed about £14,000, and the limit is £20,000: it won.",
+        "new_question": "So why is it 'quietly shrinking'? (the catch: frozen for over nine years)"
+      },
+      {
+        "question": "Prices kept climbing during the freeze: how far behind is it now?",
+        "twist": "Everyone thinks £20,000 is a big, safe number. Actually keeping pace since 2017 would take about £28,000, and next April the cash part falls to £12,000 for under-65s.",
+        "new_question": "Is a 'generous' £20,000 really generous? — hands back to sentence 1"
+      }
+    ]
+  },
+  "id": "019",
+  "slot": "2026-10-28 10:00 Europe/London",
+  "format": "since",
+  "pillar": "isa",
+  "title": "Your £20,000 ISA Limit Is Quietly Shrinking… Then Cash Savers Get Just £12,000 😱🛡️ #shorts",
+  "description": "Your ISA limit is £20,000, but it's quietly shrinking.\n\nWhen ISAs began in April 1999 the limit was £7,000 a year (HMRC). Prices (ONS CPI) have almost doubled since: up 99.6% from April 1999 to September 2026, so keeping pace would have needed about £14,000 (£13,971). The limit is £20,000, so it beat prices since 1999.\n\nThe catch: it has been £20,000 since 6 April 2017, frozen for over nine years. Prices have risen just over 40% since April 2017, so keeping pace would now take about £28,000 (£28,008). Put the other way, today's £20,000 buys what about £14,300 did in April 2017.\n\nThen from 6 April 2027, the cash ISA limit drops to £12,000 a year if you're under 65 (£20,000 if you're 65 or over). The overall ISA limit stays £20,000 (gov.uk says until April 2031), so the other £8,000 can only go into other types of ISA, such as stocks and shares.\n\nSources: HMRC ISA statistics, Table 9.4 (limits 1999-2018): https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/737084/Table_9.4_Published_August_2018.pdf · HMRC Annual savings statistics 2026, background (limits to 2026-27): https://www.gov.uk/government/statistics/annual-savings-statistics-2026/annual-savings-statistics-background-and-methodology · HMRC Tax-free savings newsletter 19 (cash ISA from April 2027): https://www.gov.uk/government/publications/tax-free-savings-newsletter-19/tax-free-savings-newsletter-19-november-2025 · ONS CPI index D7BT: https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt\n\nA £20,000 limit, frozen since 2017, cash cut to £12,000: generous or not? Comment 👇\n📩 Send this to the friend who keeps all their savings in a cash ISA.\n\nIllustration only. 'Keeping pace' = the limit uprated by CPI from April of the base year to September 2026, the latest figure. Rules as at 28 October 2026, published before the Autumn Budget statement that afternoon, which could change them. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#ISA #cashISA #savings #personalfinanceuk #ukmoney",
+  "comment_question": "A £20,000 limit, frozen since 2017, with cash cut to £12,000: generous or not?",
+  "first_comment": "A £20,000 ISA limit, frozen since 2017, with cash cut to £12,000 for under-65s: generous or not? 👇 📩 Send this to the friend who keeps all their savings in a cash ISA. Every number is checked against official sources.",
+  "tags": [
+    "ISA",
+    "ISA allowance",
+    "cash ISA",
+    "cash ISA limit",
+    "ISA changes 2027",
+    "savings",
+    "inflation",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£20,000",
+      "how": "official figure: adult ISA annual subscription limit, 2017-18 to 2026-27",
+      "source": "https://www.gov.uk/government/statistics/annual-savings-statistics-2026/annual-savings-statistics-background-and-methodology (Table 1)",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£7,000",
+      "how": "official figure: overall ISA limit 1999-00 to 2007-08",
+      "source": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/737084/Table_9.4_Published_August_2018.pdf (note 5)",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "almost doubled",
+      "how": "CPI Sep 2026 144.1 / CPI Apr 1999 72.2 = 1.996 (scenes.py)",
+      "source": "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£14,000",
+      "how": "£7,000 × 144.1 / 72.2 = £13,971, rounded to the nearest £1,000 (scenes.py)",
+      "source": "arithmetic in scenes.py; ONS D7BT",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "over nine years",
+      "how": "6 April 2017 (limit set at £20,000) to 28 October 2026 = 9.56 years (scenes.py)",
+      "source": "HMRC tables above",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£28,000",
+      "how": "£20,000 × CPI Sep 2026 144.1 / CPI Apr 2017 102.9 = £28,008, rounded (scenes.py)",
+      "source": "arithmetic in scenes.py; ONS D7BT",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "over 40% (on screen)",
+      "how": "144.1 / 102.9 - 1 = 40.04% (scenes.py)",
+      "source": "ONS D7BT",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£12,000",
+      "how": "official figure: cash ISA annual limit from 6 April 2027 for under-65s (65 and over: £20,000; overall limit £20,000)",
+      "source": "https://www.gov.uk/government/publications/tax-free-savings-newsletter-19/tax-free-savings-newsletter-19-november-2025",
+      "checked": "2026-10-28"
+    }
+  ],
+  "assumptions": [
+    "Keeping pace = the limit uprated by ONS CPI (D7BT) from April of the base year to September 2026, the latest month (released 21 Oct 2026).",
+    "Exact figures: prices ×1.996 since April 1999; £7,000 → £13,971; £20,000 (April 2017) → £28,008; prices up 40.04% since April 2017; today's £20,000 = £14,282 in April-2017 pounds.",
+    "Limit history: £7,000 (1999-2008), £7,200 (2008-10; £10,200 for 50+ from Oct 2009), £10,200 (2010-11), £10,680, £11,280, £11,520, £11,880 then £15,000 from 1 July 2014, £15,240 (2015-17), £20,000 from April 2017.",
+    "'Next April' = 6 April 2027. Rules as at the morning of 28 October 2026; the Autumn Budget that afternoon could change them.",
+    "Comment-question answer (not shown): a matter of opinion — no right answer."
+  ],
+  "sources": [
+    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/737084/Table_9.4_Published_August_2018.pdf",
+    "https://www.gov.uk/government/statistics/annual-savings-statistics-2026/annual-savings-statistics-background-and-methodology",
+    "https://www.gov.uk/government/publications/tax-free-savings-newsletter-19/tax-free-savings-newsletter-19-november-2025",
+    "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-2008666415950770955"
+  },
+  "durationSec": 34.0
+}

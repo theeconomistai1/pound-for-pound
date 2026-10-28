@@ -1,0 +1,30 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "since",
+ "sentences": [
+  "Your ISA limit is {£20,000|twenty thousand pounds}, but it's quietly shrinking.",
+  "And next April, many cash savers get even less.",
+  "ISAs began with a {£7,000|seven thousand pound} limit.",
+  "Prices have almost doubled since.",
+  "Keeping pace needed about {£14,000,|fourteen thousand,} so your limit won.",
+  "The catch: it's been frozen for over nine years.",
+  "Prices kept climbing.",
+  "Keeping pace now takes about {£28,000.|twenty eight thousand.}",
+  "Next April, under sixty-fives get just {£12,000|twelve thousand} in a cash ISA.",
+  "So when ISAs sound generous, remember:"
+ ],
+ "steps": [
+  "risk",
+  "risk",
+  "context",
+  "question",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
