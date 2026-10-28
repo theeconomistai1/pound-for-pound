@@ -16,6 +16,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
 
 ## Queue
+- todo · news · tax — Budget 2026 (28 Oct): the change that hits most households, every figure from the Budget document / OOTLAR on gov.uk · from: 2026-10-28 (not made 28 Oct 16:00: the Budget documents weren't reachable from the run at ~14:00 UTC; take it within 3 days)
 - done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
 - done (006) · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
 - done (007) · since · tax — The Personal Allowance since 2010 vs what it would be if it had kept up with inflation (gov.uk rates history, ONS CPI)
@@ -31,7 +32,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (017) · myth · debt — "Minimum payments are fine": a £2,000 credit card balance at a typical APR, paid at the minimum (FCA / lender rules)
 - done (018) · calc · tax — Student loans: Plan 2 vs Plan 5 repayments on the same salary (gov.uk thresholds)
 - done (019) · since · isa — The ISA allowance since 1999 (PEP/TESSA to £20,000) vs inflation
-- todo · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
+- done (020) · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
 - todo · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band
 - todo · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
 - todo · calc · debt — An arranged overdraft at around 40% APR: the cost of £500 for a year

@@ -1,0 +1,134 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: 'You two could be owed £1,260, and lose some next April.' Who (you and your partner), what (up to £1,260 of tax), when (next April). Owed by whom? is the open question.",
+      "curiosity": "Loop 1: is this the low-pay perk everyone says? Answered at ~8-18 s: your partner can earn up to about £50,000, and their tax drops by up to £252 a year. Loop 2: what about the years you never claimed? Answered in the last third: backdate to April 2022, up to £1,260, and the oldest year goes after next April.",
+      "tempo": "Eight scenes, none over 6 s; MYTH stamp at ~8 s; rehook 'But here's what couples miss.' at ~18 s; a new number, chip or stamp every 2-4 s.",
+      "feeling": "Surprise ('my partner earns £40k, we qualify?'), then mild urgency and relief (the missed years aren't lost)."
+    },
+    "why_comment": {
+      "take_sides": "Is it fair that only married couples and civil partners get it, not couples who live together? Shown as the loop chip 'FAIR OR NOT? COMMENT'.",
+      "debate": "Should the tax system reward marriage at all? Is £252 worth the form? Should HMRC apply it automatically when it already knows both incomes?",
+      "something_to_say": "'We've been eligible for years and never knew', 'Just claimed it', 'We're not married so we get nothing'.",
+      "see_yourself": "Couples where one partner stays at home, works part-time, studies or is retired and the other is a basic-rate taxpayer."
+    },
+    "why_share": {
+      "send_to": "The friend whose partner stays at home with the kids.",
+      "memorable_line": "Everyone says Marriage Allowance is just for low earners.",
+      "thats_me": "'That's us: one of us earns under £12,570 and we've never claimed.'",
+      "short_and_clear": "If one of you earns under £12,570 and the other is a basic-rate taxpayer, Marriage Allowance cuts up to £252 a year off their tax, and you can backdate to April 2022: up to £1,260; 35 s."
+    },
+    "why_follow": "The UK small print nobody tells you, every number checked on GOV.UK, in 30 seconds. Third tax-pillar myth; sets up 'Council Tax bands are based on what your home is worth today' and the Personal Savings Allowance.",
+    "risk": {
+      "who": "You and your partner, one earning under the Personal Allowance, the other a basic-rate taxpayer",
+      "stake": "Up to £1,260 of Income Tax, £252 a year over five tax years",
+      "deadline": "Next April: after 5 April 2027 the 2022 to 2023 year can't be claimed"
+    },
+    "loops": [
+      {
+        "question": "Is Marriage Allowance only for couples on low pay, as everyone says?",
+        "twist": "Everyone thinks it's a low-pay perk. Actually your partner can earn up to about £50,000; only the lower earner must be under the tax-free allowance.",
+        "new_question": "So what about all the years you never claimed it?"
+      },
+      {
+        "question": "Never claimed: are those years lost?",
+        "twist": "Everyone thinks missed years are gone. Actually you can backdate to April 2022, up to £1,260.",
+        "new_question": "And after next April the oldest year goes, which hands back to 'You two could be owed £1,260'."
+      }
+    ]
+  },
+  "id": "020",
+  "slot": "2026-10-28 16:00 Europe/London",
+  "format": "myth",
+  "pillar": "tax",
+  "title": "Marriage Allowance Is Just for Low Earners? Myth… You Could Be Owed £1,260 💍😱 #shorts",
+  "description": "Marriage Allowance isn't just for low earners: as a couple you could be owed up to £1,260, and part of it goes next April.\n\nThe rule (gov.uk): if you earn less than your Personal Allowance (£12,570), you can transfer £1,260 of it to your husband, wife or civil partner. That cuts their tax by up to £252 a year. Your partner must be a basic-rate taxpayer: income usually up to £50,270 (about £50,000) in England, Wales and Northern Ireland, or up to £43,662 in Scotland (starter, basic or intermediate rate).\n\nThe part couples miss: you can backdate a claim to 6 April 2022 (the 2022 to 2023 tax year). HMRC lets you go back up to four years, so with this year that's five tax years at up to £252 each: up to £1,260 in total. Under the four-year limit, 2022 to 2023 can't be claimed after 5 April 2027.\n\nWhen the myth is true: it's only for married couples and civil partners (living together doesn't count), and not if your partner pays higher or additional rate tax.\n\nSources: https://www.gov.uk/marriage-allowance · https://taxconfident.campaign.gov.uk/working-life/life-changes/marriage-allowance/ · https://www.gov.uk/income-tax-rates · https://www.gov.uk/government/publications/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026\n\nMarriage Allowance only for married couples and civil partners: fair or not? Comment 👇\n📩 Send this to the friend whose partner stays at home with the kids.\n\nIllustration only. 'Up to £1,260' assumes the lower earner's income was below the Personal Allowance and the partner was a basic-rate taxpayer in every tax year from 2022 to 2023 through 2026 to 2027; the Personal Allowance was £12,570 in each of those years. Rules as at 28 October 2026 (Budget day): later years' rules could change. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#marriageallowance #incometax #HMRC #personalfinanceuk #ukmoney",
+  "comment_question": "Marriage Allowance is only for married couples and civil partners, not couples who live together: fair or not?",
+  "first_comment": "Marriage Allowance is only for married couples and civil partners, not couples who live together: fair or not? 👇 📩 Send this to the friend whose partner stays at home with the kids. Every number is checked against official sources.",
+  "tags": [
+    "Marriage Allowance",
+    "marriage tax allowance",
+    "income tax",
+    "personal allowance",
+    "HMRC",
+    "tax refund",
+    "married couples",
+    "civil partnership",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£1,260",
+      "how": "Maximum backdated total: 5 tax years (2022/23 to 2026/27) x up to £252; asserted in scenes.py. (The yearly transfer is also £1,260, shown only in the description.)",
+      "source": "https://www.gov.uk/marriage-allowance (backdate to 6 April 2022; up to £252) · https://taxconfident.campaign.gov.uk/working-life/life-changes/marriage-allowance/ (last four years) · arithmetic in scenes.py",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£50,000",
+      "how": "Partner's income limit £50,270 (basic rate, England, Wales and NI), said as 'up to about £50,000'; shown as £50,270",
+      "source": "https://www.gov.uk/marriage-allowance",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£50,270",
+      "how": "official figure, shown on screen",
+      "source": "https://www.gov.uk/marriage-allowance",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£252",
+      "how": "official figure: 20% of the £1,260 transfer; asserted in scenes.py",
+      "source": "https://www.gov.uk/marriage-allowance",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "2022",
+      "how": "official: 'You can backdate your claim to 6 April 2022 (the 2022 to 2023 tax year)'",
+      "source": "https://www.gov.uk/marriage-allowance",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£12,570",
+      "how": "Personal Allowance 2026/27 and every year from 2022/23 (frozen)",
+      "source": "https://www.gov.uk/income-tax-rates · https://www.gov.uk/government/publications/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "£43,662",
+      "how": "Scotland: partner's income limit (starter, basic or intermediate rate), shown on screen",
+      "source": "https://www.gov.uk/marriage-allowance",
+      "checked": "2026-10-28"
+    },
+    {
+      "figure": "5 April 2027",
+      "how": "Four-year limit: 2022/23 ended 5 April 2023, so its claim window closes 5 April 2027 ('as far back as the last four years')",
+      "source": "https://taxconfident.campaign.gov.uk/working-life/life-changes/marriage-allowance/",
+      "checked": "2026-10-28"
+    }
+  ],
+  "assumptions": [
+    "Lower earner's income below the Personal Allowance (£12,570) and partner a basic-rate taxpayer in every year claimed.",
+    "'Up to £1,260' = 5 tax years (2022/23 backdated to 2026/27) x £252; the Personal Allowance was £12,570 in each year, so the transfer was £1,260 and the saving up to £252 each year.",
+    "'Lose some next April': under HMRC's four-year limit the 2022/23 year can't be claimed after 5 April 2027.",
+    "Partner's limit £50,270 said as 'about £50,000'; Scotland £43,662 shown on screen and in the description.",
+    "Rules as at 28 October 2026, Budget day; the Budget documents weren't reachable when this was made, so later years' rules could change.",
+    "Comment-question answer (not shown): a matter of opinion; the rule itself requires marriage or civil partnership."
+  ],
+  "sources": [
+    "https://www.gov.uk/marriage-allowance",
+    "https://www.gov.uk/marriage-allowance/how-to-apply",
+    "https://taxconfident.campaign.gov.uk/working-life/life-changes/marriage-allowance/",
+    "https://www.gov.uk/income-tax-rates",
+    "https://www.gov.uk/government/publications/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026/income-tax-personal-allowance-and-the-basic-rate-limit-from-6-april-2022-to-5-april-2026"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "Budget 2026 news video not made today: official Budget documents not reachable from the run at ~14:00 UTC; queued as a news line for the next slot.",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=4775123094628745265",
+    "metricool_uuid": "4775123094628745265"
+  },
+  "durationSec": 34.1
+}

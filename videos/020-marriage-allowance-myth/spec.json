@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "You two could be owed {£1,260,|twelve hundred and sixty pounds,} and lose some next April.",
+  "Everyone says Marriage Allowance is just for low earners.",
+  "Actually, your partner can earn up to about {£50,000.|fifty thousand pounds.}",
+  "Earn under your tax-free allowance? Their tax falls up to {£252.|two hundred and fifty-two pounds.}",
+  "But here's what couples miss.",
+  "Never claimed? Feels too late.",
+  "Actually, you can backdate to April {2022.|twenty twenty-two.}",
+  "Up to {£1,260.|twelve hundred and sixty pounds.} After April, the oldest year goes.",
+  "So when it's called a low-pay perk, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "answer",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
