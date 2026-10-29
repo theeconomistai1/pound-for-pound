@@ -16,7 +16,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
 
 ## Queue
-- todo · news · tax — Budget 2026 (28 Oct): the change that hits most households, every figure from the Budget document / OOTLAR on gov.uk · from: 2026-10-28 (not made 28 Oct 16:00: the Budget documents weren't reachable from the run at ~14:00 UTC; take it within 3 days)
+- done (021) · news · bills — Budget 2026 (28 Oct): the £100 Household Energy Payment for council tax bands A–D in England, from January 2027 (Budget document, gov.uk)
 - done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
 - done (006) · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
 - done (007) · since · tax — The Personal Allowance since 2010 vs what it would be if it had kept up with inflation (gov.uk rates history, ONS CPI)

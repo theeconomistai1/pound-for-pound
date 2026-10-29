@@ -1,0 +1,129 @@
+{
+ "brief": {
+  "why_watch": {
+   "hook": "£100 lands for 20 million homes from January, and yours could miss out: a gain with a threat attached.",
+   "curiosity": "Who gets it and who doesn't? Half-answered at sentence 2 (by band), the real twist (1991 values: big earner in a small flat gets it, band E family doesn't) lands in sentences 5-6, the last third.",
+   "tempo": "Picture changes at 0, 4.9, 9.9, 13.5, 20 and 28 s; rehook 'And here's the strange part:' at 13.5 s; booms on 'band' and 'nothing'.",
+   "feeling": "'That's not fair': a payment based on 35-year-old house prices."
+  },
+  "why_comment": {
+   "take_sides": "Band E family gets nothing while a big earner in a small flat gets £100: FAIR OR NOT? chip on the loop scene.",
+   "debate": "Is council tax band a fair, simple way to target help quickly, or should it be means-tested?",
+   "something_to_say": "'We're band E and skint' / 'I'm band C on a good salary, didn't expect it' / 'my house was worth £60k in 1991'.",
+   "see_yourself": "Anyone in England checking their council tax band, especially families in bigger band E homes."
+  },
+  "why_share": {
+   "send_to": "the friend who thinks the £100 is coming to everyone",
+   "memorable_line": "Not by income. Not by energy bill. Just by your band.",
+   "thats_me": "'We're band E' moment in sentence 6.",
+   "short_and_clear": "The Budget's £100 energy payment goes by your 1991 council tax band, not your income."
+  },
+  "why_follow": "The UK small print behind yesterday's headline, checked on GOV.UK in 30 seconds; sets up a council tax band myth (bands are 1991 values) and more Budget 2026 changes.",
+  "risk": {
+   "who": "you, a household in England",
+   "stake": "a £100 payment",
+   "deadline": "from January 2027"
+  },
+  "loops": [
+   {
+    "question": "Who gets the £100?",
+    "twist": "Everyone thinks help goes by income or energy bills. Actually it's just your council tax band.",
+    "new_question": "So what decides your band?"
+   },
+   {
+    "question": "What decides your band?",
+    "twist": "Everyone thinks it's what your home is worth now. Actually it's 1991 values, so a big earner in a small flat gets it and a band E family doesn't.",
+    "new_question": "Is it really for everyone? (back to sentence 1: yours could miss out)"
+   }
+  ]
+ },
+ "id": "021",
+ "slot": "2026-10-29 10:00 Europe/London",
+ "format": "news",
+ "pillar": "bills",
+ "title": "The Budget's £100 Energy Payment… Based on What Your Home Was Worth in 1991 😱🏠 #shorts",
+ "description": "The Budget's £100 energy payment goes to 20 million homes from January, and it's based on your council tax band, not your income.\n\nWhat changed (Budget 2026, 28 October): a £2.6 billion Household Energy Payment of £100 for households in England in council tax bands A to D, from January 2027, for up to 20 million households, delivered through the council tax system. Councils get £100 million to help households in bands above A to D. Scotland, Wales and Northern Ireland get funding for similar support.\n\nThe strange part: in England your council tax band is set by what your home would have been worth on 1 April 1991 (VOA). Band D is a home worth up to £88,000 back then; band E is £88,001 to £120,000. So the payment follows the band, not what you earn or what your energy bill is.\n\nSources: https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html · https://www.gov.uk/government/news/budget-2026-breathing-space-for-today-hope-for-the-future · https://www.gov.uk/guidance/understand-how-council-tax-bands-are-assessed\n\nA £100 energy payment based on what your home was worth in 1991: fair or not? Comment 👇\n📩 Send this to the friend who thinks the £100 is coming to everyone.\n\nIllustration only. The 'big earner in a small flat' and 'band E family' are illustrative examples. Payment as announced in the Budget on 28 October 2026; exact delivery is for the government and councils to confirm. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#Budget2026 #energybills #counciltax #personalfinanceuk #ukmoney",
+ "comment_question": "A £100 energy payment based on what your home was worth in 1991: fair or not?",
+ "first_comment": "A £100 energy payment based on what your home was worth in 1991: fair or not? 👇 📩 Send this to the friend who thinks the £100 is coming to everyone. Every number is checked against official sources.",
+ "tags": [
+  "Budget 2026",
+  "Household Energy Payment",
+  "£100 energy payment",
+  "council tax band",
+  "energy bills",
+  "cost of living",
+  "personal finance UK",
+  "UK money"
+ ],
+ "facts": [
+  {
+   "figure": "20 million",
+   "how": "official figure: 'up to 20 million households' in bands A-D in England",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£100",
+   "how": "official figure: £100 Household Energy Payment per household, from January 2027",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "A to D",
+   "how": "official: households in England in council tax bands A-D",
+   "source": "https://www.gov.uk/government/news/budget-2026-breathing-space-for-today-hope-for-the-future",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "1991",
+   "how": "official: England bands are based on the value at 1 April 1991",
+   "source": "https://www.gov.uk/guidance/understand-how-council-tax-bands-are-assessed",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£88,000",
+   "how": "official: band D = £68,001 to £88,000 (1991 value), shown on screen",
+   "source": "https://www.gov.uk/guidance/understand-how-council-tax-bands-are-assessed",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£100 million",
+   "how": "official: £100 million for English local authorities to help households above bands A-D, shown in the caveat",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£2.6 billion",
+   "how": "official: total cost of the payment (description only); 20m x £100 = £2bn, asserted ≤ £2.6bn in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "January",
+   "how": "official: payment from January 2027",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  }
+ ],
+ "assumptions": [
+  "Payment as announced in Budget 2026 on 28 October 2026; delivery 'via the Council Tax system', exact mechanics for the government and councils to confirm.",
+  "England only; the devolved governments get funding via the Barnett formula for similar support.",
+  "'A big earner in a small flat' and 'a family in a band E house' are illustrative; no income test was announced.",
+  "'Gets nothing… unless their council helps' refers to the £100 million fund for councils to help households above band D.",
+  "Comment-question answer (not shown): a matter of opinion."
+ ],
+ "sources": [
+  "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+  "https://www.gov.uk/government/news/budget-2026-breathing-space-for-today-hope-for-the-future",
+  "https://www.gov.uk/guidance/understand-how-council-tax-bands-are-assessed"
+ ],
+ "review": {
+  "status": "scheduled",
+  "owner_take": "",
+  "owner_voice": false,
+  "notes": "Note: video 019 (28 Oct) said the cash ISA limit drops to £12,000 from April 2027; Budget 2026 reversed that (cash ISA stays £20,000).",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=4633298829695601388",
+  "metricool_uuid": "4633298829695601388"
+ },
+ "durationSec": 31.9
+}

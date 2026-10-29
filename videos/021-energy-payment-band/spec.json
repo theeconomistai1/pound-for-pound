@@ -1,0 +1,26 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "news",
+ "sentences": [
+  "From January, {20 million|twenty million} homes get {£100,|a hundred pounds,} and yours could miss out.",
+  "Yesterday's Budget pays it to homes in England, council tax bands A to D.",
+  "Not by income. Not by energy bill. Just by your band.",
+  "And here's the strange part:",
+  "Your band is set by what your home was worth in {1991.|nineteen ninety-one.}",
+  "So a big earner in a small flat still gets the {£100.|hundred pounds.}",
+  "A family in a band E house gets nothing… unless their council helps.",
+  "So when you hear the {£100|hundred pounds} is for everyone, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
