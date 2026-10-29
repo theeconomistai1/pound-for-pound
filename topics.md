@@ -16,6 +16,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
 
 ## Queue
+- todo · news · isa — Budget 2026 (28 Oct): the planned cut of the cash ISA limit to £12,000 is reversed, it stays £20,000 (Budget document 3.9; corrects video 019's April 2027 line) · from: 2026-10-28
 - done (021) · news · bills — Budget 2026 (28 Oct): the £100 Household Energy Payment for council tax bands A–D in England, from January 2027 (Budget document, gov.uk)
 - done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
 - done (006) · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
@@ -33,7 +34,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (018) · calc · tax — Student loans: Plan 2 vs Plan 5 repayments on the same salary (gov.uk thresholds)
 - done (019) · since · isa — The ISA allowance since 1999 (PEP/TESSA to £20,000) vs inflation
 - done (020) · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
-- todo · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band
+- done (022) · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band (angle: Budget 2026 savings tax 24%/44% from April 2027)
 - todo · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
 - todo · calc · debt — An arranged overdraft at around 40% APR: the cost of £500 for a year
 - todo · since · bills — The energy price cap since 2019 (Ofgem): the typical yearly bill, quarter by quarter

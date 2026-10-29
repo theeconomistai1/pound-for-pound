@@ -1,0 +1,150 @@
+{
+ "brief": {
+  "why_watch": {
+   "hook": "Yesterday's Budget: tax on your savings jumps to 24% next April. A loss with a deadline, the number at 2.4 s.",
+   "curiosity": "Does that mean every saver pays more? Half-answered at sentence 2 (not most: £1,000 tax-free), then the real catch (higher rate: it halves to £500, rest at 44%, and your interest can tip you over) lands in sentences 6-7, the last third.",
+   "tempo": "Picture changes at 0, 5, 8, 12.5, 17.5, 23 and 29 s; rehook 'But here's the catch.' at 17.5 s; booms on 24%, 'halves' and 44%.",
+   "feeling": "Relief ('I'm fine'), then 'that's not fair' / 'wait, that's me' for anyone near £50,000."
+  },
+  "why_comment": {
+   "take_sides": "Higher-rate savers get half the allowance and pay 44% on the rest: FAIR OR NOT? chip on the loop scene.",
+   "debate": "Is taxing savings interest more heavily than wages fair, or does it punish people who save?",
+   "something_to_say": "'My savings tip me over every year' / 'I'm moving it all into an ISA' / 'so savers pay more than workers now?'",
+   "see_yourself": "Anyone earning £45,000-£60,000 with savings outside an ISA; anyone who heard 'the Budget hit savers' yesterday."
+  },
+  "why_share": {
+   "send_to": "the friend with all their savings in a normal savings account",
+   "memorable_line": "Your interest counts as income too. It can tip you over.",
+   "thats_me": "'Cross into the higher-rate band, and something halves.' (sentence 5)",
+   "short_and_clear": "Savings tax rises to 24% from April 2027, but basic-rate savers still get £1,000 of interest tax-free; higher-rate savers only £500."
+  },
+  "why_follow": "The UK small print behind yesterday's Budget headline, checked on GOV.UK in 30 seconds; sets up the cash ISA U-turn (limit stays £20,000) and the starting rate for savings next.",
+  "risk": {
+   "who": "you, a saver with money outside an ISA",
+   "stake": "tax on your savings interest (e.g. £220 a year on £1,000 of interest for a higher-rate saver)",
+   "deadline": "6 April 2027 (next April)"
+  },
+  "loops": [
+   {
+    "question": "So does every saver now pay more tax?",
+    "twist": "Everyone thinks the Budget hit all savers. Actually most pay nothing: the first £1,000 of interest is still tax-free on basic rate.",
+    "new_question": "So what's the catch?"
+   },
+   {
+    "question": "What halves when you cross into the higher-rate band?",
+    "twist": "Everyone thinks it's only about your salary. Actually your interest counts as income too, so it can tip you over and halve the allowance.",
+    "new_question": "So did the Budget hit savers? (back to sentence 1: 24% next April)"
+   }
+  ]
+ },
+ "id": "022",
+ "slot": "2026-10-29 16:00 Europe/London",
+ "format": "calc",
+ "pillar": "saving",
+ "title": "The Budget Just Raised Savings Tax to 24%… But Most Savers Still Pay £0 😱🏦 #shorts",
+ "description": "Tax on savings interest jumps to 24% next April (basic rate), but most savers still pay nothing.\n\nWhat changed: Budget 2025 raised the tax rates on savings income by two points from 6 April 2027, and Budget 2026 (28 October) adds a further two points. So from 6 April 2027 the savings basic rate is 24% (now 20%), the higher rate 44% (now 40%) and the additional rate 49% (now 45%). The government says 84% of income tax payers will be unaffected.\n\nWhy most savers pay nothing: the Personal Savings Allowance stays at £1,000 of interest a year for basic-rate taxpayers and £500 for higher-rate taxpayers (nothing for additional rate), and the starting rate for savings stays at £5,000. The Budget says a basic-rate taxpayer would need over £25,000 in savings, on top of any ISA, before paying tax. At 4% interest, £25,000 earns £1,000 a year.\n\nThe catch: cross into the higher-rate band (over £50,270 in England, Wales and Northern Ireland) and the allowance halves to £500; the rest is taxed at 44% from April 2027. And your interest counts as income: on a £50,000 salary, £1,000 of interest takes your income to £51,000, over £50,270, so your allowance is £500 and from April 2027 you'd pay £220 on that interest.\n\nSources: https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html (section 3.9) · https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar · https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances · https://www.gov.uk/government/publications/income-tax-personal-savings-allowance/income-tax-personal-savings-allowance · https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income\n\nHigher earners get half the tax-free interest, and pay 44% on the rest: fair or not? Comment 👇\n📩 Send this to the friend with all their savings in a normal savings account.\n\nIllustration only. Assumes interest outside ISAs, an employee with no other income, the Personal Allowance of £12,570 (income under £100,000), and England, Wales and NI tax bands (savings income uses UK rates everywhere, but Scottish taxpayers' bands differ). The 4% interest rate is an illustration. Rules as announced at Budget 2026 on 28 October 2026 and could change. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#Budget2026 #savings #savingstax #personalfinanceuk #ukmoney",
+ "comment_question": "Higher earners get half the tax-free interest, and pay 44% on the rest: fair or not?",
+ "first_comment": "Higher earners get half the tax-free interest, and pay 44% on the rest: fair or not? 👇 📩 Send this to the friend with all their savings in a normal savings account. Every number is checked against official sources.",
+ "tags": [
+  "Budget 2026",
+  "savings tax",
+  "Personal Savings Allowance",
+  "tax on savings interest",
+  "savings interest",
+  "higher rate tax",
+  "income tax",
+  "personal finance UK",
+  "UK money"
+ ],
+ "facts": [
+  {
+   "figure": "24%",
+   "how": "official: savings basic rate 2027-28 (20% + 2 points Budget 2025 + 2 points Budget 2026), from 6 April 2027; asserted in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "next April",
+   "how": "official: 'The changes will take effect from 6 April 2027'",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "Not for most",
+   "how": "official: '84% of income tax payers will be unaffected by these changes' (Budget 2026 para 74)",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£1,000",
+   "how": "official: Personal Savings Allowance for basic rate taxpayers, £1,000 in 2026-27 and 2027-28",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£25,000",
+   "how": "official: 'basic rate taxpayers would need over £25,000 in savings in addition to any ISA savings before paying tax' (Budget 2026 para 75); on screen: £1,000 a year at an illustrative 4%, asserted in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£500",
+   "how": "official: Personal Savings Allowance for higher rate taxpayers, £500 in 2026-27 and 2027-28 (half of £1,000, asserted)",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "44%",
+   "how": "official: savings higher rate 2027-28 (40% + 2 + 2), from 6 April 2027; asserted in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£50,270",
+   "how": "Personal Allowance £12,570 + basic rate band £37,700 (2026-27 and 2027-28), shown on screen; asserted in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "20%",
+   "how": "official: savings basic rate 2026-27, shown on screen",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "£51,000",
+   "how": "illustration: £50,000 salary + £1,000 interest; savings income counts towards the higher rate test ('or would be but for the operation of this new savings nil rate'; income within the allowance 'will still count towards their basic or higher rate limits'), so the allowance is £500; tax 2027-28 = £500 × 44% = £220 (scenes.py savings_tax)",
+   "source": "https://www.gov.uk/government/publications/income-tax-personal-savings-allowance/income-tax-personal-savings-allowance",
+   "checked": "2026-10-29"
+  },
+  {
+   "figure": "4%",
+   "how": "assumption: illustrative interest rate at which £25,000 earns £1,000 a year, shown on screen",
+   "source": "arithmetic in scenes.py",
+   "checked": "2026-10-29"
+  }
+ ],
+ "assumptions": [
+  "Interest outside ISAs; employee, no other income; Personal Allowance £12,570 (income under £100,000).",
+  "England, Wales and NI bands: higher rate from £50,270. Savings rates are UK-wide; Scottish taxpayers' bands for the allowance differ.",
+  "Higher-rate example: £1,000 interest, allowance £500, £500 × 44% = £220 a year from 6 April 2027 (£200 at 40% in 2026-27).",
+  "Tip-over example: £50,000 salary + £1,000 interest = £51,000 > £50,270; allowance £500; tax £220 from April 2027.",
+  "Starting rate for savings (£5,000) only helps if other taxable income is low; it doesn't apply in these examples.",
+  "Comment-question answer: none (opinion)."
+ ],
+ "sources": [
+  "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+  "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+  "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+  "https://www.gov.uk/government/publications/income-tax-personal-savings-allowance/income-tax-personal-savings-allowance",
+  "https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-dividend-income/changes-to-tax-rates-for-property-savings-dividend-income"
+ ],
+ "review": {
+  "status": "scheduled",
+  "owner_take": "",
+  "owner_voice": false,
+  "notes": "",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=6851052833811744378"
+ },
+ "durationSec": 34.1
+}

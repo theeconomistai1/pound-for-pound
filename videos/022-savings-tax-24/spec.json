@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "Basic-rate tax on your savings jumps to {24%|twenty-four percent} next April.",
+  "Sounds like every saver got hit.",
+  "Not for most. Your first {£1,000|thousand pounds} of interest stays tax-free.",
+  "You'd need over {£25,000|twenty-five thousand pounds} saved, outside an ISA, to pay any.",
+  "But here's the catch.",
+  "Cross into the higher-rate band, and something halves.",
+  "Your tax-free interest drops to {£500.|five hundred pounds.} The rest is taxed at {44%.|forty-four percent.}",
+  "Your interest counts as income too. It can tip you over.",
+  "So when you hear the Budget hit savers:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "answer",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
