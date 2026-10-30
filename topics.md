@@ -35,7 +35,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (019) · since · isa — The ISA allowance since 1999 (PEP/TESSA to £20,000) vs inflation
 - done (020) · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
 - done (022) · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band (angle: Budget 2026 savings tax 24%/44% from April 2027)
-- todo · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
+- done (024) · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
 - todo · calc · debt — An arranged overdraft at around 40% APR: the cost of £500 for a year
 - todo · since · bills — The energy price cap since 2019 (Ofgem): the typical yearly bill, quarter by quarter
 - todo · calc · tax — The dividend allowance and Capital Gains Tax allowance today, and what that means for investing outside an ISA

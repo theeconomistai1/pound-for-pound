@@ -1,0 +1,157 @@
+{
+  "brief": {
+    "why_watch": {
+      "hook": "Risk in the first 3 s: 'Got £10,000 spare? Overpaying your mortgage could lose to savings.' Who (you, a homeowner with spare cash), what (the interest on £10,000), and it contradicts the 'always overpay' rule everyone repeats.",
+      "curiosity": "Loop 1: does overpaying always win? Answered at ~9-17 s: it saves about £400 a year, but the average new savings deal pays £442. Loop 2: so saving wins? Answered in the last third: once your tax-free allowance is used, from next April a basic-rate saver keeps £336, so overpaying wins again, but the money is locked away.",
+      "tempo": "Seven scenes, none over 6 s; MYTH? stamp at ~8 s; versus cards at ~10-16 s; rehook 'So saving wins? Not quite.' at ~17 s; tax line and big £336 at ~25 s; HALF TRUE stamp at ~30 s.",
+      "feeling": "Surprise (savings beat my mortgage?), then 'I knew it' smugness for overpayers, then a nagging doubt about locking the money away."
+    },
+    "why_comment": {
+      "take_sides": "Overpay or save? Shown as the loop chip 'OVERPAY OR SAVE? COMMENT'.",
+      "debate": "Peace of mind of a smaller mortgage vs keeping cash you can reach; whether rates will rise or fall; whether ISAs change the answer.",
+      "something_to_say": "'I overpay every month and sleep better', 'My fix is 1.9%, savings win easily', 'Offset mortgage gets you both'.",
+      "see_yourself": "Homeowners with a bonus, inheritance or savings pot, deciding where spare cash goes; people coming off cheap fixes."
+    },
+    "why_share": {
+      "send_to": "The friend who throws every spare pound at their mortgage.",
+      "memorable_line": "Everyone says overpaying always wins.",
+      "thats_me": "'That's me: I overpay every month without ever checking my savings rate.'",
+      "short_and_clear": "On average rates today, savings pay more interest than overpaying saves, but once your tax-free savings allowance is used the tax flips it back, and overpaid money is locked away; 37 s."
+    },
+    "why_follow": "The UK small print nobody tells you, every number checked on official sources (Bank of England, GOV.UK), in 30 seconds. First property-pillar myth; follows on from the Budget 2026 savings-tax videos (022, 023) and sets up Stamp Duty and the 1991 council tax bands.",
+    "risk": {
+      "who": "You: a homeowner with a mortgage and £10,000 of spare cash",
+      "stake": "The interest on £10,000: about £400 a year saved by overpaying vs £442 earned in savings (£336 after tax from April 2027)",
+      "deadline": "Next April (6 April 2027), when the savings basic rate rises to 24%"
+    },
+    "loops": [
+      {
+        "question": "Does overpaying your mortgage always win, as everyone says?",
+        "twist": "Everyone thinks overpaying always wins. Actually, at average rates, a new savings deal pays £442 on £10,000, more than the £400 a year overpaying saves.",
+        "new_question": "So saving wins? Not quite: what's the catch?"
+      },
+      {
+        "question": "What happens to that £442 once your tax-free savings allowance is used?",
+        "twist": "Everyone thinks the savings rate is what you get. Actually it's taxed: from next April a basic-rate saver keeps just £336, so overpaying wins again.",
+        "new_question": "But the overpaid money is usually locked away, which hands back to 'Got £10,000 spare?'"
+      }
+    ]
+  },
+  "id": "024",
+  "slot": "2026-10-30 16:00 Europe/London",
+  "format": "myth",
+  "pillar": "property",
+  "title": "Overpaying Your Mortgage Always Wins? Savings Pay £442… Until the Tax Bill 🏠😱 #shorts",
+  "description": "Got £10,000 spare? At today's average rates a savings account can pay more than overpaying your mortgage saves, until tax takes its cut.\n\nThe numbers (Bank of England, September 2026 averages, published 29 October): the average rate on outstanding mortgages is 4.03%, so overpaying £10,000 saves roughly £403 of interest in the first year (about £400). The average rate on new fixed-term savings deals is 4.42%: £442 a year on £10,000.\n\nThe catch: savings interest is taxed once you've used your Personal Savings Allowance (£1,000 of interest a year for basic-rate taxpayers, £500 for higher rate). Budget 2026 raises the savings basic rate from 20% to 24% from 6 April 2027 (higher rate 40% to 44%). So a basic-rate saver who has used the allowance keeps £336 of the £442 from April 2027 (£353.60 at today's 20%); a higher-rate saver keeps £247.52 at 44%. Overpaying's saving isn't taxed, so it wins again. Interest inside an ISA stays tax-free.\n\nOne thing people miss: normal overpayments usually can't be taken back out (flexible and offset mortgages can), and many lenders only allow up to 10% a year without an early repayment charge. MoneyHelper suggests keeping enough savings for at least three months first.\n\nSources: https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026 · https://www.bankofengland.co.uk/statistics/effective-interest-rates/2026/september-2026 · https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances · https://www.gov.uk/government/publications/income-tax-changes-to-tax-rates-for-property-and-savings-income/income-tax-changes-to-tax-rates-for-property-and-savings-income · https://www.moneyhelper.org.uk/en/homes/buying-a-home/should-you-pay-off-your-mortgage-early\n\nSpare £10,000: overpay the mortgage or keep it in savings? Which one are you? Comment 👇\n📩 Send this to the friend who throws every spare pound at their mortgage.\n\nIllustration only. £10,000 is an example; the rates are Bank of England averages (outstanding mortgages; new time deposits with banks and building societies), so your own mortgage and savings rates will differ. The first-year interest saved by overpaying is approximated as 4.03% of £10,000. Assumes savings outside an ISA, a basic-rate taxpayer who has already used the £1,000 allowance, no starting rate for savings and no early repayment charge. Tax rates as announced at Budget 2026 and could change. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#mortgage #overpayment #savings #personalfinanceuk #ukmoney",
+  "comment_question": "Spare £10,000: overpay the mortgage or keep it in savings? Which one are you?",
+  "first_comment": "Spare £10,000: overpay the mortgage or keep it in savings? Which one are you? 👇 📩 Send this to the friend who throws every spare pound at their mortgage. Every number is checked against official sources.",
+  "tags": [
+    "mortgage overpayment",
+    "overpay mortgage or save",
+    "savings interest",
+    "savings tax",
+    "Budget 2026",
+    "Personal Savings Allowance",
+    "mortgage rates UK",
+    "personal finance UK",
+    "UK money"
+  ],
+  "facts": [
+    {
+      "figure": "£10,000",
+      "how": "Illustrative lump sum",
+      "source": "assumption (stated in description)",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£400",
+      "how": "4.03% x £10,000 = £403, said as 'about £400 a year' (first-year interest saved, approximated); asserted in scenes.py",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026 (outstanding stock of mortgages 4.03%, Sep 2026) · arithmetic in scenes.py",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "4.03%",
+      "how": "official figure, shown on screen: effective rate on outstanding mortgages, Sep 2026",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£442",
+      "how": "4.42% x £10,000; asserted in scenes.py",
+      "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026 (new time deposits 4.42%, Sep 2026) · arithmetic in scenes.py",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "4.42%",
+      "how": "official figure, shown on screen: effective rate on new time deposits, Sep 2026",
+      "source": "https://www.bankofengland.co.uk/statistics/effective-interest-rates/2026/september-2026",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "24%",
+      "how": "official: savings basic rate 2027 to 2028 (20% in 2026 to 2027), shown on screen",
+      "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances · https://www.gov.uk/government/publications/income-tax-changes-to-tax-rates-for-property-and-savings-income/income-tax-changes-to-tax-rates-for-property-and-savings-income",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£336",
+      "how": "£442 x (1 - 24%) = £335.92, rounded; asserted in scenes.py",
+      "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances · arithmetic in scenes.py",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "April 2027",
+      "how": "official: the new rates apply from the 2027 to 2028 tax year (6 April 2027)",
+      "source": "https://www.gov.uk/government/publications/income-tax-changes-to-tax-rates-for-property-and-savings-income/income-tax-changes-to-tax-rates-for-property-and-savings-income",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "10%",
+      "how": "MoneyHelper: lenders often allow overpayments of up to 10% a year without penalty; shown in the on-screen caveat",
+      "source": "https://www.moneyhelper.org.uk/en/homes/buying-a-home/should-you-pay-off-your-mortgage-early",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£1,000",
+      "how": "official: Personal Savings Allowance, basic rate (description only)",
+      "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£353.60",
+      "how": "£442 x 80% (description only)",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-30"
+    },
+    {
+      "figure": "£247.52",
+      "how": "£442 x 56% at the 44% higher rate from April 2027 (description only)",
+      "source": "arithmetic in scenes.py",
+      "checked": "2026-10-30"
+    }
+  ],
+  "assumptions": [
+    "£10,000 lump sum is illustrative.",
+    "Mortgage at the BoE average effective rate on outstanding mortgages (4.03%, Sep 2026); savings at the BoE average effective rate on new time deposits (4.42%, Sep 2026) — fixed-term deals, so the savings money is also tied up for the term.",
+    "First-year interest saved by overpaying approximated as 4.03% x £10,000 = £403 ('about £400').",
+    "Basic-rate taxpayer who has already used the £1,000 Personal Savings Allowance; no starting rate for savings; savings outside an ISA; £442 x 76% = £335.92 -> £336 from April 2027.",
+    "No early repayment charge (most lenders allow up to 10% a year).",
+    "Comment-question answer (not shown): depends on your rates, tax position, emergency fund and mortgage terms."
+  ],
+  "sources": [
+    "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+    "https://www.bankofengland.co.uk/statistics/effective-interest-rates/2026/september-2026",
+    "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/annex-a-rates-and-allowances",
+    "https://www.gov.uk/government/publications/income-tax-changes-to-tax-rates-for-property-and-savings-income/income-tax-changes-to-tax-rates-for-property-and-savings-income",
+    "https://www.moneyhelper.org.uk/en/homes/buying-a-home/should-you-pay-off-your-mortgage-early"
+  ],
+  "review": {
+    "status": "scheduled",
+    "owner_take": "",
+    "owner_voice": false,
+    "notes": "Metricool showed the 29 Oct 10:00, 29 Oct 16:00 and 30 Oct 10:00 posts failed on YouTube with 'You have reached your Metricool account limit.' This post was accepted (status PENDING) but may fail the same way unless the limit is raised. Today's 16:00 is a myth (not news) because the last video, 023, was news; the First Time Buyer ISA news line is next.",
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=-7502365531212397137",
+    "metricool_uuid": "-7502365531212397137"
+  },
+  "durationSec": 34.1
+}

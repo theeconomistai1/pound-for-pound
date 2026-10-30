@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "myth",
+ "sentences": [
+  "Got {£10,000|ten thousand pounds} spare? Overpaying your mortgage could lose to savings.",
+  "Everyone says overpaying always wins.",
+  "Overpaying an average mortgage saves about {£400|four hundred pounds} a year.",
+  "Actually, average new savings deals pay {£442.|four hundred and forty-two pounds.}",
+  "So saving wins? Not quite.",
+  "Used your tax-free savings allowance? Then the interest is taxed.",
+  "From April, basic-rate savers keep just {£336.|three hundred and thirty-six pounds.}",
+  "Overpaying wins again. But it's usually locked away.",
+  "So before you overpay, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "answer",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}
