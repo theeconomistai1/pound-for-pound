@@ -1,0 +1,129 @@
+{
+ "brief": {
+  "why_watch": {
+   "hook": "£8,000 of tax-free room was about to vanish for every cash saver under 65: a loss in the first second.",
+   "curiosity": "Did it happen? Answered at sentence 2 (the Budget scrapped the cut), then a second question: if savings tax went up, what does that mean? Answered in sentences 5-6 (the ISA got more valuable), the last third.",
+   "tempo": "Picture changes at 0, 5.3, 13.5, 19.9 and 28.3 s; rehook 'But here's the strange part:' at 13.5 s; booms on '£8,000' and 'outside', coins on '£20,000' and 'zero'.",
+   "feeling": "Relief ('they gave it back'), then smugness: the ISA you nearly lost is now worth more."
+  },
+  "why_comment": {
+   "take_sides": "Was scrapping the cut the right call, or should cash savers be nudged to invest? Loop chip: RIGHT CALL? COMMENT.",
+   "debate": "Some say cash ISAs keep savers safe and fund mortgages; others say £20,000 of cash keeps people out of the stock market.",
+   "something_to_say": "'I'd already moved my money' / 'Good, I'm saving for a deposit in cash' / 'They keep changing their minds'.",
+   "see_yourself": "Cash ISA savers under 65, especially people saving a house deposit in cash."
+  },
+  "why_share": {
+   "send_to": "the friend who rushed to fill their cash ISA before the cut",
+   "memorable_line": "The tax-free room you nearly lost just got more valuable.",
+   "thats_me": "The under-65 cash saver seeing 'stays at £20,000' land in sentence 2.",
+   "short_and_clear": "The Budget scrapped the cash ISA cut, so it stays £20,000, and with savings tax rising outside ISAs it's worth more."
+  },
+  "why_follow": "The UK small print behind this week's Budget, checked on GOV.UK in 30 seconds; it corrects our own video 019 (which reported the £12,000 cut) and sets up the new First Time Buyer ISA replacing the Lifetime ISA in 2029.",
+  "risk": {
+   "who": "you, a cash ISA saver under 65",
+   "stake": "£8,000 a year of tax-free cash ISA room",
+   "deadline": "from April 2027"
+  },
+  "loops": [
+   {
+    "question": "Did the £8,000 cut happen?",
+    "twist": "Everyone thinks Budgets only take from savers. Actually this one scrapped the cut: the cash ISA limit stays at £20,000.",
+    "new_question": "So nothing changed for savers?"
+   },
+   {
+    "question": "What does the savings tax rise mean for your ISA?",
+    "twist": "Everyone thinks the Budget hit savers. Actually, with tax rising outside ISAs from April, the tax-free room got more valuable.",
+    "new_question": "Did the Budget only hit savers? (back to sentence 1: you nearly lost £8,000)"
+   }
+  ]
+ },
+ "id": "023",
+ "slot": "2026-10-30 10:00 Europe/London",
+ "format": "news",
+ "pillar": "isa",
+ "title": "The Cash ISA Cut Is Cancelled… And Your £20,000 Just Got More Valuable 😮🏦 #shorts",
+ "description": "The cash ISA cut is cancelled: the limit stays at £20,000, and the same Budget made that tax-free room worth more.\n\nWhat changed: Budget 2025 planned to cut the cash ISA limit to £12,000 a year for savers under 65 from April 2027 (65 and over would keep £20,000), within the overall £20,000 ISA limit. That's £8,000 a year less tax-free cash room (£20,000 − £12,000). Budget 2026 (28 October) scraps the cut: the cash ISA limit stays at £20,000 for all savers over 18 from April 2027. The government will also explore a new incentive for people investing in a stocks and shares ISA for the first time.\n\nThe strange part: the same Budget raises the tax rates on savings interest outside ISAs from 6 April 2027: basic rate 24% (now 20%), higher rate 44% (now 40%), additional rate 49% (now 45%). Interest inside an ISA stays tax-free. Most basic-rate savers still pay nothing on their first £1,000 of interest a year (£500 for higher rate) thanks to the Personal Savings Allowance.\n\nCorrection: our video 019 said under-65s would get £12,000 in a cash ISA from April 2027. That cut has now been cancelled.\n\nSources: https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html (section 3.9) · https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar (2.5 and 1.1) · https://www.gov.uk/government/publications/budget-2025-overview-of-tax-legislation-and-rates-ootlar/budget-2025-overview-of-tax-legislation-and-rates-ootlar (2.3) · https://www.gov.uk/individual-savings-accounts\n\nScrapping the cash ISA cut: right call, or should savers be nudged to invest? Comment 👇\n📩 Send this to the friend who rushed to fill their cash ISA before the cut.\n\nIllustration only. Rules as announced at Budget 2026 on 28 October 2026; the cash ISA change is made by secondary legislation due in November 2026. Savings tax rates shown are the UK savings rates (Scottish taxpayers' income bands differ). General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#Budget2026 #cashISA #ISA #personalfinanceuk #ukmoney",
+ "comment_question": "Scrapping the cash ISA cut: right call, or should savers be nudged to invest?",
+ "first_comment": "Scrapping the cash ISA cut: right call, or should savers be nudged to invest? 👇 📩 Send this to the friend who rushed to fill their cash ISA before the cut. Every number is checked against official sources.",
+ "tags": [
+  "Budget 2026",
+  "cash ISA",
+  "cash ISA limit",
+  "ISA allowance",
+  "ISA U-turn",
+  "savings tax",
+  "personal finance UK",
+  "UK money"
+ ],
+ "facts": [
+  {
+   "figure": "65s",
+   "how": "official: the planned £12,000 cash limit applied to under-65s; over-65s kept £20,000",
+   "source": "https://www.gov.uk/government/publications/budget-2025-overview-of-tax-legislation-and-rates-ootlar/budget-2025-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "£8,000",
+   "how": "£20,000 overall limit − £12,000 planned cash limit, asserted in scenes.py",
+   "source": "https://www.gov.uk/government/publications/budget-2025-overview-of-tax-legislation-and-rates-ootlar/budget-2025-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "£12,000",
+   "how": "official: Budget 2025 planned cash ISA limit from April 2027 (shown on screen)",
+   "source": "https://www.gov.uk/government/publications/budget-2025-overview-of-tax-legislation-and-rates-ootlar/budget-2025-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "£20,000",
+   "how": "official: Budget 2026 retains the cash ISA limit at £20,000 for all savers over 18 from April 2027; overall ISA limit 2026/27 is £20,000",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "April 2027",
+   "how": "official: the planned cut was to commence in April 2027; savings rates rise from 6 April 2027",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "20% / 24%",
+   "how": "official: savings basic rate 24% from 6 April 2027 (20% today), shown on screen; higher 44%, additional 49% in the description",
+   "source": "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "£1,000",
+   "how": "official: Personal Savings Allowance for basic-rate taxpayers stays £1,000 (shown in the caveat)",
+   "source": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "checked": "2026-10-30"
+  },
+  {
+   "figure": "£0",
+   "how": "interest inside an ISA is tax-free",
+   "source": "https://www.gov.uk/individual-savings-accounts",
+   "checked": "2026-10-30"
+  }
+ ],
+ "assumptions": [
+  "Budget 2026 measures as announced on 28 October 2026; the cash ISA limit is set by secondary legislation due in November 2026.",
+  "'Under 65s' follows the Budget 2025 policy: savers over the age of 65 were to keep a £20,000 cash ISA limit.",
+  "'Raised the tax on savings interest' refers to the savings rates (24%/44%/49% from 6 April 2027); the Personal Savings Allowance (£1,000 basic, £500 higher) and £5,000 starting rate for savings remain, so many savers pay nothing.",
+  "'This week's Budget' = Budget 2026, Wednesday 28 October 2026.",
+  "Comment-question answer (not shown): a matter of opinion."
+ ],
+ "sources": [
+  "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+  "https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar",
+  "https://www.gov.uk/government/publications/budget-2025-overview-of-tax-legislation-and-rates-ootlar/budget-2025-overview-of-tax-legislation-and-rates-ootlar",
+  "https://www.gov.uk/individual-savings-accounts"
+ ],
+ "review": {
+  "status": "scheduled",
+  "owner_take": "",
+  "owner_voice": false,
+  "notes": "Corrects video 019's April 2027 £12,000 line.",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=92075361433306806"
+ },
+ "durationSec": 31.8
+}

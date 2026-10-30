@@ -1,0 +1,26 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "news",
+ "sentences": [
+  "Next April, under {65s|sixty-fives} were losing {£8,000|eight thousand pounds} of cash ISA room.",
+  "Then this week's Budget did something savers didn't expect.",
+  "It scrapped the cut. Your cash ISA limit stays at {£20,000.|twenty thousand pounds.}",
+  "But here's the strange part:",
+  "The same Budget raised the tax on savings interest outside ISAs.",
+  "So the tax-free room you nearly lost just got more valuable.",
+  "Outside, the tax rate rises next April. Inside, it stays zero.",
+  "So when you hear the Budget only hit savers, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}

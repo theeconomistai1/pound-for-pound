@@ -16,7 +16,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - parked — The 1p savings challenge (not UK-specific; brand-v1 sample in samples/005-penny-challenge)
 
 ## Queue
-- todo · news · isa — Budget 2026 (28 Oct): the planned cut of the cash ISA limit to £12,000 is reversed, it stays £20,000 (Budget document 3.9; corrects video 019's April 2027 line) · from: 2026-10-28
+- done (023) · news · isa — Budget 2026 (28 Oct): the planned cut of the cash ISA limit to £12,000 is reversed, it stays £20,000 (Budget document 3.9; corrects video 019's April 2027 line) · from: 2026-10-28
 - done (021) · news · bills — Budget 2026 (28 Oct): the £100 Household Energy Payment for council tax bands A–D in England, from January 2027 (Budget document, gov.uk)
 - done (005) · myth · tax — "A pay rise can leave you worse off": go £1 over the higher-rate line and you keep 58p · sample: samples/v2-myth-pay-rise
 - done (006) · calc · tax — The £100k trap: the effective 60% rate between £100,000 and £125,140, and how pension contributions change it
@@ -42,6 +42,8 @@ rule, rate or figure is checked against an official source on the day the video 
 - todo · myth · investing — "1% fees don't matter": 1% vs 0.2% a year on the same pension over 30 years
 - todo · calc · property — Stamp Duty in England: the bands for first-time buyers vs movers on one example (gov.uk)
 - todo · myth · tax — "Council Tax bands are based on what your home is worth today" (England: 1991 values, VOA)
+
+- todo · news · isa — Budget 2026 (28 Oct): the new First Time Buyer ISA (25% bonus, replaces the Lifetime ISA for new savers, launch April 2029) and the lower LISA withdrawal charge above the property cap (Budget 2026 OOTLAR 2.3–2.4) · from: 2026-10-28
 
 ## News (taken only when the event happens; ROUTINE.md §2)
 - watch · news · tax — Autumn Budget 2026: what changed for income tax, ISAs and pensions (check the date on gov.uk)
