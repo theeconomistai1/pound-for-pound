@@ -105,10 +105,10 @@
   "https://www.fca.org.uk/data/changes-overdraft-charges"
  ],
  "review": {
-  "status": "scheduled",
+  "status": "cancelled",
   "owner_take": "",
   "owner_voice": false,
-  "notes": "Metricool shows the 29 Oct 10:00 and 16:00 and 30 Oct 10:00 and 16:00 posts failed on YouTube with 'You have reached your Metricool account limit.' This post was accepted (status PENDING) but may fail the same way unless the limit is raised. Calc format (last video 024 was myth); no UK money event in the last 2 days, so no news video.",
+  "notes": "Metricool shows the 29 Oct 10:00 and 16:00 and 30 Oct 10:00 and 16:00 posts failed on YouTube with 'You have reached your Metricool account limit.' This post was accepted (status PENDING) but may fail the same way unless the limit is raised. Calc format (last video 024 was myth); no UK money event in the last 2 days, so no news video. Cancelled 31 Oct 08:07 UTC at the owner's request (set to draft in Metricool); owner asked to stop making videos and all three scheduled tasks were paused.",
   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=1316005551164900925",
   "metricool_uuid": "1316005551164900925"
  },
