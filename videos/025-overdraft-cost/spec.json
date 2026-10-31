@@ -1,0 +1,28 @@
+{
+ "voice": "bf_emma",
+ "speed": 1.15,
+ "gap": 0.08,
+ "format": "calc",
+ "sentences": [
+  "{£500|Five hundred pounds} on your overdraft until next Halloween costs about {£100.|a hundred pounds.}",
+  "Most people see it as a safety cushion, cheaper than a credit card.",
+  "Not really. The average overdraft costs about the same as a credit card.",
+  "Both average just over {a fifth|a fifth} a year.",
+  "But here's the strange part.",
+  "Going past your limit used to cost far more.",
+  "Since {April 2020,|April twenty twenty,} banks can't charge more than your arranged rate.",
+  "No daily fees either. Just one interest rate.",
+  "So next time your balance dips below zero, remember:"
+ ],
+ "steps": [
+  "risk",
+  "question",
+  "twist",
+  "answer",
+  "rehook",
+  "question",
+  "twist",
+  "answer",
+  "loop"
+ ]
+}

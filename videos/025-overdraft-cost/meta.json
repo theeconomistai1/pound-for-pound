@@ -1,0 +1,116 @@
+{
+ "brief": {
+  "why_watch": {
+   "hook": "£500 in your overdraft until next Halloween costs about £100: the 'free cushion' has a price tag, said on the day it starts counting (Halloween).",
+   "curiosity": "Is the overdraft at least the cheap option? Answered in sentences 2-3 (no: same as a card), then: what about going past your limit? Answered late in sentence 6.",
+   "tempo": "New picture every 4-7 s (cover, £500 card, overdraft vs card, past your limit, the 2020 rule, no fees, loop); rehooks 'Not really.' and 'But here's the strange part.'",
+   "feeling": "Shock that the 'cushion' costs like a credit card, then relief that the old over-the-limit fees are gone."
+  },
+  "why_comment": {
+   "take_sides": "Safety net or trap? Shown as the loop chip 'SAFETY NET OR TRAP?'",
+   "debate": "Whether an overdraft is a sensible buffer or a debt people stop noticing.",
+   "something_to_say": "'I've been in my overdraft for years' / 'my bank charges way more than that'.",
+   "see_yourself": "Anyone who dips below zero before payday."
+  },
+  "why_share": {
+   "send_to": "the friend who lives in their overdraft every month",
+   "memorable_line": "The average overdraft costs about the same as a credit card.",
+   "thats_me": "Your balance dipping below zero before payday.",
+   "short_and_clear": "An overdraft isn't a free cushion: at the average rate, £500 for a year costs about £100, like a credit card."
+  },
+  "why_follow": "UK small print in 30 seconds, every number checked (Bank of England data, FCA rules). Follows video 017 on credit card minimum payments; sets up the cheaper ways to borrow and what a 0% buffer is worth.",
+  "risk": {
+   "who": "you, with £500 in your overdraft",
+   "stake": "about £100 in interest",
+   "deadline": "until next Halloween (31 October 2027)"
+  },
+  "loops": [
+   {
+    "question": "Is the overdraft at least cheaper than a credit card?",
+    "twist": "Everyone thinks an overdraft is the bank's cheap cushion. Actually the average overdraft rate is about the same as a credit card's.",
+    "new_question": "So what happens if you go past your limit?"
+   },
+   {
+    "question": "Does going past your limit still cost far more?",
+    "twist": "Everyone thinks going over the limit is where the big fees are. Actually since April 2020 it can't cost more than your arranged rate, with no daily fees.",
+    "new_question": "So what does a year in your overdraft really cost? (back to sentence 1)"
+   }
+  ]
+ },
+ "id": "025",
+ "slot": "2026-10-31 10:00 Europe/London",
+ "format": "calc",
+ "pillar": "debt",
+ "title": "Your Overdraft Is a Safety Cushion? £500 for a Year Costs About £100 😱💳 #shorts",
+ "description": "Owe £500 on your overdraft for a year and, at the average rate, it costs about £100 in interest: about the same as a credit card.\n\nThe numbers (Bank of England, Money and Credit, September 2026, published 29 October): the average effective interest rate on interest-charging overdrafts is 20.79%, and on interest-charging credit cards 21.71%: both just over a fifth a year. So £500 overdrawn for a year costs about £103.95 at the overdraft average (about £100), and £108.55 at the credit card average. For comparison, the average rate on new personal loans is 9.85%.\n\nThe strange part: going past your limit (an unarranged overdraft) used to cost far more, often through daily fees. Since April 2020 the FCA's rules mean banks can't charge more for an unarranged overdraft than an arranged one, and can't charge fixed fees for overdraft borrowing: just one interest rate.\n\nSources: https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026 · https://www.fca.org.uk/news/press-releases/millions-customers-together-save-nearly-1billion-due-overdraft-rule-changes · https://www.fca.org.uk/data/changes-overdraft-charges\n\nAn overdraft costing about the same as a credit card: safety net or trap? Comment 👇\n📩 Send this to the friend who lives in their overdraft every month.\n\nIllustration only. Assumes a steady £500 balance for 12 months (31 October 2026 to 31 October 2027) at the September 2026 average effective rate on interest-charging overdrafts, with no interest-free buffer. Averages include all interest-charging accounts; your own bank's advertised rate (EAR) may be higher or lower, so check yours. Rates as at 31 October 2026. General education, not financial advice.\n\nMusic and sound effects: original, made for this channel.\n\n#overdraft #debt #creditcard #personalfinanceuk #ukmoney",
+ "comment_question": "An overdraft costing about the same as a credit card: safety net or trap?",
+ "first_comment": "An overdraft costing about the same as a credit card: safety net or trap? 👇 📩 Send this to the friend who lives in their overdraft every month. Every number is checked against official sources.",
+ "tags": [
+  "overdraft",
+  "overdraft interest",
+  "arranged overdraft",
+  "overdraft fees",
+  "credit card interest",
+  "debt",
+  "Bank of England",
+  "personal finance UK",
+  "UK money"
+ ],
+ "facts": [
+  {
+   "figure": "£500",
+   "how": "Illustrative overdrawn balance, held for a year",
+   "source": "assumption (stated in description)",
+   "checked": "2026-10-31"
+  },
+  {
+   "figure": "£100",
+   "how": "£500 x 20.79% = £103.95, said as 'about £100'; asserted in scenes.py",
+   "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026 (effective rate on interest-charging overdrafts 20.79%, Sep 2026) · arithmetic in scenes.py",
+   "checked": "2026-10-31"
+  },
+  {
+   "figure": "about the same as a credit card",
+   "how": "Overdraft 20.79% vs credit card 21.71% (difference under 1 point); asserted in scenes.py",
+   "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+   "checked": "2026-10-31"
+  },
+  {
+   "figure": "a fifth",
+   "how": "Both 20.79% and 21.71% are just over 20% (a fifth); asserted in scenes.py",
+   "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+   "checked": "2026-10-31"
+  },
+  {
+   "figure": "April 2020",
+   "how": "Official date: FCA overdraft pricing rules in force from April 2020 (no fixed fees; unarranged no more than arranged)",
+   "source": "https://www.fca.org.uk/news/press-releases/millions-customers-together-save-nearly-1billion-due-overdraft-rule-changes · https://www.fca.org.uk/data/changes-overdraft-charges",
+   "checked": "2026-10-31"
+  },
+  {
+   "figure": "20.8% / 21.7% (on screen)",
+   "how": "20.79% and 21.71% rounded to one decimal place",
+   "source": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+   "checked": "2026-10-31"
+  }
+ ],
+ "assumptions": [
+  "Steady £500 balance for 12 months, 31 Oct 2026 to 31 Oct 2027, at 20.79% (BoE effective rate on interest-charging overdrafts, Sep 2026): £103.95; credit card average 21.71%: £108.55",
+  "No interest-free buffer; actual advertised rates (EAR) vary by bank and customer",
+  "Comment question has no right answer (not shown)"
+ ],
+ "sources": [
+  "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026",
+  "https://www.fca.org.uk/news/press-releases/millions-customers-together-save-nearly-1billion-due-overdraft-rule-changes",
+  "https://www.fca.org.uk/data/changes-overdraft-charges"
+ ],
+ "review": {
+  "status": "scheduled",
+  "owner_take": "",
+  "owner_voice": false,
+  "notes": "Metricool shows the 29 Oct 10:00 and 16:00 and 30 Oct 10:00 and 16:00 posts failed on YouTube with 'You have reached your Metricool account limit.' This post was accepted (status PENDING) but may fail the same way unless the limit is raised. Calc format (last video 024 was myth); no UK money event in the last 2 days, so no news video.",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7523442&openWithPostUuid=1316005551164900925",
+  "metricool_uuid": "1316005551164900925"
+ },
+ "durationSec": 34.1
+}

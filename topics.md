@@ -36,7 +36,7 @@ rule, rate or figure is checked against an official source on the day the video 
 - done (020) · myth · tax — "Marriage Allowance is only for married couples on low pay": who qualifies and the yearly saving
 - done (022) · calc · saving — The Personal Savings Allowance: at what balance your savings interest starts to be taxed, by tax band (angle: Budget 2026 savings tax 24%/44% from April 2027)
 - done (024) · myth · property — "Overpaying your mortgage always wins": overpayments vs saving at today's rates on one example
-- todo · calc · debt — An arranged overdraft at around 40% APR: the cost of £500 for a year
+- done (025) · calc · debt — An arranged overdraft: the cost of £500 for a year (angle: Bank of England average overdraft rate 20.79% ≈ credit cards 21.71%; FCA 2020 rules; big-bank rates now vary, e.g. Lloyds Classic 29.9% EAR, not 40%)
 - todo · since · bills — The energy price cap since 2019 (Ofgem): the typical yearly bill, quarter by quarter
 - todo · calc · tax — The dividend allowance and Capital Gains Tax allowance today, and what that means for investing outside an ISA
 - todo · myth · investing — "1% fees don't matter": 1% vs 0.2% a year on the same pension over 30 years
